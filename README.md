@@ -73,11 +73,13 @@ Below are images of the *Action Replay MK III* module showing its front and back
 
 ---
 
-## Legacy Product Status
+## Legals 
+
+### Legacy Product Status
 
 The **Action Replay MK III** has not been manufactured or distributed for many years. While it is no longer available for purchase through official channels, it is still widely appreciated by retro gamers and collectors. Since this product is no longer sold, it is often considered **abandonware**, meaning there are no current copyright or distribution restrictions for personal use. However, always check your local regulations regarding abandonware before distribution or modification.
 
-## License
+### License
 
 This repository, including the translated manuals, recreated labels, and any other documentation or media files, is released under the following license:
 
@@ -94,7 +96,7 @@ Under the following terms:
 - **NonCommercial** — You may not use the material for commercial purposes.
 - **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
 
-### Exclusions
+#### Exclusions
 
 This license **does not apply** to:
 
