@@ -1,4 +1,4 @@
-# Action Replay MK III Module for Super Nintendo
+# Action Replay MK III - Manuals
 
 ![AR MK III Label](./assets/action_replay_mk_iii_label.png)
 
