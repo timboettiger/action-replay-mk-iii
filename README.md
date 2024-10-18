@@ -24,24 +24,26 @@ To give your Action Replay MK III module an authentic look, we’ve provided hig
 - [Module Label (PNG)](./assets/action_replay_mk_iii_label.png)
 - [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
 
+### More Cheats!
+
+If you're looking for even more codes beyond what's built-in, check out [the SNES area at gamehacking.org](https://gamehacking.org/system/snes/), an excellent resource with a vast collection of codes for the SNES, including games that may not be covered by the built-in database. 
+
 ## Further Insights
 
 ### Why is the Action Replay MK III the Best Module?
 
 The **Action Replay MK III** stands out as one of the most advanced and user-friendly modules ever made for the Super Nintendo. Here's why:
 
-- **Cheats**: Whether you're a casual gamer looking to get past that impossible level or a hardcore player testing new game mechanics, the MK III allows you to input cheat codes with ease. It comes with a built-in **cheat database** that includes a wide variety of cheats for many popular SNES games, so you can start using cheats right out of the box.
+- **Cheats**: Whether you're a casual gamer looking to get past that impossible level or a hardcore player testing new game mechanics, the MK III allows you to input cheat codes with ease. It comes with a built-in **cheat database** that includes a wide variety of cheats for many popular SNES games, so you can start using cheats right out of the box. Even `Game Genie` Codes are supported.
 
-- **Region-Free Gaming**: One of the standout features is the ability to bypass regional lockouts, allowing you to play games from other regions (such as NTSC or PAL) without any hassle. This means you can enjoy Japan-exclusive titles, US releases, or European versions without needing separate consoles or adapters.
+- **Bypass Region-Lock**: One of the standout features is the ability to bypass regional lockouts, allowing you to play games from other regions (such as NTSC or PAL) without any hassle. This means you can enjoy Japan-exclusive titles, US releases, or European versions without needing separate consoles or adapters.
 
-- Find Unknown Codes**: One of the unique features of the *Action Replay MK III* is its **trainer mode**, which allows you to find new cheat codes by scanning the game's memory in real-time. This feature is particularly useful if a code for your specific need isn’t available in the pre-built database. With trainer mode, you can:
+- **Find new Cheats**: One of the unique features of the *Action Replay MK III* is its **trainer mode**, which allows you to find new cheat codes by scanning the game's memory in real-time. This feature is particularly useful if a code for your specific need isn’t available in the pre-built database. With trainer mode, you can:
   - Freeze or modify game values, such as health, lives, or in-game currency.
   - Identify changes in memory when certain actions are performed (e.g., losing health or gaining points).
   - Create your own custom cheat codes by narrowing down memory addresses that correspond to specific in-game variables.
 
 - **Ease of Use**: The module is easy to set up and doesn’t require any complex modifications to your console. Simply plug it into your SNES and start using it right away.
-
-- **Cheat Code Flexibility**: In addition to the pre-installed database, users can also enter new cheat codes manually. If you're looking for even more codes beyond what's included, check out [the SNES area at gamehacking.org](https://gamehacking.org/system/snes/), an excellent resource with a vast collection of codes for the SNES, including games that may not be covered by the built-in database.
 
 ### Key Differences Compared to Other Modules
 
@@ -51,7 +53,7 @@ The **Action Replay MK III** stands out as one of the most advanced and user-fri
 
 - **Superior Compatibility**: Its region-free feature sets it apart from competitors like the Game Genie or Pro Action Replay, which often need modifications or separate adapters to play imported games.
 
-- **User-Friendly Interface**: The *Action Replay MK III* has a straightforward and intuitive menu system, making it easy for both beginners and advanced users to navigate the available features without any hassle. The *Action Replay MK III* was primarily available in Europe, which may present challenges for players from other regions who are unfamiliar with its layout and settings. However,
+- **User-Friendly Interface**: The *Action Replay MK III* has a straightforward and intuitive menu system, making it easy for both beginners and advanced users to navigate the available features without any hassle. The *Action Replay MK III* was primarily available in Europe, which may present challenges for players from other regions who are unfamiliar with its layout and settings.
 
 ### Module Overview: Front and Back Elements
 
