@@ -23,6 +23,7 @@ To give your Action Replay MK III module an authentic look, we’ve provided hig
 
 - [Module Label (PNG)](./assets/action_replay_mk_iii_label.png)
 - [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
+- [Module Label (Adobe Illustrator 2024)](./assets/action_replay_mk_iii_label.ai)
 
 ### More Cheats!
 
