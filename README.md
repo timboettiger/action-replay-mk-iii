@@ -2,13 +2,31 @@
 
 ![AR MK III Label](./assets/action_replay_mk_iii_label.png)
 
-Welcome to the repository for the *Action Replay MK III Module* for the Super Nintendo! This project is dedicated to providing a comprehensive guide for all users who are searching for the user manual and looking to make the most out of this versatile module. Whether you're aiming to use cheats or unlock the ability to play games from different regions, this is the go-to module for your SNES console.
+Welcome to the repository for the *Action Replay MK III Module* for the Super Nintendo! This project is dedicated to providing a comprehensive guide for all users who are searching for the user manual and looking to make the most out of this versatile module: this is the go-to module for your SNES console!
 
-I hope you enjoy using the *Action Replay MK III* as much as I do! Whether you're unlocking cheats, discovering unknown codes, or exploring games from different regions, this module is sure to enhance your Super Nintendo experience. Have fun, and happy gaming!
+I hope you enjoy using the *Action Replay MK III* as much as I do - whether you're unlocking cheats, discovering unknown codes, or exploring games from different regions, this module is sure to enhance your Super Nintendo experience. Have fun, and happy gaming!
 
 *Tim*
 
-## Why is the Action Replay MK III the Best Module?
+## Downloads
+
+### Manuals
+
+I provide you fully translated manuals to ensure that all users can easily operate the device, no matter where they are from:
+
+- [Manual (German)](manual_de.md)
+- [Manual (English)](manual_en.md)
+
+### Cartridge Labels (Repros)
+
+To give your Action Replay MK III module an authentic look, we’ve provided high-resolution label downloads for printing. These are faithful recreations of the original labels and are available in case your module's label has been damaged and needs replacing:
+
+- [Module Label (PNG)](./assets/action_replay_mk_iii_label.png)
+- [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
+
+## Further Insights
+
+### Why is the Action Replay MK III the Best Module?
 
 The **Action Replay MK III** stands out as one of the most advanced and user-friendly modules ever made for the Super Nintendo. Here's why:
 
@@ -25,7 +43,7 @@ The **Action Replay MK III** stands out as one of the most advanced and user-fri
 
 - **Cheat Code Flexibility**: In addition to the pre-installed database, users can also enter new cheat codes manually. If you're looking for even more codes beyond what's included, check out [the SNES area at gamehacking.org](https://gamehacking.org/system/snes/), an excellent resource with a vast collection of codes for the SNES, including games that may not be covered by the built-in database.
 
-## Key Differences Compared to Other Modules
+### Key Differences Compared to Other Modules
 
 - **Comprehensive Cheat Database**: While many cheat modules require you to manually input codes from the start, the Action Replay MK III includes a pre-installed database of cheats for a wide range of SNES games, saving you time and effort. Plus, you can easily add your own custom codes.
 
@@ -35,11 +53,11 @@ The **Action Replay MK III** stands out as one of the most advanced and user-fri
 
 - **User-Friendly Interface**: The *Action Replay MK III* has a straightforward and intuitive menu system, making it easy for both beginners and advanced users to navigate the available features without any hassle. The *Action Replay MK III* was primarily available in Europe, which may present challenges for players from other regions who are unfamiliar with its layout and settings. However,
 
-## Module Overview: Front and Back Elements
+### Module Overview: Front and Back Elements
 
 Below are images of the *Action Replay MK III* module showing its front and back:
 
-### Front View
+#### Front View
 
 ![Front View](./assets/front.png)
 
@@ -47,31 +65,17 @@ Below are images of the *Action Replay MK III* module showing its front and back
 - **LED A & LED B**: The two LEDs indicate the status of the module when it's active and when cheats are applied.
 - **Cartridge Slot on Top**: This is where you insert your SNES game cartridge to enable cheats and region-free functionality.
 
-### Back View
+#### Back View
 
 ![Back View](./assets/back.png)
 
 - **Card Slot on Back**: This slot is essential when using a game from a different region. To enable compatibility with certain expansion chips (such as those used in certain region-specific games), you will need to insert a **donor module** in this slot. The donor module provides the necessary additional chips required for the imported game to run correctly on the SNES console. 
 
-## Challenges for International Users
-
-I provide you fully translated manuals to ensure that all users can easily operate the device, no matter where they are from:
-
-- [Manual (German)](manual_de.md)
-- [Manual (English)](manual_en.md)
+---
 
 ## Legacy Product Status
 
 The **Action Replay MK III** has not been manufactured or distributed for many years. While it is no longer available for purchase through official channels, it is still widely appreciated by retro gamers and collectors. Since this product is no longer sold, it is often considered **abandonware**, meaning there are no current copyright or distribution restrictions for personal use. However, always check your local regulations regarding abandonware before distribution or modification.
-
-## Downloads
-
-To give your Action Replay MK III module an authentic look, we’ve provided high-resolution label downloads for printing. These are faithful recreations of the original labels and are available in case your module's label has been damaged and needs replacing:
-
-- [Module Label (PNG)](./assets/action_replay_mk_iii_label.png)
-- [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
-
----
 
 ## License
 
