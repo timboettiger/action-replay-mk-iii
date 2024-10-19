@@ -71,9 +71,9 @@ Selecting this menu item brings up the Main Menu.
 
 Using this menu item, the type or form of all menu items can be changed. You have seven different types or forms to choose from.
 
-#### <a name="hintergrund"></a> BACKGROUND OFF
+#### <a name="hintergrund"></a> HINTERGRUND AUS
 
-Using this menu item, the screen background can be set into motion. Selecting it again turns this function off.
+Using this menu item, the screen background can be set into motion (`AN` = `ON`). Selecting it again turns this function `AUS` (`OFF`).
 
 #### <a name="trainer_select"></a> TRAINER-SELECT
 
