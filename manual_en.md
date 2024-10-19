@@ -1,6 +1,8 @@
 # SNES Action Replay MKIII V1.1 - Manual/Guide (English)
 
-Translation Copyright (C) 2024 by Tim Böttiger
+Translation V1.4
+
+Copyright (C) 2024 by Tim Böttiger
 
 ## WELCOME!
 
