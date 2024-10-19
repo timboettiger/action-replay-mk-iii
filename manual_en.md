@@ -48,12 +48,12 @@ The Action Replay's menus are navigated using a cursor in the shape of an arrow.
 
 The main menu consists of the following menu items:
 
-- **Start Game:** Selecting this menu item will start the game.
-- **Enter Codes:** Selecting this menu item brings up the Parameter Menu. Further explanations can be found in the chapter "[The Parameter Menu](#param)".
-- **Europ:** This menu item activates the adapter function for the use of imported game cartridges. Further explanations can be found in the chapter "[The Adapter Function](#adapter)".
-- **Speed:** Using this menu item, the speed of the slow-motion function can be adjusted. Further explanations can be found in the chapter "[The Slow-Motion Function](#zeitlupe)".
-- **Options:** Selecting this menu item brings up the Options Menu, where various settings, such as the type or form of the menu items, etc., can be made. Further explanations can be found in the chapter "[Options](#optionen)".
-- **Capabilities:** This menu item displays any found parameters. Further explanations can be found in the chapter "[The Trainer](#trainer)".
+- **START GAME** Selecting this menu item will start the game.
+- **CODES EINGEBEN:** Selecting this menu item ("Enter Codes") brings up the Parameter Menu. Further explanations can be found in the chapter "[The Parameter Menu](#param)".
+- **EUROP:** This menu item activates the adapter function for the use of imported game cartridges. Further explanations can be found in the chapter "[The Adapter Function](#adapter)".
+- **GESCHWINDIGKEIT:** Using this menu item, the speed of the slow-motion function can be adjusted. Further explanations can be found in the chapter "[The Slow-Motion Function](#zeitlupe)".
+- **OPTIONEN:** Selecting this menu item brings up the Options Menu, where various settings, such as the type or form of the menu items, etc., can be made. Further explanations can be found in the chapter "[Options](#optionen)".
+- **MOEGLICHKEITEN:** This menu item ("capabilities") displays any found parameters. Further explanations can be found in the chapter "[The Trainer](#trainer)".
 
 ### <a name="optionen"></a> OPTIONS
 
