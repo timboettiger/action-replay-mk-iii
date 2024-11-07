@@ -14,8 +14,8 @@ I hope you enjoy using the *Action Replay MK III* as much as I do - whether you'
 
 The original manual contains several small errors, and a revised version is available for download. Since the module’s interface is in German, I have provided a translation. However, only the body text has been translated – the menu names and messages have been kept in the original language for better orientation.
 
-- [Manual (German, revised)](manual_de.md)
-- [Manual (English, translation)](manual_en.md)
+- [Manual (German, revised V1.1a)](manual_de.md)
+- [Manual (English, translation V1.4a)](manual_en.md)
 
 ### Cartridge Labels (Repros)
 
