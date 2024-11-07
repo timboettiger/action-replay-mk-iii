@@ -8,7 +8,7 @@ Copyright (C) 2024 by Tim Böttiger
 
 Herzlich Willkommen in der Welt des "Action Replays MK III". Das "Action Replay MK III" bietet Ihnen zahlreiche neue Möglichkeiten, wie z.B. den komplett überarbeiteten Trainer, die Parametergruppen und die verbesserte deutsche Menüführung.
 
-> **COPYRIGHT:** `SUPER NES" und `NINTENDO" sind eingetragene Warenzeichen von Nintendo America INC.
+> **COPYRIGHT:** `SUPER NES` sind `NINTENDO` sind eingetragene Warenzeichen von Nintendo America INC.
 
 > **DISCLAIMER:** Nichts aus dieser Anleitung darf vervielfältigt, kopiert oder auf irgendeinem anderen Wege in Umlauf gebracht werden, ohne daß vorher eine schriftliche Genehmigung von der Firma systems B.V. Ede, Niederlande vorliegt.
 
