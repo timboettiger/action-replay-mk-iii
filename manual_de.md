@@ -405,11 +405,11 @@ In diesem Fall sind auch nach den o.g. Trainervorgängen zu viele Parameter übr
 
 Sollte der von Ihnen benutzte Parameter den Spielablauf nicht beeinflussen, müssen Sie wie folgt vorgehen:
 
-- *Unendliches Leben:* Kapitel "[PARAMETERSUCHE FÜR UNENDLICHES LEBEN](#param_leben)" von Punkt 7 bis Punkt 14.
-- *Unendliche Zeit/Geld:* Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE ZEIT UND UNENDLICHES GELD](#param_geld)" von Punkt 8 bis Punkt 15 bzw. von Punkt 7 bis Punkt 14.
-- *Unendliche Energie:* Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE ENERGIE](#param_energie)" von Punkt 8 bis Punkt 15.
-- *Levelanwahl:* Kapitel "[PARAMETERSUCHE FÜR LEVELANWAHL](#param_level)" von Punkt 6 (jedoch `SELECT` und `Y`-Taste drücken) bis Punkt 10.
-- *Unendliche Extra-Waffen:* Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE WAFFEN](#param_waffen) U.A." von Punkt 8 bis Punkt 15.
+- **Unendliches Leben:** Kapitel "[PARAMETERSUCHE FÜR UNENDLICHES LEBEN](#param_leben)" von Punkt 7 bis Punkt 14.
+- **Unendliche Zeit/Geld:** Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE ZEIT UND UNENDLICHES GELD](#param_geld)" von Punkt 8 bis Punkt 15 bzw. von Punkt 7 bis Punkt 14.
+- **Unendliche Energie:** Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE ENERGIE](#param_energie)" von Punkt 8 bis Punkt 15.
+- **Levelanwahl:** Kapitel "[PARAMETERSUCHE FÜR LEVELANWAHL](#param_level)" von Punkt 6 (jedoch `SELECT` und `Y`-Taste drücken) bis Punkt 10.
+- **Unendliche Extra-Waffen:** Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE WAFFEN](#param_waffen) U.A." von Punkt 8 bis Punkt 15.
 
 ## <a name="zeitlupe"></a> DIE ZEITLUPEN-FUNKTION
 
