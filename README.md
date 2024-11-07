@@ -1,6 +1,6 @@
 # Action Replay MK III - Manuals
 
-![AR MK III Label](./assets/action_replay_mk_iii_label.png)
+![AR MK III Manuals Logo](./assets/logo.jpg)
 
 Welcome to the repository for the *Action Replay MK III Module* for the Super Nintendo! This project is dedicated to providing a comprehensive guide for all users who are searching for the user manual and looking to make the most out of this versatile module: this is the go-to module for your SNES console!
 
@@ -31,6 +31,79 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
 
 ## Further Insights
 
+### Game Converters and Adapters
+
+|                                           |         | **Slot** | **Cart-** |  **Cheatcodes**  |         **Special Features**           |
+| **Adapter Name**                          | **Reg** | **Type** | **Slots** | **PAR** | **GG** | **DB** | **Slomo** | **ROM** | **CIC** |
+|-------------------------------------------|---------|----------|-----------|---------|--------|--------|-----------|---------|---------|
+| Game Converter / Fire (MD-303)            | INT     | simp     | 2         | 0       | 0      | -      | -         | -       | -       |
+| Game Converter / Fire FX (MD-909)         | EU      | ext      | 2         | 0       | 0      | -      | -         | -       | -       |
+| AD-29 Universal Adapter                   | INT     | ext      | 2         | 0       | 0      | -      | -         | -       | -       |
+| AD-29 Universal Adapter (Upgrade Version) | INT     | ext      | 2         | 0       | 0      | -      | -         | -       | -       |
+| Multi Converter (DIS-SFC01)               | INT     | simp     | 2         | 0       | 0      | -      | -         | -       | -       |
+| Pro Universal Adapter                     | INT     | ext      | 2         | 0       | 0      | -      | -         | -       | -       |
+| Universal Adapter                         | INT     | simp     | 2         | 0       | 0      | -      | -         | -       | -       |
+| Universal Adapter Expert Version          | INT     | ext      | 2         | 0       | 0      | -      | -         | -       | -       |
+| Super Game Key                            | INT     | simp     | 2         | 0       | 0      | -      | -         | -       | -       |
+| Super Key (Universal Adapter)             | INT     | ext      | 1         | 0       | 0      | -      | -         | -       | Yes     |
+| Super Magic Key                           | PAL     | simp     | 2         | 0       | 0      | -      | -         | -       | -       |
+| Honey Bee                                 | EU/NA   | simp     | 2         | 0       | 0      | -      | -         | -       | -       |
+| Honey Bee (Super-Magic Game Converter)    | NA      | ext      | 2         | 0       | 0      | -      | -         | -       | -       |
+| Honey Bee (Super-Magic Game Converter)    | EU      | simp     | 2         | 0       | 0      | -      | -         | -       | -       |
+| Programmable Universal Adapter            | EU      | ext      | 2         | 1       | 0      | -      | -         | -       | -       |
+| Action Replay                             | INT     | simp     | 1         | 4       | 0      | -      | -         | -       | -       |
+| Pro Action Replay MK1                     | INT     | ext      | 2         | 20      | 0      | Yes    | -         | -       | -       |
+| Pro Action Replay MK2 (1.0)               | INT     | ext      | 2         | 100     | 0      | Yes    | Yes       | Yes     | -       |
+| Pro Action Replay MK2 (2.P)               | INT     | ext      | 2         | 100     | 0      | Yes    | Yes       | Yes     | -       |
+| Pro Action Replay MK2 (2.T)               | INT     | ext      | 2         | 100     | 0      | Yes    | Yes       | Yes     | -       |
+| Pro Action Replay MK3                     | INT     | ext      | 2         | 100     | 5      | Yes    | Yes       | Yes     | -       |
+
+#### Legend
+
+- **Region:** 
+  - **INT**: International
+  - **EU**: Europe
+  - **NA**: North America
+  - **PAL**: PAL Region
+
+- **Slot Type:** 
+  - **simple**: Simple contacts (no enhancement chips supported)
+  - **extended**: Extended contacts (some or all enhancement chips supported)
+
+- **Cart Slots:** 
+  - **1**: Single Slot
+  - **2**: Dual Slot
+
+- **Cheat Codes:**
+  - **PAR**: Pro Action Replay cheat codes supported (and how many)
+  - **GG**: Game Genie cheat codes supported (and how many)
+  
+- **Special Features:**
+  - **DB:** Indicates whether a cheat code database is integrated
+  - **Slomo:** Indicates whether slow motion is integrated
+  - **ROM:** Indicates whether ROM cheat codes are supported
+  - **CIC:** Indicates whether a CIC chip is integrated
+  
+#### Sources
+
+1. [Credits/Source](https://www.reddit.com/r/snes/comments/v83p0f/pro_action_replay_confusion/)
+
+### Secrets
+
+> [Credits/Source](https://tcrf.net/Pro_Action_Replay_MK3_(SNES))
+
+#### Credits/Informations
+
+Hold `A` as the Action Replay logo fades out to display a credits/information screen. This screen contains the program version, copyrights, build date, and checksum.
+
+#### Test Mode
+
+Hold `Y` # `A` while booting/restarting the menu to enter a simple test mode. From here, pressing `B` will strobe the two cartridge `LEDs` and then start the attached game with the code `7E001902` active.
+
+#### Unused Routines
+
+At CPU address `00D48B` (right after the text for the credits/info screen) is the string "THIS IS THE START OF THE END", followed by some no-longer-used routines which attempt to poll the values at CPU addresses `00D500` through `00D50F` as part of some unknown functionality.
+
 ### Why is the Action Replay MK III the Best Module?
 
 The **Action Replay MK III** stands out as one of the most advanced and user-friendly modules ever made for the Super Nintendo. Here's why:
@@ -52,7 +125,7 @@ The **Action Replay MK III** stands out as one of the most advanced and user-fri
 
 - **Trainer Mode**: Not many cheat modules offer a built-in trainer mode for finding and creating new cheat codes. This advanced feature sets the MK III apart, allowing users to actively search for memory addresses while playing the game and create new cheats.
 
-- **Superior Compatibility**: Its region-free feature sets it apart from competitors like the Game Genie or Pro Action Replay, which often need modifications or separate adapters to play imported games.
+- **Superior Compatibility**: Its region-free feature sets it apart from competitors like the Game Genie or very early (Pro) Action Replay versions, which often need modifications or separate adapters to play imported games.
 
 - **User-Friendly Interface**: The *Action Replay MK III* has a straightforward and intuitive menu system, making it easy for both beginners and advanced users to navigate the available features without any hassle. The *Action Replay MK III* was primarily available in Europe, which may present challenges for players from other regions who are unfamiliar with its layout and settings.
 
