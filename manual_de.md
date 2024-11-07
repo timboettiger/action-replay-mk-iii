@@ -1,6 +1,6 @@
 # SNES Action Replay MKIII V1.1 - Handbuch/Anleitung (deutsch)
 
-Überarbeitete Version V1.1
+Überarbeitete Version V1.1a
 
 Copyright (C) 2024 by Tim Böttiger
 
