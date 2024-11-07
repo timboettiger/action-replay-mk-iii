@@ -409,7 +409,7 @@ Sollte der von Ihnen benutzte Parameter den Spielablauf nicht beeinflussen, müs
 - **Unendliche Zeit/Geld:** Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE ZEIT UND UNENDLICHES GELD](#param_geld)" von Punkt 8 bis Punkt 15 bzw. von Punkt 7 bis Punkt 14.
 - **Unendliche Energie:** Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE ENERGIE](#param_energie)" von Punkt 8 bis Punkt 15.
 - **Levelanwahl:** Kapitel "[PARAMETERSUCHE FÜR LEVELANWAHL](#param_level)" von Punkt 6 (jedoch `SELECT` und `Y`-Taste drücken) bis Punkt 10.
-- **Unendliche Extra-Waffen:** Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE WAFFEN](#param_waffen) U.A." von Punkt 8 bis Punkt 15.
+- **Unendliche Extra-Waffen:** Kapitel "[PARAMETERSUCHE FÜR UNENDLICHE WAFFEN U.A.](#param_waffen)" von Punkt 8 bis Punkt 15.
 
 ## <a name="zeitlupe"></a> DIE ZEITLUPEN-FUNKTION
 
