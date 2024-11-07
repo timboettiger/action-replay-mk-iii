@@ -1,6 +1,6 @@
 # SNES Action Replay MKIII V1.1 - Manual/Guide (English)
 
-Translation V1.4
+Translation V1.4a
 
 Copyright (C) 2024 by Tim Böttiger
 
@@ -412,7 +412,7 @@ If the parameter you used does not affect the gameplay, you must proceed as foll
 - **Infinite Time/Money:** Chapter "[PARAMETER SEARCH FOR INFINITE TIME AND INFINITE MONEY](#param_geld)" from point 8 to point 15 or from point 7 to point 14.
 - **Infinite Energy:** Chapter "[PARAMETER SEARCH FOR INFINITE ENERGY](#param_energie)" from point 8 to point 15.
 - **Level Selection:** Chapter "[PARAMETER SEARCH FOR LEVEL SELECTION](#param_level)" from point 6 (but press `SELECT` and `Y` buttons) to point 10.
-- **Infinite Extra Weapons:** Chapter "[PARAMETER SEARCH FOR INFINITE WEAPONS](#param_waffen) ETC." from point 8 to point 15.
+- **Infinite Extra Weapons:** Chapter "[PARAMETER SEARCH FOR INFINITE WEAPONS ETC.](#param_waffen)" from point 8 to point 15.
 
 ## <a name="zeitlupe"></a> THE SLOW-MOTION FUNCTION
 
