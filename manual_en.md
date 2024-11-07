@@ -409,8 +409,7 @@ In this case, even after the above trainer procedures, too many parameters remai
 If the parameter you used does not affect the gameplay, you must proceed as follows:
 
 - **Infinite Lives:** Chapter "[PARAMETER SEARCH FOR INFINITE LIVES](#param_leben)" from point 7 to point 14.
-- **Infinite Time:**
-- **Infinite Money:** Chapter "[PARAMETER SEARCH FOR INFINITE TIME AND INFINITE MONEY](#param_geld)" from point 8 to point 15 or from point 7 to point 14.
+- **Infinite Time/Money:** Chapter "[PARAMETER SEARCH FOR INFINITE TIME AND INFINITE MONEY](#param_geld)" from point 8 to point 15 or from point 7 to point 14.
 - **Infinite Energy:** Chapter "[PARAMETER SEARCH FOR INFINITE ENERGY](#param_energie)" from point 8 to point 15.
 - **Level Selection:** Chapter "[PARAMETER SEARCH FOR LEVEL SELECTION](#param_level)" from point 6 (but press `SELECT` and `Y` buttons) to point 10.
 - **Infinite Extra Weapons:** Chapter "[PARAMETER SEARCH FOR INFINITE WEAPONS](#param_waffen) ETC." from point 8 to point 15.
