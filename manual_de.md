@@ -1,6 +1,6 @@
 # SNES Action Replay MKIII V1.1 - Handbuch/Anleitung (deutsch)
 
-Überarbeitete Version V1.1a
+Überarbeitete Version V2.0
 
 Copyright (C) 2024 by Tim Böttiger
 
@@ -48,6 +48,8 @@ Die Menüs des Action Replay's werden mit Hilfe eines Cursors in Pfeilform angew
 
 ### <a name="root"></a> DAS HAUTPMENÜ
 
+![Hauptmenü](./ui/clean/clean-main-menu.png)
+
 Das Hauptmenü besteht aus den nachfolgend genannten Menüpunkten:
 
 - **Spiel starten:** Nach Anwahl dieses Menüpunktes wird das Spiel gestartet.
@@ -58,6 +60,8 @@ Das Hauptmenü besteht aus den nachfolgend genannten Menüpunkten:
 - **Optionen:** Nach Anwahl dieses Menüpunktes erscheint das Options-Menü, in dem verschiedene Einstellungen, wie z.B. die Art bzw. Form der Menüpunkte usw. vorgenommes werden können. Weitere Erklärungen hierzu finden Sie im Kapitel "[Optionen](#optionen)".
 
 ### <a name="optionen"></a> OPTIONEN
+
+![Optionen](./ui/clean/clean-options.png)
 
 Im Options-Menü können Sie verschiedene Grundeinstellungen ändern:
 
@@ -86,9 +90,13 @@ Die Trainer-Funktion wird über einige Tastenkombinationen (in Verbindung mit de
 
 #### <a name="joypad"></a> JOYPAD
 
+![Joypad](./ui/clean/clean-joypad.png)
+
 Nach Anwahl dieses Menüpunktes wird die Belegung des Joypads angezeigt.
 
 ### <a name="param"></a> DAS PARAMETER-MENÜ
+
+![Parameter](./ui/clean/clean-codes.png)
 
 Erläuterungen zum Parameter-Menü:
 
@@ -136,6 +144,8 @@ Erläuterungen zum Parameter-Menü:
 12. Möchten Sie das Spiel ohne Veränderungen weiterspielen, bringen Sie den Schalter des Action Replay's in Mittelstellung.
 
 ### <a name="param_nutzen"></a> BENUTZUNG DER EINGEBAUTEN PARAMETER
+
+![Eingebaute Parameter](./ui/clean/clean-games.png)
 
 1. Verfahren Sie wie im Kapitel "[BENUTZUNG DES ACTION REPLAY'S](#benutzung)" beschrieben, bis Sie sich im Hauptmenü befinden.
 2. Im Hauptmenü mit dem Cursor den Menüpunkt `CODES EINGEBEN` anwählen und die `B`-Taste drücken.

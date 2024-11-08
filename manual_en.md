@@ -1,6 +1,6 @@
 # SNES Action Replay MKIII V1.1 - Manual/Guide (English)
 
-Translation V1.4a
+Translation V2.0
 
 Copyright (C) 2024 by Tim Böttiger
 
@@ -48,9 +48,11 @@ The Action Replay's menus are navigated using a cursor in the shape of an arrow.
 
 ### <a name="root"></a> THE MAIN MENU
 
+![Main Menu](./ui/clean/clean-main-menu.png)
+
 The main menu consists of the following menu items:
 
-- **START GAME** Selecting this menu item will start the game.
+- **SPIEL STARTEN** Selecting this menu item will start the game.
 - **CODES EINGEBEN:** Selecting this menu item ("Enter Codes") brings up the Parameter Menu. Further explanations can be found in the chapter "[The Parameter Menu](#param)".
 - **EUROP:** This menu item activates the adapter function for the use of imported game cartridges. Further explanations can be found in the chapter "[The Adapter Function](#adapter)".
 - **GESCHWINDIGKEIT:** Using this menu item, the speed of the slow-motion function can be adjusted. Further explanations can be found in the chapter "[The Slow-Motion Function](#zeitlupe)".
@@ -59,7 +61,9 @@ The main menu consists of the following menu items:
 
 ### <a name="optionen"></a> OPTIONS
 
-In the Options Menu, you can change various basic settings:
+![Options](./ui/clean/clean-options.png)
+
+In the **OPTIONEN** Menu, you can change various basic settings (options):
 
 1. Follow the steps described in the chapter "[USING THE ACTION REPLAY](#benutzung)" until you reach the main menu. If you have already used the "Action Replay MK II", you can also press the `RESET` button after setting the Action Replay's switch to the bottom position.
 2. Use the cursor to select the menu item `OPTIONEN` and press the `B` button. The Options Menu appears.
@@ -86,9 +90,13 @@ The trainer function is controlled via several key combinations (in combination 
 
 #### <a name="joypad"></a> JOYPAD
 
+![Joypad](./ui/clean/clean-joypad.png)
+
 Selecting this menu item will display the joypad's configuration.
 
 ### <a name="param"></a> THE PARAMETER MENU
+
+![Parameter](./ui/clean/clean-codes.png)
 
 Explanations for the Parameter Menu:
 
@@ -137,6 +145,8 @@ Explanations for the Parameter Menu:
 12. If you want to continue playing the game without changes, set the Action Replay's switch to the middle position.
 
 ### <a name="param_nutzen"></a> USING BUILT-IN PARAMETERS
+
+![Built-In Parameters](./ui/clean/clean-games.png)
 
 1. Follow the steps described in the chapter "[USING THE ACTION REPLAY](#benutzung)" until you reach the main menu.
 2. In the main menu, use the cursor to select the menu item `CODES EINGEBEN` and press the `B` button.
