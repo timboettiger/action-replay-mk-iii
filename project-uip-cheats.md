@@ -4,6 +4,8 @@
 
 [Game List](project-uip-games.md)
 
+[Code Editor](project-uip-codes.md)
+
 ## Cheat Screenshots
 
 ### 1. ACROBAT MISSION
