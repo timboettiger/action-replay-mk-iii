@@ -3,21 +3,21 @@
 
 ---
 
-### Discover the Full Power of the Action Replay MK III
+### Discover the Full Power of the Action Replay MK3!
 
 Finding in-depth information (or even basic manuals) for this Super Nintendo cheat device is difficult. Here you find:
 - revised and up-to-date manuals (de/en)
 - print-ready repro labels
-- further informations on the built-in code database
-- project "UI Preservaction" - an ui documentation
+- further information on the built-in code database
+- project "UI Preservation" - a UI documentation
 - comparison to other cheat-devices or SNES region adapters
 
-The Pro Action Replay MK III is my favorite SNES cheat device, because it's much more a swiss army knife:
+The Pro Action Replay MK III is my favorite SNES cheat device because it's much more like a Swiss Army knife:
 - a region adapter
 - a cheat code device
 - a cheat code finder (trainer)
 - a cheat code database
-- a mouse or joypad driven user interface
+- a mouse or joypad-driven user interface
 
 ### Why did you make this?
 
@@ -54,11 +54,11 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 - [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
 - [Module Label (Adobe Illustrator 2024)](./assets/action_replay_mk_iii_label.ai)
 
-### Project 'UI Preservaction'
+### Project 'UI Preservation'
 
-Since no (or very little) information, screenshots and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I startet this project: to document all functions of the Action Replay MK III - from the interface and operation to features hidden behind the input screen.
+Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden behind the input screen.
 
-- [Go to Projekt UI Preservaction](./project-uip-toc.md)
+- [Go to Project UI Preservation](./project-uip-toc.md)
 
 ### Built-In Codes
 
@@ -66,30 +66,30 @@ The Action Replay MK III includes a built-in database of (cheat) codes. A total 
 
 Due to limited storage space, only the most essential codes were included, such as infinite lives, energy, or time. Additionally, there are codes that support region unlocking, effectively patching the software in real-time.
 
-See a [list of all includes games](./code-database.md) and cheat codes.
+See a [list of all included games](./code-database.md) and cheat codes.
 
 Interestingly, there are **a few oddities**:
-- `"Mega lo Mania"` is listed mistakenly as `"Mage Lo Mania"`.
-- `"Sküljagger: Revolt of the Westicans"` is listed mistakenly as `"Skulljagger"`.
-- `"Eek! The Cat"` is listed in the cheat code database mistakenly as `"Sky Cat"`.
-- `"Rampart"` is listed mistakenly as `"Ramparts"`.
-- The [cheat codes for `"Street Racer"`](./ui/cheats/170b-codes-street-racer-4.png) are labeled mistakenly as `"No Description"`.
-- Some games are listed with their japanese or european name, but not marked with "`JAP`" or "`EU`" as other games are. This leaves the version unclear:
-  - `"Contra Spirits"` (JAP) = `"Contra III: The Alien Wars"` (US)
-  - `"Dead Dance"` (JAP) = `"Tuff E Nuff"` (US)
-  - `"Super SWIV"` (JAP) = `"Firepower 2000"` (US)
-  - `"Wild Trax"` (JAP) = `"Stunt Race FX"` (US)
-  - `"Desert Fighter"` (EU) = `"A.S.P.: Air Strike Patrol"` (US)
-  - `"Mega lo Mania"` (EU) = `"Tyrants: Fight Through Time"` (US)
-  - `"Rival Turf!"` (INT) = `"Rushing Beat"` (JAP)
-  - `"Rushing Beat Shura"` (JAP) = `"Brawl Brothers"` (US)
-  - `"Super Aleste"` (JAP) = `"Space Megaforce"` (US)
-  - `"Super Pang"` (JAP) = `"Super Buster Bros"` (US)
+- `Mega lo Mania` is listed mistakenly as `Mage Lo Mania`.
+- `Sküljagger: Revolt of the Westicans` is listed mistakenly as `Skulljagger`.
+- `Eek! The Cat` is listed in the cheat code database mistakenly as `Sky Cat`.
+- `Rampart` is listed mistakenly as `Ramparts`.
+- The [cheat codes for `Street Racer`](./ui/cheats/170b-codes-street-racer-4.png) are labeled mistakenly as `No Description`.
+- Some games are listed with their Japanese or European name, but not marked with "`JAP`" or "`EU`" as other games are. This leaves the version unclear:
+  - `Contra Spirits` (JAP) = `Contra III: The Alien Wars` (US)
+  - `Dead Dance` (JAP) = `Tuff E Nuff` (US)
+  - `Super SWIV` (JAP) = `Firepower 2000` (US)
+  - `Wild Trax` (JAP) = `Stunt Race FX` (US)
+  - `Desert Fighter` (EU) = `A.S.P.: Air Strike Patrol` (US)
+  - `Mega lo Mania` (EU) = `Tyrants: Fight Through Time` (US)
+  - `Rival Turf!` (INT) = `Rushing Beat` (JAP)
+  - `Rushing Beat Shura` (JAP) = `Brawl Brothers` (US)
+  - `Super Aleste` (JAP) = `Space Megaforce` (US)
+  - `Super Pang` (JAP) = `Super Buster Bros` (US)
 
 Along with **some misleading simplifications**:
-- `"90 Minutes - European Prime Goal"` is listed as `"Prime Goal"`.
-- `"Harley's Humongous Adventure"` is listed as `"Harleys Humongous Advent"`.
-- `"The Legend of Zelda - A Link to the Past"` is listed as `"Zelda III"`.
+- `90 Minutes - European Prime Goal` is listed as `Prime Goal`.
+- `Harley's Humongous Adventure` is listed as `Harleys Humongous Advent`.
+- `The Legend of Zelda - A Link to the Past` is listed as `Zelda III`.
 
 #### More (Cheat-)Codes!
 
@@ -198,6 +198,54 @@ Below are images of the *Action Replay MK III* module showing its front and back
 
 - **Card Slot on Back**: This slot is essential when using a game from a different region. To enable compatibility with certain expansion chips (such as those used in certain region-specific games), you will need to insert a **donor module** in this slot. The donor module provides the necessary additional chips required for the imported game to run correctly on the SNES console. 
 
+#### PCB
+
+![PCB](./assets/pcb-chips.png)
+
+**Download:** [PCB-Image without descriptions](./assets/pcb-pure.png)
+
+- **74HC4066 - CMOS Logic Quad Bilateral Switch:** The 74HC4066 is a logic IC containing four bidirectional switches. It’s often used in digital circuits to selectively switch and route signals. In this module, it may be used to switch between different signal paths or data sources depending on the switch position or selected functions.
+
+- **HY62256A - CMOS SRAM 32Kx8bit:** This is a static RAM (SRAM) chip with a storage capacity of 32 kilobytes, organized in 32Kx8-bit cells. SRAM chips store data temporarily and are ideal for holding cheat data, settings, or intermediate values for parameters in real-time. Here, it could be used to store cheats or modified values for games, which are then applied directly to the console.
+
+- **LZ95G72 - DATEL TURBO REPLAY:** The LZ95G72 is the heart of the module and is likely a specialized microcontroller or custom IC from DATEL, designed specifically for cheat and region-bypass functions. It processes the entered cheats, manages the interfaces to other chips, and controls the module’s overall functionality.
+
+- **HC74A - Dual D Flip-Flop with Set and Reset:** The HC74A is a Dual D Flip-Flop IC, used in digital circuits to store and stabilize states. The Flip-Flop can be controlled by set and reset signals, and could be used here to store cheat states (e.g., which cheats are active), keeping them consistent even through game inputs.
+
+- **HC32A - Quadruple 2-Input Positive-OR Gates:** This chip contains four 2-input OR gates and is a logic component used to combine signals based on OR logic in digital circuits. It might be used to combine logic signals required for activating cheats or controlling certain module settings.
+
+- **AT27C010-12JC - OTP EPROM 1MB:** The AT27C010 is a one-time programmable memory chip (EPROM) with a storage capacity of 1 Megabit. It is used to store the hard-coded programs and data for the module, such as the firmware, user interface, and potentially pre-installed cheat codes. The EPROM contains the main program that controls the module’s behavior.
+
+##### 3-Way Toggle Switch and Its Functions
+
+The **3-way toggle switch** on the side of the Pro Action Replay MK III module controls the different operating modes of the module and allows switching between the following positions:
+
+1. **Top Position:**
+   - This position activates **parameters**, the **slow-motion function**, and the **trainer**. In this mode, cheats can be applied, and the game can be slowed down using the slow-motion feature.
+   - During gameplay, the trainer can be used to locate memory addresses for specific values (e.g., lives or energy) and adjust them.
+
+2. **Middle Position:**
+   - This position turns off the Action Replay, placing it in pass-through mode. The game runs unmodified without any cheat or modification functions.
+   - This is the default mode when no modifications to the game are desired.
+
+3. **Bottom Position:**
+   - This position enables the **parameter input mode** and displays the Action Replay’s main menu. In this mode, users can enter cheat codes, activate the adapter function for games from other regions, and adjust other settings.
+   - Through the menu, parameters can be selected or entered, which will later be applied in cheat mode.
+
+##### Hypothetical Analysis of Chip Interaction
+
+Based on the known functions of the module and the analyzed hardware, the following explanation is purely **speculative** about how the chips might work together:
+
+- **Signal Flow and Mode Control:** The **74HC4066** is likely controlled by the 3-way switch and acts as a central switch for the various modes. Depending on the switch position, it routes signals and determines which chips are active. For example, in the top position, it might activate cheat signals, in the middle position disable cheats, and in the bottom position enable menu access.
+
+- **Processing and Control by the Main Chip:** The **LZ95G72** acts as the central control unit, coordinating the cheat and region-bypass functions. It reads data from the EPROM and activates or deactivates the SRAM and other chips depending on the selected mode. In combination with the **HC74A** Flip-Flop, it keeps track of active cheats and applies them consistently during gameplay.
+
+- **Memory and Logic Processing:** The **HY62256A (SRAM)** temporarily stores active cheat data and settings that the module applies during gameplay. The **HC32A** OR gate chip combines logic signals to determine if a cheat is active and if the Action Replay should actively modify the game code.
+
+- **Storage and Program Access:** The **AT27C010 EPROM** holds the main program and user interface for the Action Replay. The main chip (LZ95G72) retrieves the firmware from this chip and manages all custom settings and cheat functions. This EPROM also provides the necessary commands for the trainer and slow-motion tools.
+
+However, the exact technical implementation remains unknown.
+
 ---
 
 ## Legals 
@@ -234,4 +282,3 @@ This license **does not apply** to:
 These elements remain the intellectual property of their respective owners and are not covered by the license provided here.
 
 For more details, you can view the full license at [https://creativecommons.org/licenses/by-nc-sa/4.0/](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
