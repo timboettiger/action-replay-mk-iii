@@ -98,10 +98,13 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
 | Programmable Universal Adapter            | EU         | extended      | 2              | 1       | 0      | -      | -         | -       | -       |
 | Action Replay                             | INT        | simple        | 1              | 4       | 0      | -      | -         | -       | -       |
 | Pro Action Replay MK1                     | INT        | extended      | 2              | 20      | 0      | Yes    | -         | -       | -       |
-| Pro Action Replay MK2 (1.0)               | INT        | extended      | 2              | 100     | 0      | Yes    | Yes       | Yes     | -       |
-| Pro Action Replay MK2 (2.P)               | INT        | extended      | 2              | 100     | 0      | Yes    | Yes       | Yes     | -       |
-| Pro Action Replay MK2 (2.T)               | INT        | extended      | 2              | 100     | 0      | Yes    | Yes       | Yes     | -       |
+| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100     | 0      | Yes    | Yes       | Yes     | -       |
 | Pro Action Replay MK3                     | INT        | extended      | 2              | 100     | 5      | Yes    | Yes       | Yes     | -       |
+| Analogue Super NT                         | INT        | extended      | 1              | 0       | 6      | -      | -         | -       | FPGA    |
+| Hyperkin Retron 5                         | INT        | extended      | 1              | `Raw`   | `Raw`  | -      | Yes       | -       | Emu     |
+| Hyperkin SupaBoy                          | INT        | extended      | 1              | 0       |        | -      | Unknown   | -       | Emu     |
+
+> Why is MiSTer not listed in this section? Well, MiSTer is a cool device (specialized in ROMs), but has no cartridge slot.
 
 #### Legend
 
@@ -122,6 +125,7 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
 - **Cheat Codes:**
   - **PAR**: Pro Action Replay cheat codes supported (and how many)
   - **GG**: Game Genie cheat codes supported (and how many)
+  - **Raw**: Raw cheat codes (from gamehacking) supported, no limit known
   
 - **Special Features:**
   - **DB:** Indicates whether a cheat code database is integrated
