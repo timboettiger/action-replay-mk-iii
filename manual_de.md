@@ -1,6 +1,6 @@
 # SNES Action Replay MKIII V1.1 - Handbuch/Anleitung (deutsch)
 
-Überarbeitete Version V2.0
+Überarbeitete Version V2.1
 
 Copyright (C) 2024 by Tim Böttiger
 
@@ -33,7 +33,9 @@ Schaltmöglichkeiten:
 
 ### <a name="allgemein"></a> ALLGEMEINER HINWEIS
 
-Die Menüs des Action Replay's werden mit Hilfe eines Cursors in Pfeilform angewählt. Dieser Cursor kann mit dem Joypad wie auch mit der Super-Nintendo-Maus gesteuert werden. Bitte beachten Sie, daß Sie ein Wechsel des Jaypads bzw. der Maus nur im ausgeschalteren Zustand der Konsole vornehmen dürfen.
+Die Menüs des Action Replay's werden mit Hilfe eines Cursors in Pfeilform angewählt. Dieser Cursor kann mit dem **Joypad** wie auch mit der **Super-Nintendo-Maus** gesteuert werden.
+
+> Bitte beachten Sie, daß Sie ein Wechsel des Jaypads bzw. der Maus nur im ausgeschalteren Zustand der Konsole vornehmen dürfen.
 
 ## <a name="benutzung"></a> BENUTZUNG DES ACTION REPLAY‘S
 

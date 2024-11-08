@@ -8,7 +8,7 @@ The Pro Action Replay MK III is my favorite SNES cheat device, because it's much
 - a region adapter
 - a cheat code finder
 - a cheat code database
-- a mouse driven user interface
+- a mouse or joypad driven user interface
 
 Finding in-depth information (or even basic manuals) for this Super Nintendo device is difficult. Here you find:
 - revised manuals (de/en)
@@ -39,8 +39,8 @@ Happy gaming (or cheating)
 
 The original manual contains several small errors, and a revised version is available for download. Since the module's interface is in German, I have provided a translation. However, only the body text has been translated – the menu names and messages have been kept in the original language for better orientation.
 
-- [Manual (German, revised V2.0)](manual_de.md)
-- [Manual (English, translation V2.0)](manual_en.md)
+- [Manual (German, revised V2.1)](manual_de.md)
+- [Manual (English, translation V2.1)](manual_en.md)
 
 ### Cartridge Labels (Repros)
 

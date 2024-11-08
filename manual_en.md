@@ -1,6 +1,6 @@
 # SNES Action Replay MKIII V1.1 - Manual/Guide (English)
 
-Translation V2.0
+Translation V2.1
 
 Copyright (C) 2024 by Tim Böttiger
 
@@ -33,7 +33,9 @@ Switch options:
 
 ### <a name="allgemein"></a> GENERAL NOTICE
 
-The Action Replay's menus are navigated using a cursor in the shape of an arrow. This cursor can be controlled with both the joypad and the Super Nintendo mouse. Please note that you must only change the joypad or mouse when the console is turned off.
+The Action Replay's menus are navigated using a cursor in the shape of an arrow. This cursor can be controlled with both the **joypad** and the **Super Nintendo mouse**.
+
+> Please note that you must only change the joypad or mouse when the console is turned off.
 
 ## <a name="benutzung"></a> USING THE ACTION REPLAY
 
