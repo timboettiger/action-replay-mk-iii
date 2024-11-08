@@ -4,18 +4,19 @@
 
 ## Welcome
 
-The Pro Action Replay MK III is my favorite SNES cheat device, because it's much more:
+Finding in-depth information (or even basic manuals) for this Super Nintendo cheat device is difficult. Here you find:
+- revised and up-to-date manuals (de/en)
+- print-ready repro labels
+- further informations on the built-in code database
+- project "UI Preservaction" - a screenshot database
+- comparison to other cheat-devices or SNES region adapters
+
+The Pro Action Replay MK III is my favorite SNES cheat device, because it's much more a swiss army knife:
 - a region adapter
-- a cheat code finder
+- a cheat code device
+- a cheat code finder (trainer)
 - a cheat code database
 - a mouse or joypad driven user interface
-
-Finding in-depth information (or even basic manuals) for this Super Nintendo device is difficult. Here you find:
-- revised manuals (de/en)
-- print-ready repro labels
-- screenshots
-- code-db information
-- comparison to other cheat-devices or SNES region adapters
 
 ### Why did you make this?
 
@@ -50,6 +51,12 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 - [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
 - [Module Label (Adobe Illustrator 2024)](./assets/action_replay_mk_iii_label.ai)
 
+### Project 'UI Preservaction'
+
+Since no (or very little) screenshots are available, I think it is important to preserve the Pro Action Replay 3 UI. Therefore I startet this project: collecting and taking screenshots from all ui components and screens.
+
+- [Show Preserved UI](./project-uip-toc.md)
+
 ### Built-In Codes
 
 The Action Replay MK III includes a built-in database of (cheat) codes. A total of `907` codes for `202` games are pre-installed on the module (version `V1.0G`). Alongside classics like A Link to the Past, Castlevania, Final Fight, and Street Fighter, it also features cheats for games that only later achieved cult status and are now considered “hidden gems” or “underrated”: such as Blackthorne, Goof Troop, Lost Vikings, and Mickey's Magical Quest.
@@ -59,17 +66,27 @@ Due to limited storage space, only the most essential codes were included, such 
 See a [list of all includes games](./code-database.md) and cheat codes.
 
 Interestingly, there are **a few oddities**:
-- `"Mega Lo Mania"` (also known as `"Tyrants: Fight Through Time"`) is listed mistakenly as `"Mage Lo Mania"`.
+- `"Mega lo Mania"` is listed mistakenly as `"Mage Lo Mania"`.
 - `"Sküljagger: Revolt of the Westicans"` is listed mistakenly as `"Skulljagger"`.
 - `"Eek! The Cat"` is listed in the cheat code database mistakenly as `"Sky Cat"`.
-- The cheat codes for `"Street Racer"` are labeled mistakenly as `"No Description"`.
-- `"Contra III: The Alien Wars"` is listed as `"Contra Spirits"` - the Japanese title of the game - but it is not marked with "`JAP`" as other games are. This leaves the version unclear.
+- `"Rampart"` is listed mistakenly as `"Ramparts"`.
+- The [cheat codes for `"Street Racer"`](./ui/cheats/170b-codes-street-racer-4.png) are labeled mistakenly as `"No Description"`.
+- Some games are listed with their japanese or european name, but not marked with "`JAP`" or "`EU`" as other games are. This leaves the version unclear:
+  - `"Contra Spirits"` (JAP) = `"Contra III: The Alien Wars"` (US)
+  - `"Dead Dance"` (JAP) = `"Tuff E Nuff"` (US)
+  - `"Super SWIV"` (JAP) = `"Firepower 2000"` (US)
+  - `"Wild Trax"` (JAP) = `"Stunt Race FX"` (US)
+  - `"Desert Fighter"` (EU) = `"A.S.P.: Air Strike Patrol"` (US)
+  - `"Mega lo Mania"` (EU) = `"Tyrants: Fight Through Time"` (US)
+  - `"Rival Turf!"` (INT) = `"Rushing Beat"` (JAP)
+  - `"Rushing Beat Shura"` (JAP) = `"Brawl Brothers"` (US)
+  - `"Super Aleste"` (JAP) = `"Space Megaforce"` (US)
+  - `"Super Pang"` (JAP) = `"Super Buster Bros"` (US)
 
-Along with **some simplifications**:
+Along with **some misleading simplifications**:
 - `"90 Minutes - European Prime Goal"` is listed as `"Prime Goal"`.
 - `"Harley's Humongous Adventure"` is listed as `"Harleys Humongous Advent"`.
 - `"The Legend of Zelda - A Link to the Past"` is listed as `"Zelda III"`.
-- `"Kevin Keegan's Player Manager"` is listed as `"Kevin Keegan"`.
 
 #### More (Cheat-)Codes!
 
@@ -77,7 +94,11 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
 
 ## Further Insights
 
+In addition to the main information about the MK III features, I’ve also compiled other interesting insights about the cheat device that caught my attention during my research.
+
 ### Game Converters and Adapters
+
+Many people search the internet for help finding a well-functioning cartridge adapter to play games from another region on a Super Nintendo. There are certainly a few decent options, but the best one is the Action Replay MK III. Most adapters don’t support complex late-release games, don’t pass through the cartridge’s enhancement chips, and so on.
 
 | **Adapter Name**                          | **Region** | **Slot Type** | **Cart-Slots** | **PAR** | **GG** | **DB** | **Slomo** | **ROM** | **CIC** |
 |-------------------------------------------|------------|---------------|----------------|---------|--------|--------|-----------|---------|---------|
@@ -134,8 +155,6 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
   - **ROM:** Indicates whether ROM cheat codes are supported
   - **CIC:** Indicates whether a CIC chip is integrated
   
-#### Sources
-
 1. [Credits/Source](https://www.reddit.com/r/snes/comments/v83p0f/pro_action_replay_confusion/)
 
 ### Secrets
@@ -157,31 +176,6 @@ Hold `Y` # `A` while booting/restarting the menu to enter a simple test mode. Fr
 #### Unused Routines
 
 At CPU address `00D48B` (right after the text for the credits/info screen) is the string "THIS IS THE START OF THE END", followed by some no-longer-used routines which attempt to poll the values at CPU addresses `00D500` through `00D50F` as part of some unknown functionality.
-
-### Why is the Action Replay MK III the Best Module?
-
-The **Action Replay MK III** stands out as one of the most advanced and user-friendly modules ever made for the Super Nintendo. Here's why:
-
-- **Cheats**: Whether you're a casual gamer looking to get past that impossible level or a hardcore player testing new game mechanics, the MK III allows you to input cheat codes with ease. It comes with a built-in **cheat database** that includes a wide variety of cheats for many popular SNES games, so you can start using cheats right out of the box. Even `Game Genie` Codes are supported.
-
-- **Bypass Region-Lock**: One of the standout features is the ability to bypass regional lockouts, allowing you to play games from other regions (such as NTSC or PAL) without any hassle. This means you can enjoy Japan-exclusive titles, US releases, or European versions without needing separate consoles or adapters.
-
-- **Find new Cheats**: One of the unique features of the *Action Replay MK III* is its **trainer mode**, which allows you to find new cheat codes by scanning the game's memory in real-time. This feature is particularly useful if a code for your specific need isn't available in the pre-built database. With trainer mode, you can:
-  - Freeze or modify game values, such as health, lives, or in-game currency.
-  - Identify changes in memory when certain actions are performed (e.g., losing health or gaining points).
-  - Create your own custom cheat codes by narrowing down memory addresses that correspond to specific in-game variables.
-
-- **Ease of Use**: The module is easy to set up and doesn't require any complex modifications to your console. Simply plug it into your SNES and start using it right away.
-
-### Key Differences Compared to Other Modules
-
-- **Comprehensive Cheat Database**: While many cheat modules require you to manually input codes from the start, the Action Replay MK III includes a pre-installed database of little over 900 cheats for >200 SNES games, saving you time and effort. Plus, you can easily add your own custom codes.
-
-- **Trainer Mode**: Not many cheat modules offer a built-in trainer mode for finding and creating new cheat codes. This advanced feature sets the MK III apart, allowing users to actively search for memory addresses while playing the game and create new cheats.
-
-- **Superior Compatibility**: Its region-free feature sets it apart from competitors like the Game Genie or very early (Pro) Action Replay versions, which often need modifications or separate adapters to play imported games.
-
-- **User-Friendly Interface**: The *Action Replay MK III* has a straightforward and intuitive menu system, making it easy for both beginners and advanced users to navigate the available features without any hassle. Did you know, that you can use the SNES Mouse to operate the MK III menu? The *Action Replay MK III* was primarily available in Europe, which may present challenges for players from other regions who are unfamiliar with its layout and settings.
 
 ### Module Overview: Front and Back Elements
 

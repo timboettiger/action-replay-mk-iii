@@ -1,7 +1,5 @@
 # Action Replay MK III - Built-In Code Database
 
-![AR MK III Manuals Logo](./assets/logo.jpg)
-
 The Action Replay MK III includes a built-in database of (cheat-)codes. A total of `907` codes for `202` games are pre-installed on the module (version `V1.0G`):
 
 |   ID | Game Abbreviation         | Game Name                                        |   Cheat Codes |
@@ -13,7 +11,7 @@ The Action Replay MK III includes a built-in database of (cheat-)codes. A total 
 |    5 | ADAMS FAMILY II           | The Addams Family II                             |             9 |
 |    6 | ADVENTURE ISLAND          | Adventure Island                                 |             1 |
 |    7 | AERO THE ACROBAT          | Aero the Acro-Bat                                |             7 |
-|    8 | ALLADIN                   | Aladdin                                          |            15 |
+|    8 | ALADDIN                   | Aladdin                                          |            15 |
 |    9 | CHEAT ALIEN III           | Alien III                                        |            10 |
 |   10 | ART OF FIGHTING           | Art of Fighting                                  |             7 |
 |   11 | ASTERIX                   | Asterix & Obelix                                 |             3 |
@@ -52,7 +50,7 @@ The Action Replay MK III includes a built-in database of (cheat-)codes. A total 
 |   44 | DESERT FIGHTER            | Desert Fighter                                   |             3 |
 |   45 | DESERT STRIKE             | Desert Strike                                    |             9 |
 |   46 | DIMENSION FORCE           | Dimension Force                                  |             2 |
-|   47 | DINOSAURS                 | Dinosaurs for Hire                               |             5 |
+|   47 | DINOSAURS                 | Hungry Dinosaurs                                 |             5 |
 |   48 | DONKEY KONG COUNTRY UK    | Donkey Kong Country (`UK`)                       |            15 |
 |   49 | DRACULA                   | Bram Stoker's Dracula                            |             1 |
 |   50 | DRAGON BALL Z             | Dragon Ball Z                                    |             4 |
@@ -127,7 +125,7 @@ The Action Replay MK III includes a built-in database of (cheat-)codes. A total 
 |  119 | MISTER NUTZ               | Mr. Nutz                                         |             6 |
 |  120 | MOLE PATROL               | Mole Patrol                                      |             1 |
 |  121 | MYSTICAL NINJA            | Mystical Ninja                                   |             9 |
-|  122 | MYSTICAL NINJA II JAP     | Mystical Ninja II (`JAP`)                        |             4 |
+|  122 | MYSTICAL NINJA II JAP     | Ganbare Goemon 2: Kiteretsu Shōgun Magginesu     |             4 |
 |  123 | NIGEL MANSELL             | Nigel Mansell's World Championship               |             3 |
 |  124 | NIGEL MANSELL NEW VER     | Nigel Mansell's World Championship (New Version) |             1 |
 |  125 | NIGEL                     | Nigel Mansell's Cheats                           |             2 |
@@ -138,8 +136,8 @@ The Action Replay MK III includes a built-in database of (cheat-)codes. A total 
 |  130 | PILOTWINGS                | Pilotwings                                       |             2 |
 |  131 | PINBALL DREAMS            | Pinball Dreams                                   |             1 |
 |  132 | PINK PANTHER              | The Pink Panther                                 |             2 |
-|  133 | PITFALL                   | Pitfall                                          |             5 |
-|  134 | PITFALL 82 VERSION        | Pitfall 82 Version                               |             1 |
+|  133 | PITFALL                   | Pitfall: The Mayan Adventure                     |             5 |
+|  134 | PITFALL 82 VERSION        | Pitfall!                                         |             1 |
 |  135 | PIT FIGHTER               | Pit-Fighter                                      |             1 |
 |  136 | PLOK                      | Plok                                             |             5 |
 |  137 | POCKY AND ROCKY           | Pocky & Rocky                                    |             4 |
@@ -203,7 +201,7 @@ The Action Replay MK III includes a built-in database of (cheat-)codes. A total 
 |  195 | UNIVERSAL SOLDIER         | Universal Soldier                                |             1 |
 |  196 | VORTEX                    | Vortex                                           |             2 |
 |  197 | WAYNES WORLD              | Wayne's World                                    |             1 |
-|  198 | WILDTRAX                  | Wild Trax                                        |             1 |
+|  198 | WILDTRAX                  | Stunt Race FX                                    |             1 |
 |  199 | WIZARD OF OZ              | The Wizard of Oz                                 |             3 |
 |  200 | WORLDCUP STRIKER          | World Cup Striker                                |             3 |
 |  201 | WRESTLEMANIA              | WWF WrestleMania                                 |             1 |
