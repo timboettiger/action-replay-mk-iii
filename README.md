@@ -52,7 +52,7 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 
 ### Built-In Codes
 
-The Action Replay MK III includes a built-in database of (cheat) codes. A total of `907` codes for `202` games are pre-installed on the module. Alongside classics like A Link to the Past, Castlevania, Final Fight, and Street Fighter, it also features cheats for games that only later achieved cult status and are now considered “hidden gems” or “underrated”: such as Blackthorne, Goof Troop, Lost Vikings, and Mickey's Magical Quest.
+The Action Replay MK III includes a built-in database of (cheat) codes. A total of `907` codes for `202` games are pre-installed on the module (version `V1.0G`). Alongside classics like A Link to the Past, Castlevania, Final Fight, and Street Fighter, it also features cheats for games that only later achieved cult status and are now considered “hidden gems” or “underrated”: such as Blackthorne, Goof Troop, Lost Vikings, and Mickey's Magical Quest.
 
 Due to limited storage space, only the most essential codes were included, such as infinite lives, energy, or time. Additionally, there are codes that support region unlocking, effectively patching the software in real-time.
 
