@@ -1,14 +1,15 @@
-# Pro Action Replay MK III - Manuals
+# Home of Pro Action Replay MK III for SNES:
+## The Ultimate Documentation Hub
 
-![AR MK III Manuals Logo](./assets/logo.jpg)
+---
 
-## Welcome
+### Discover the Full Power of the Action Replay MK III
 
 Finding in-depth information (or even basic manuals) for this Super Nintendo cheat device is difficult. Here you find:
 - revised and up-to-date manuals (de/en)
 - print-ready repro labels
 - further informations on the built-in code database
-- project "UI Preservaction" - a screenshot database
+- project "UI Preservaction" - an ui documentation
 - comparison to other cheat-devices or SNES region adapters
 
 The Pro Action Replay MK III is my favorite SNES cheat device, because it's much more a swiss army knife:
@@ -40,6 +41,8 @@ Happy gaming (or cheating)
 
 The original manual contains several small errors, and a revised version is available for download. Since the module's interface is in German, I have provided a translation. However, only the body text has been translated – the menu names and messages have been kept in the original language for better orientation.
 
+![AR MK III Manuals Logo](./assets/logo.jpg)
+
 - [Manual (German, revised V2.1)](manual_de.md)
 - [Manual (English, translation V2.1)](manual_en.md)
 
@@ -53,9 +56,9 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 
 ### Project 'UI Preservaction'
 
-Since no (or very little) screenshots are available, I think it is important to preserve the Pro Action Replay 3 UI. Therefore I startet this project: collecting and taking screenshots from all ui components and screens.
+Since no (or very little) information, screenshots and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I startet this project: to document all functions of the Action Replay MK III - from the interface and operation to features hidden behind the input screen.
 
-- [Show Preserved UI](./project-uip-toc.md)
+- [Go to Projekt UI Preservaction](./project-uip-toc.md)
 
 ### Built-In Codes
 
