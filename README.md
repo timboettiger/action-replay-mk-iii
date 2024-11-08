@@ -91,7 +91,7 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
 | Universal Adapter Expert Version          | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       |
 | Super Game Key                            | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
 | Super Key (Universal Adapter)             | INT        | extended      | 1              | 0       | 0      | -      | -         | -       | Yes     |
-| Super Magic Key                           | PAL        | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
+| Super Magic Key                           | EU         | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
 | Honey Bee                                 | EU/NA      | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
 | Honey Bee (Super-Magic Game Converter)    | NA         | extended      | 2              | 0       | 0      | -      | -         | -       | -       |
 | Honey Bee (Super-Magic Game Converter)    | EU         | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
@@ -109,10 +109,11 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
 #### Legend
 
 - **Region:** 
-  - **INT**: International
+  - **INT**: International (incl. JP)
+  - **EU/NA**: North America (without JP)
   - **EU**: Europe
   - **NA**: North America
-  - **PAL**: PAL Region
+  - **JP**: Japan
 
 - **Slot Type:** 
   - **simple**: Simple contacts (no enhancement chips supported)
@@ -120,7 +121,7 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
 
 - **Cart Slots:** 
   - **1**: Single Slot
-  - **2**: Dual Slot
+  - **2**: Dual Slot (one for local CIC 'donation' cartridge)
 
 - **Cheat Codes:**
   - **PAR**: Pro Action Replay cheat codes supported (and how many)
