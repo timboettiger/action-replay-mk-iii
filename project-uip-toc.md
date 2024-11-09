@@ -15,6 +15,8 @@ So far, over 300 screenshots have been documented, more than 200 games added to 
 
 ## Table Of Contents
 
+### UI
+
 1. [boot- and system screens](project-uip-system.md)
 2. [main menu screens](project-uip-mainmenu.md)
 5. [code screens](project-uip-codes.md)
@@ -22,3 +24,8 @@ So far, over 300 screenshots have been documented, more than 200 games added to 
    - [cheat screens](project-uip-cheats.md)
 3. [trainer screens (incomplete)](project-uip-trainer.md)
 4. [option screens](project-uip-options.md)
+
+### Cheats
+
+1. [`DEADC0DES`](project-uip-deadc0de.md)
+

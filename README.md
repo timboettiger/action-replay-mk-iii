@@ -9,7 +9,7 @@ Finding in-depth information (or even basic manuals) for this Super Nintendo che
 - revised and up-to-date manuals (de/en)
 - print-ready repro labels
 - further information on the built-in code database
-- project "UI Preservation" - a UI documentation
+- project "UI Preservaction" - a UI documentation
 - comparison to other cheat-devices or SNES region adapters
 
 The Pro Action Replay MK III is my favorite SNES cheat device because it's much more like a Swiss Army knife:
@@ -54,11 +54,17 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 - [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
 - [Module Label (Adobe Illustrator 2024)](./assets/action_replay_mk_iii_label.ai)
 
-### Project 'UI Preservation'
+### Project 'UI Preservaction'
 
 Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden behind the input screen.
 
-- [Go to Project UI Preservation](./project-uip-toc.md)
+- [Go to Project UI Preservaction](./project-uip-toc.md)
+
+#### All about DEADC0DE
+
+Different from the regular cheatcodes you find `DEADC0DES` for the Action Replay beginning from MK II. They look very unusual, but a quick google research shows: Nothing.
+
+This is interesting! A challenge! Why hasn’t anyone delved into this yet? Oh, the nerd in me must have awakened. If you’re interested in what deadcodes are (they’re awesome, I can already tell you), check out the corresponding archive in [Project Preservaction with all the details](project-uip-deadc0de.md).
 
 ### Built-In Codes
 
@@ -130,6 +136,11 @@ Many people search the internet for help finding a well-functioning cartridge ad
 
 > Why is MiSTer not listed in this section? Well, MiSTer is a cool device (specialized in ROMs), but has no cartridge slot.
 
+> Credits/Source:
+    (1) [Reddit](https://www.reddit.com/r/snes/comments/v83p0f/pro_action_replay_confusion/)
+    (2) [SNES Central](https://snescentral.com/article.php?id=0798)
+    (3) [GameFAQs](https://gamefaqs.gamespot.com/snes/916396-super-nintendo/faqs/11640)
+
 #### Legend
 
 - **Region:** 
@@ -158,11 +169,7 @@ Many people search the internet for help finding a well-functioning cartridge ad
   - **ROM:** Indicates whether ROM cheat codes are supported
   - **CIC:** Indicates whether a CIC chip is integrated
   
-1. [Credits/Source](https://www.reddit.com/r/snes/comments/v83p0f/pro_action_replay_confusion/)
-
 ### Secrets
-
-> [Credits/Source](https://tcrf.net/Pro_Action_Replay_MK3_(SNES))
 
 #### Credits/Informations
 
@@ -170,11 +177,15 @@ Hold `A` as the Action Replay logo fades out to display a credits/information sc
 
 ![Credits](./ui/boot/3-boot-credits.png)
 
+> Note: [Credits/Source](https://tcrf.net/Pro_Action_Replay_MK3_(SNES))
+
 #### Test Mode
 
 Hold `Y` # `A` while booting/restarting the menu to enter a simple test mode. From here, pressing `B` will light up the two cartridge `LEDs` and then start the attached game with the code `7E001902` active.
 
 ![Credits](./ui/boot/4-boot-test.png)
+
+> Note: [Credits/Source](https://tcrf.net/Pro_Action_Replay_MK3_(SNES))
 
 #### Unused Routines
 
