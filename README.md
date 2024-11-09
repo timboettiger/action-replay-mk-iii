@@ -56,15 +56,13 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 
 ### Project 'UI Preservaction'
 
-Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden behind the input screen.
+Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden behind the input screen. Why not go to [Project Preservaction](project-uip-toc.md)?
 
-- [Go to Project UI Preservaction](./project-uip-toc.md)
-
-#### All about DEADC0DE
+### All about DEADC0DE
 
 Different from the regular cheatcodes you find `DEADC0DES` for the Action Replay beginning from MK II. They look very unusual, but a quick google research shows: Nothing.
 
-This is interesting! A challenge! Why hasn’t anyone delved into this yet? Oh, the nerd in me must have awakened. If you’re interested in what deadcodes are (they’re awesome, I can already tell you), check out the corresponding archive in [Project Preservaction with all the details](project-uip-deadc0de.md).
+This is interesting! A challenge! Why hasn’t anyone delved into this yet? Oh, the nerd in me must have awakened. If you’re interested in what deadcodes are (they’re awesome, I can already tell you), check out the corresponding archive [with all the details](project-uip-deadc0de.md).
 
 ### Built-In Codes
 
@@ -72,7 +70,7 @@ The Action Replay MK III includes a built-in database of (cheat) codes. A total 
 
 Due to limited storage space, only the most essential codes were included, such as infinite lives, energy, or time. Additionally, there are codes that support region unlocking, effectively patching the software in real-time.
 
-See a [list of all included games](./code-database.md) and cheat codes.
+See a [list of all included games](code-database.md) and cheat codes.
 
 Interestingly, there are **a few oddities**:
 - `Mega lo Mania` is listed mistakenly as `Mage Lo Mania`.
