@@ -120,9 +120,9 @@ Many people search the internet for help finding a well-functioning cartridge ad
 | Honey Bee (Super-Magic Game Converter)    | EU         | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
 | Programmable Universal Adapter            | EU         | extended      | 2              | 1       | 0      | -      | -         | -       | -       | -              |
 | Action Replay                             | INT        | simple        | 1              | 4       | 0      | -      | -         | -       | -       | -              |
-| Pro Action Replay MK1                     | INT        | extended      | 2              | 20      | 0      | Yes    | -         | -       | -       | Maybe          |
-| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100     | 0      | Yes    | Yes       | Yes     | -       | Yes            |
-| Pro Action Replay MK3                     | INT        | extended      | 2              | 100     | 5      | Yes    | Yes       | Yes     | -       | Yes            |
+| Pro Action Replay MK1                     | INT        | extended      | 2              | 5       | 0      | Yes    | -         | -       | -       | Maybe          |
+| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100/255? | 0      | Yes    | Yes       | Yes     | -       | Yes            |
+| Pro Action Replay MK3                     | INT        | extended      | 2              | 255      | 5      | Yes    | Yes       | Yes     | -       | Yes            |
 | Analogue Super NT                         | INT        | extended      | 1              | 0       | 6      | -      | -         | -       | FPGA    | -              |
 | Hyperkin Retron 5                         | INT        | extended      | 1              | `Raw`   | `Raw`  | -      | Yes       | -       | Emu     | -              |
 | Hyperkin SupaBoy                          | INT        | extended      | 1              | 0       |        | -      | Unknown   | -       | Emu     | -              |
