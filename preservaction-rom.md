@@ -4,11 +4,9 @@
 
 ## ROM
 
-In this project, I aim to analyze the file format of the Action Replay ROM (or the so called 'BIOS'). My goal is to uncover and understand the underlying structure, focusing specifically on locating the built-in game list and the associated cheat codes stored within the file.
+The goal of this section is to uncover and understand the data structure of the ROM, focusing specifically on locating the built-in game list and the associated cheat codes stored within the file.
 
-Somewhere in this ROM, there must be a catalog of games and corresponding cheats, as well as the functions that manage them. By exploring the ROM's contents, I intend to reveal the hidden functionalities that have been embedded within this device.
-
-In addition, I suspect that there may be some undocumented functions that were either concealed or left unused in the standard operation of the Action Replay. For instance, I theorize that there may be functionality to output and display the current memory state of the action replay (or game). Such hidden features could provide unique insights into the device’s capabilities and may even open up new possibilities for modifying or controlling gameplay in ways previously undisclosed.
+In addition, I want to know more about the interaction between ROM (SNES runtime) and the Datel IC (cheat runtime)
 
 ### Versions
 
