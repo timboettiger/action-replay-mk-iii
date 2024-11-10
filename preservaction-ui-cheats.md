@@ -1,10 +1,10 @@
 # Project Preservaction
 
-[Table Of Contents](project-uip-toc.md)
+[Table Of Contents](preservaction-ui-toc.md)
 
-[Game List](project-uip-games.md)
+[Game List](preservaction-ui-games.md)
 
-[Code Editor](project-uip-codes.md)
+[Code Editor](preservaction-ui-codes.md)
 
 ## Cheat Screenshots
 

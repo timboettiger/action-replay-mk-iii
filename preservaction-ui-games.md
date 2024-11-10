@@ -1,12 +1,12 @@
 # Project Preservaction
 
-[Table Of Contents](project-uip-toc.md)
+[Table Of Contents](preservaction-ui-toc.md)
 
 ## Game List Screenshots
 
 ### Return To Code Menu
 
-[Detail Screens](project-uip-codes.md)
+[Detail Screens](preservaction-ui-codes.md)
 
 ![Games Return](./ui/games/5-games-return.png)
 

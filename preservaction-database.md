@@ -1,4 +1,8 @@
-# Action Replay MK III - Built-In Code Database
+# Project Preservaction
+
+[Table Of Contents](preservaction-ui-toc.md)
+
+## Built-In Code Database
 
 The Action Replay MK III includes a built-in database of (cheat-)codes. A total of `907` codes for `202` games are pre-installed on the module (version `V1.0G`):
 

@@ -1,6 +1,6 @@
 # Project Preservaction
 
-[Table Of Contents](project-uip-toc.md)
+[Table Of Contents](preservaction-ui-toc.md)
 
 ## Main Menu Screenshots
 
@@ -10,7 +10,7 @@
 
 ### Codes
 
-[Detail Screens](project-uip-codes.md)
+[Detail Screens](preservaction-ui-codes.md)
 
 ![Codes](./ui/mainmenu/2-codes.png)
 
@@ -44,13 +44,13 @@
 
 ### Trainer
 
-[Detail Screens](project-uip-trainer.md)
+[Detail Screens](preservaction-ui-trainer.md)
 
 ![Possibilities](./ui/mainmenu/5-possibilities.png)
 
 ### Options
 
-[Detail Screens](project-uip-options.md)
+[Detail Screens](preservaction-ui-options.md)
 
 ![Options](./ui/mainmenu/6-options.png)
 

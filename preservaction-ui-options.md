@@ -1,12 +1,12 @@
 # Project Preservaction
 
-[Table Of Contents](project-uip-toc.md)
+[Table Of Contents](preservaction-ui-toc.md)
 
 ## Option Screenshots
 
 ### Return To Main Menu
 
-[Detail Screens](project-uip-mainmenu.md)
+[Detail Screens](preservaction-ui-mainmenu.md)
 
 ![Options Return](./ui/options/0-options-return.png)
 

@@ -12,24 +12,18 @@ Finding in-depth information (or even basic manuals) for this Super Nintendo che
 - project "Preservaction" - documentation of PAR MK III
 - comparison to other cheat-devices or SNES region adapters
 
-The Pro Action Replay MK III is my favorite SNES cheat device because it's much more like a Swiss Army knife:
+### Why did you make this?
+
+I've been collecting SNES equipment for over 20 years and spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MKIII - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
+
+**Indeed!** The Pro Action Replay MK III is my favorite SNES cheat device because it's much more like a Swiss Army knife:
 - a region adapter
 - a cheat code device
 - a cheat code finder (trainer)
 - a cheat code database
 - a mouse or joypad-driven user interface
 
-### Why did you make this?
-
-I've been collecting SNES equipment for over 20 years and spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MKIII - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
-
-**Indeed!** The MK III isn't just a cheat device but also an excellent region adapter. Apparently, it's the only one that can play SMRPG (Super Mario RPG) on European consoles! I was also amazed to find out that it can convert Game Genie codes! But there was more: it was supposed to have a built-in code database. Could that really be?
-
-Yes, it could. I hadn't read the manual, which, to be honest, was (and still is) quite a pain! *Printed way too small, unillustrated, full of typos, and barely formatted.*
-
-Long story short: the MK III is my absolute favorite cheat module - it's basically the Swiss Army knife of SNES modules! And very few people know it. To make this amazing hardware appreciated again, I digitized and translated the manual, documented all the built-in codes, screenshotted each menu, and gathered more information.
-
-Do you think you don't need a cheat-code device because your Super NT, MiSTer, or cheap emulator has a cheat-code menu? That's a shame because the **MK III is still a lot of fun, even on modern hardware!** Hopefully, anyone else who likes this module and lacks the manual will find what they need here. And maybe I've inspired someone else to appreciate this fantastic piece of hardware...
+To make this amazing hardware appreciated again, I digitized and translated the manual, documented all the built-in codes, screenshotted each menu, and gathered more information.
 
 Happy gaming (or cheating)
 
@@ -56,13 +50,13 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 
 ### Project 'Preservaction'
 
-Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden within the ROM. Why not go to [Project Preservaction](project-uip-toc.md)?
+Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden within the ROM. Why not go to [Project Preservaction](preservaction-toc.md)?
 
 ### All about DEADC0DE
 
 Different from the regular cheatcodes you find `DEADC0DES` for the Action Replay beginning from MK II. They look very unusual, but a quick google research shows: Nothing.
 
-This is interesting! A challenge! Why hasn’t anyone delved into this yet? Oh, the nerd in me must have awakened. If you’re interested in what deadcodes are (they’re awesome, I can already tell you), check out the corresponding archive [with all the details](project-uip-deadc0de.md).
+This is interesting! A challenge! Why hasn’t anyone delved into this yet? Oh, the nerd in me must have awakened. If you’re interested in what deadcodes are (they’re awesome, I can already tell you), check out the corresponding archive [with all the details](preservaction-deadc0de.md).
 
 ### Built-In Codes
 
@@ -70,7 +64,7 @@ The Action Replay MK III includes a built-in database of (cheat) codes. A total 
 
 Due to limited storage space, only the most essential codes were included, such as infinite lives, energy, or time. Additionally, there are codes that support region unlocking, effectively patching the software in real-time.
 
-See a [list of all included games](code-database.md) and cheat codes.
+See a [list of all included games](preservaction-database.md) and the amount of integrated cheat codes.
 
 Interestingly, there are **a few oddities**:
 - `Mega lo Mania` is listed mistakenly as `Mage Lo Mania`.
@@ -107,30 +101,30 @@ In addition to the main information about the MK III features, I’ve also compi
 
 Many people search the internet for help finding a well-functioning cartridge adapter to play games from another region on a Super Nintendo. There are certainly a few decent options, but the best one is the Action Replay MK III. Most adapters don’t support complex late-release games, don’t pass through the cartridge’s enhancement chips, and so on.
 
-| **Adapter Name**                          | **Region** | **Slot Type** | **Cart-Slots** | **PAR** | **GG** | **DB** | **Slomo** | **ROM** | **CIC** |
-|-------------------------------------------|------------|---------------|----------------|---------|--------|--------|-----------|---------|---------|
-| Game Converter / Fire (MD-303)            | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
-| Game Converter / Fire FX (MD-909)         | EU         | extended      | 2              | 0       | 0      | -      | -         | -       | -       |
-| AD-29 Universal Adapter                   | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       |
-| AD-29 Universal Adapter (Upgrade Version) | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       |
-| Multi Converter (DIS-SFC01)               | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
-| Pro Universal Adapter                     | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       |
-| Universal Adapter                         | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
-| Universal Adapter Expert Version          | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       |
-| Super Game Key                            | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
-| Super Key (Universal Adapter)             | INT        | extended      | 1              | 0       | 0      | -      | -         | -       | Yes     |
-| Super Magic Key                           | EU         | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
-| Honey Bee                                 | EU/NA      | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
-| Honey Bee (Super-Magic Game Converter)    | NA         | extended      | 2              | 0       | 0      | -      | -         | -       | -       |
-| Honey Bee (Super-Magic Game Converter)    | EU         | simple        | 2              | 0       | 0      | -      | -         | -       | -       |
-| Programmable Universal Adapter            | EU         | extended      | 2              | 1       | 0      | -      | -         | -       | -       |
-| Action Replay                             | INT        | simple        | 1              | 4       | 0      | -      | -         | -       | -       |
-| Pro Action Replay MK1                     | INT        | extended      | 2              | 20      | 0      | Yes    | -         | -       | -       |
-| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100     | 0      | Yes    | Yes       | Yes     | -       |
-| Pro Action Replay MK3                     | INT        | extended      | 2              | 100     | 5      | Yes    | Yes       | Yes     | -       |
-| Analogue Super NT                         | INT        | extended      | 1              | 0       | 6      | -      | -         | -       | FPGA    |
-| Hyperkin Retron 5                         | INT        | extended      | 1              | `Raw`   | `Raw`  | -      | Yes       | -       | Emu     |
-| Hyperkin SupaBoy                          | INT        | extended      | 1              | 0       |        | -      | Unknown   | -       | Emu     |
+| **Adapter Name**                          | **Region** | **Slot Type** | **Cart-Slots** | **PAR** | **GG** | **DB** | **Slomo** | **ROM** | **CIC** | **Dead Codes** |
+|-------------------------------------------|------------|---------------|----------------|---------|--------|--------|-----------|---------|---------|----------------|
+| Game Converter / Fire (MD-303)            | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Game Converter / Fire FX (MD-909)         | EU         | extended      | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| AD-29 Universal Adapter                   | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| AD-29 Universal Adapter (Upgrade Version) | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Multi Converter (DIS-SFC01)               | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Pro Universal Adapter                     | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Universal Adapter                         | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Universal Adapter Expert Version          | INT        | extended      | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Super Game Key                            | INT        | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Super Key (Universal Adapter)             | INT        | extended      | 1              | 0       | 0      | -      | -         | -       | Yes     | -              |
+| Super Magic Key                           | EU         | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Honey Bee                                 | EU/NA      | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Honey Bee (Super-Magic Game Converter)    | NA         | extended      | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Honey Bee (Super-Magic Game Converter)    | EU         | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
+| Programmable Universal Adapter            | EU         | extended      | 2              | 1       | 0      | -      | -         | -       | -       | -              |
+| Action Replay                             | INT        | simple        | 1              | 4       | 0      | -      | -         | -       | -       | -              |
+| Pro Action Replay MK1                     | INT        | extended      | 2              | 20      | 0      | Yes    | -         | -       | -       | Maybe          |
+| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100     | 0      | Yes    | Yes       | Yes     | -       | Yes            |
+| Pro Action Replay MK3                     | INT        | extended      | 2              | 100     | 5      | Yes    | Yes       | Yes     | -       | Yes            |
+| Analogue Super NT                         | INT        | extended      | 1              | 0       | 6      | -      | -         | -       | FPGA    | -              |
+| Hyperkin Retron 5                         | INT        | extended      | 1              | `Raw`   | `Raw`  | -      | Yes       | -       | Emu     | -              |
+| Hyperkin SupaBoy                          | INT        | extended      | 1              | 0       |        | -      | Unknown   | -       | Emu     | -              |
 
 > Why is MiSTer not listed in this section? Well, MiSTer is a cool device (specialized in ROMs), but has no cartridge slot.
 
@@ -166,6 +160,7 @@ Many people search the internet for help finding a well-functioning cartridge ad
   - **Slomo:** Indicates whether slow motion is integrated
   - **ROM:** Indicates whether ROM cheat codes are supported
   - **CIC:** Indicates whether a CIC chip is integrated
+  - **Dead Codes:** Indicates whether [dead codes](preservaction-deadc0de.md) are supported
   
 ### Secrets
 

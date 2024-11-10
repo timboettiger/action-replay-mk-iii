@@ -1,6 +1,6 @@
 # Project Preservaction
 
-[Table Of Contents](project-uip-toc.md)
+[Table Of Contents](preservaction-ui-toc.md)
 
 ## Regular Action Replay Cheats
 
@@ -69,7 +69,7 @@ For example: The game accesses memory at `0x7E0C28`. If the code `7E0C28:63` is 
 
 `DEADC0DE` cheats for the Action Replay are a unique and powerful class of cheats that are neither well-documented nor widely known. Until now. These cheats stand apart from standard Action Replay codes due to their potential to significantly alter gameplay in complex ways beyond simple memory modifications.
 
-Due to the depth, potential, and complexity of this cheats, they merit their own[`DEADC0DE` chapter](project-uip-deadc0de.md). This dedicated section will also cover the story behind the reverse engineering of deadcode cheats.
+Due to the depth, potential, and complexity of this cheats, they merit their own[`DEADC0DE` chapter](preservaction-ui-deadc0de.md). This dedicated section will also cover the story behind the reverse engineering of deadcode cheats.
 
 ## Game Genie
 

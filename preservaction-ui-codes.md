@@ -1,12 +1,12 @@
 # Project Preservaction
 
-[Table Of Contents](project-uip-toc.md)
+[Table Of Contents](preservaction-ui-toc.md)
 
 ## Code Editor Screenshots
 
 ### Return To Main Menu
 
-[Detail Screens](project-uip-mainmenu.md)
+[Detail Screens](preservaction-ui-mainmenu.md)
 
 ![Code Return](./ui/codes/10-code-return.png)
 
@@ -95,6 +95,6 @@
 
 #### Open Code Database
 
-[Detail Screens](project-uip-cheats.md)
+[Detail Screens](preservaction-ui-cheats.md)
 
 ![Code DB](./ui/codes/9-code-db.png)
