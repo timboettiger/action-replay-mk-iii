@@ -9,23 +9,24 @@ Finding in-depth information (or even basic manuals) for this Super Nintendo che
 - revised and up-to-date manuals (de/en)
 - print-ready repro labels
 - further information on the built-in code database
-- project "Preservaction" - documentation of PAR MK III
+- project "Preservaction" - a deep documentation of PAR MK III
 - comparison to other cheat-devices or SNES region adapters
 
 ### Why did you make this?
 
-I've been collecting SNES equipment for over 20 years and spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MKIII - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
+I've been collecting SNES equipment for over 30 years, but the trigger to start this project was something else. In zhe last year I've spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MKIII - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
 
 **Indeed!** The Pro Action Replay MK III is my favorite SNES cheat device because it's much more like a Swiss Army knife:
 - a region adapter
 - a cheat code device
 - a cheat code finder (trainer)
+- a real-time code injector
 - a cheat code database
 - a mouse or joypad-driven user interface
 
 To make this amazing hardware appreciated again, I digitized and translated the manual, documented all the built-in codes, screenshotted each menu, and gathered more information.
 
-Happy gaming (or cheating)
+Happy gaming
 
 *Tim*
 
@@ -50,7 +51,7 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 
 ### Project 'Preservaction'
 
-Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden within the ROM. Why not go to [Project Preservaction](preservaction-toc.md)?
+Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden within the ROM. Take a look at [Project Preservaction](preservaction-toc.md)?
 
 ### All about DEADC0DE
 
