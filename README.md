@@ -20,7 +20,7 @@ I've been collecting SNES equipment for over 30 years, but the trigger to start 
 - a region adapter
 - a cheat code device
 - a cheat code finder (trainer)
-- a real-time code injector
+- a real-time opcode injector
 - a cheat code database
 - a mouse or joypad-driven user interface
 
