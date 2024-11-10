@@ -46,6 +46,8 @@ At first sight, their ROM date is identical (19/7/95), but there are differences
 
 **Games List and Codes**
 
+The serialized game database is a sequence of games. Per game you see the following structure:
+
 ```
 Offset 0x10000:
 19 00 41 43 52 4F 42 41 54 20 4D 49 53 53 49 4F 4E 00 01 7E 04 12 04 00 0A 6E
@@ -64,7 +66,13 @@ Suffix:
 |           6E  |  ?                         |  110                       |
 ```
 
+As you can see, cheat codes are serialized within the game listing. After the suffix from the game the next game starts right away in the same style.
+
+The information you have is the name of the game and the cheat codes itself. To retrieve the cheatcode description you have to resolve the description mask.
+
 **Resolve Relative Description Mask Offset**
+
+You can think of the description mask as a template with placeholders: ASCII characters remain while Non-ASCII characters will be replaced by other texts.
 
 ```
 Offset 0x1246A:
