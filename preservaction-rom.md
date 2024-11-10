@@ -14,16 +14,20 @@ In addition, I suspect that there may be some undocumented functions that were e
 
 The following ROM Versions are known:
 
-- `V1.0G` 1995
-- `V1.0U` 1995
+| Version | Date    | Langugage |
+|---------|---------|-----------|
+| `V1.0G` | 19/7/95 | German    |
+| `V1.0U` | 19/7/95 | English   |
 
-At first sight, their ROM date is identical (19/7/95), but there are differences concerning the games list as well as supported cheat codes (`U` seems to be the later release and supports more of it).
+What about the suffix? In my opinion 'G' stands for 'Germany', where 'U' stands for 'United Kingdom'.
+
+At first sight, they seem identical, but there are differences concerning the games list as well as supported cheat codes (the `UK`-version supports more of it).
 
 ### Structure
 
 **File**
 - Name: `Pro Action Replay MK3 BIOS (Europe) (Unl).sfc`
-- Size: 131,072 Bytes
+- Size: `131,072 Bytes`
 
 ```
 |  Offset   |  Length  |  Description             |  Content                        |
