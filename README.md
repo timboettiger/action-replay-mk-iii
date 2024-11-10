@@ -9,7 +9,7 @@ Finding in-depth information (or even basic manuals) for this Super Nintendo che
 - revised and up-to-date manuals (de/en)
 - print-ready repro labels
 - further information on the built-in code database
-- project "UI Preservaction" - a UI documentation
+- project "Preservaction" - documentation of PAR MK III
 - comparison to other cheat-devices or SNES region adapters
 
 The Pro Action Replay MK III is my favorite SNES cheat device because it's much more like a Swiss Army knife:
@@ -54,9 +54,9 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 - [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
 - [Module Label (Adobe Illustrator 2024)](./assets/action_replay_mk_iii_label.ai)
 
-### Project 'UI Preservaction'
+### Project 'Preservaction'
 
-Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden behind the input screen. Why not go to [Project Preservaction](project-uip-toc.md)?
+Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden within the ROM. Why not go to [Project Preservaction](project-uip-toc.md)?
 
 ### All about DEADC0DE
 
