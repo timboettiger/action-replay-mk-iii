@@ -45,7 +45,7 @@ For a small logic, that could suffice, and it would definitely be feasible. So I
 
 ### What if?
 
-What if they aren't memory areas, registers, or interrupts at all? What if Action Replay DEADC0DE is a binary code sequence encoded in hex? Yeah, bingo! Suddenly, everything made sense:
+Let's take a look at the initial mentoned description by Datel itself: "It enables you to rewrite whole sections of the game". In other words it have to be scripting of some kind. What if Action Replay DEADC0DE is a binary code sequence encoded in hex? Now everything make sense:
 
 1. Structure of the Data:
    - The data is formatted in a way typical of machine or assembly code. They consist of hexadecimal numbers that could represent sequential instructions and operands.
@@ -53,7 +53,7 @@ What if they aren't memory areas, registers, or interrupts at all? What if Actio
 
 2. Known SNES Opcode Patterns:
    - The SNES uses the `65C816` CPU, which is an extension of the 65C02 processor and supports 16-bit operations.
-   - Some of the hex values in your list actually correspond to known opcodes for this CPU. For example:
+   - Some of the hex values of dead codes actually correspond to known opcodes for this CPU. For example:
      - `08` corresponds to `PHP` (Push Processor Status onto Stack).
      - `C2 30` corresponds to `REP #$30` (Reset Processor Status Bits).
      - `48` corresponds to `PHA` (Push Accumulator onto Stack).
