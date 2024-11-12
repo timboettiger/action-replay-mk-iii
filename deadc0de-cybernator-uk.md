@@ -2,6 +2,8 @@
 
 > (ACTION REPLAY II ONLY)
 
+[Dead Code Overview](preservaction-deadc0de.md)
+
 ## Maximum/Unlimited Equipment
 
 ### Input

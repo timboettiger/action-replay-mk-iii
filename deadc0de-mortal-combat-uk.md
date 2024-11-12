@@ -2,6 +2,8 @@
 
 > (ACTION REPLAY II ONLY)
 
+[Dead Code Overview](preservaction-deadc0de.md)
+
 ## Full Blood During Combat (A)
 
 ### Input
@@ -18,8 +20,6 @@ DEADCODE
 9C21215C
 A1E68000
 ```
-
-> XXXXXXXX can be replaced by one or more of the following codes
 
 ### Analysis
 
@@ -248,9 +248,9 @@ EAFE8000
                             ; Causes a software interrupt or breakpoint
 
     INC $0EE4,X             ; FE E4 0E: INC Absolute,X
-                            ; Opcode FE: INC Absolute,X
+                            ; Opcode FE: INC (Increment Memory by 1)
                             ; Address E4 0E (little-endian) is $0EE4
-                            ; Increments the value at address $0EE4 plus X register
+                            ; Increments the value at address $0EE4 plus the X register
 
 ; 08                ; Opcode for PHP
     PHP                     ; 08: PHP (Push Processor Status)
@@ -258,8 +258,8 @@ EAFE8000
 
 ; C2 30             ; Opcode and operand for REP #imm8
     REP #$30                ; C2 30: REP #$30
-                            ; Opcode C2: REP (Reset Processor Status Bits)
-                            ; Operand 30: Resets bits 4 and 5 (sets accumulator and index to 16-bit mode)
+                            ; Resets bits 4 and 5 of the status register, switching
+                            ; the accumulator and index registers to 16-bit mode
 
 ; 48                ; Opcode for PHA
     PHA                     ; 48: PHA (Push Accumulator)
@@ -275,55 +275,53 @@ EAFE8000
 
 ; E2 30             ; Opcode and operand for SEP #imm8
     SEP #$30                ; E2 30: SEP #$30
-                            ; Opcode E2: SEP (Set Processor Status Bits)
-                            ; Operand 30: Sets bits 4 and 5 (sets accumulator and index to 8-bit mode)
+                            ; Sets bits 4 and 5 of the status register, switching
+                            ; the accumulator and index registers to 8-bit mode
 
 ; AF 19 42 00       ; Opcode and address for LDA Absolute Long
     LDA $004219             ; AF 19 42 00: LDA Absolute Long
-                            ; Opcode AF: LDA Absolute Long
-                            ; Address: 19 42 00 (little-endian), which is $004219
-                            ; Loads accumulator with value at address $004219
+                            ; Loads the accumulator with the value at memory address $004219
 
 ; 29 20             ; Opcode and operand for AND #imm8
     AND #$20                ; 29 20: AND Immediate
-                            ; Opcode 29: AND Immediate
-                            ; Operand 20: ANDs accumulator with $20
+                            ; Performs a bitwise AND between the accumulator and $20,
+                            ; isolating bit 5
 
 ; F0 1D             ; Opcode and operand for BEQ
     BEQ $+29                ; F0 1D: BEQ (Branch if Equal)
-                            ; Operand 1D: Branches ahead 29 bytes if zero flag is set
+                            ; Branches forward by 29 bytes if the zero flag is set (meaning AND result was zero)
 
 ; AF 42 00 7E       ; Opcode and address for LDA Absolute Long
     LDA $7E0042             ; AF 42 00 7E: LDA Absolute Long
-                            ; Loads accumulator with value at address $7E0042
+                            ; Loads the accumulator with the value at memory address $7E0042
 
 ; C9 0B             ; Opcode and operand for CMP #imm8
     CMP #$0B                ; C9 0B: CMP Immediate
-                            ; Compares accumulator with $0B
+                            ; Compares the accumulator with the value $0B
 
 ; F0 15             ; Opcode and operand for BEQ
     BEQ $+21                ; F0 15: BEQ (Branch if Equal)
-                            ; Branches ahead 21 bytes if zero flag is set
+                            ; Branches forward by 21 bytes if the zero flag is set (meaning accumulator equals $0B)
 
 ; A9 FD             ; Opcode and operand for LDA #imm8
     LDA #$FD                ; A9 FD: LDA Immediate
-                            ; Loads accumulator with $FD
+                            ; Loads the accumulator with the immediate value $FD
 
 ; 8F 71 04 7E       ; Opcode and address for STA Absolute Long
     STA $7E0471             ; 8F 71 04 7E: STA Absolute Long
-                            ; Stores accumulator at address $7E0471
+                            ; Stores the accumulator value ($FD) at address $7E0471
 
 ; A9 FE             ; Opcode and operand for LDA #imm8
     LDA #$FE                ; A9 FE: LDA Immediate
-                            ; Loads accumulator with $FE
+                            ; Loads the accumulator with the immediate value $FE
 
 ; 8F 72 04 7E       ; Opcode and address for STA Absolute Long
     STA $7E0472             ; 8F 72 04 7E: STA Absolute Long
-                            ; Stores accumulator at address $7E0472
+                            ; Stores the accumulator value ($FE) at address $7E0472
 
 ; AF 42 00 7E       ; Opcode and address for LDA Absolute Long
     LDA $7E0042             ; AF 42 00 7E: LDA Absolute Long
-                            ; Loads accumulator with value at address $7E0042
+                            ; Loads the accumulator with the value at memory address $7E0042
 
 ; 1A                ; Opcode for INC A
     INC A                   ; 1A: INC A
@@ -331,36 +329,34 @@ EAFE8000
 
 ; 8F 42 00 7E       ; Opcode and address for STA Absolute Long
     STA $7E0042             ; 8F 42 00 7E: STA Absolute Long
-                            ; Stores accumulator at address $7E0042
+                            ; Stores the incremented accumulator value back at $7E0042
 
 ; C2 30             ; Opcode and operand for REP #imm8
     REP #$30                ; C2 30: REP #$30
-                            ; Resets bits 4 and 5 (sets accumulator and index to 16-bit mode)
+                            ; Resets bits 4 and 5 of the status register (switches accumulator and index to 16-bit mode)
 
 ; FA                ; Opcode for PLX
     PLX                     ; FA: PLX (Pull X Register)
-                            ; Pulls the X register from the stack
+                            ; Restores the X register from the stack
 
 ; 7A                ; Opcode for PLY
     PLY                     ; 7A: PLY (Pull Y Register)
-                            ; Pulls the Y register from the stack
+                            ; Restores the Y register from the stack
 
 ; 68                ; Opcode for PLA
     PLA                     ; 68: PLA (Pull Accumulator)
-                            ; Pulls the accumulator from the stack
+                            ; Restores the accumulator from the stack
 
 ; 28                ; Opcode for PLP
     PLP                     ; 28: PLP (Pull Processor Status)
-                            ; Restores the processor status from the stack
+                            ; Restores the processor status register from the stack
 
-; 5C EA FE 80       ; Opcode and address for JML instruction
-    JML $80FEEA             ; 5C EA FE 80: JML Absolute Long
-                            ; Opcode 5C: JML (Jump Long)
-                            ; Address: EA FE 80 (little-endian), which is $80FEEA
-                            ; Jumps to the long address $80FEEA
+; 5C EA FE 80       ; Opcode and address for JML Absolute Long
+    JML $80FEEA             ; 5C EA FE 80: JML (Jump Long)
+                            ; Jumps to address $80FEEA in the program
 
-; 00                ; Opcode for BRK
-    BRK                     ; 00: BRK (Break)
-                            ; Causes a software interrupt or breakpoint
+; EA                ; Opcode for NOP
+    NOP                     ; EA: NOP (No Operation)
+                            ; Placeholder instruction, does nothing
 ```
 

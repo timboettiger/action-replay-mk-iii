@@ -2,7 +2,9 @@
 
 > (ACTION REPLAY II ONLY)
 
-## Maximum/Unlimited Equipment
+[Dead Code Overview](preservaction-deadc0de.md)
+
+## Maximum/Unlimited Equipment, Level Skip
 
 ### Input
 

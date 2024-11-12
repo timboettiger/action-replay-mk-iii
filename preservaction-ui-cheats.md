@@ -146,7 +146,7 @@
 ### 37. CYBERNATOR
 ![Cybernator](./ui/cheats/37-cheats-cybernator-10.png)
 
-### 38. CYBERNATOR DEADCODE
+### 38. CYBERNATOR (DEAD CODE)
 ![Cybernator Deadcode](./ui/cheats/38-cheats-cybernator-deadcode-15.png)
 ![Cybernator Deadcode](./ui/cheats/38b-cheats-cybernator-deadcode-5.png)
 
