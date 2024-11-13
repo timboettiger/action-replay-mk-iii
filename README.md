@@ -22,7 +22,7 @@ I've been collecting SNES equipment for over 30 years, but the trigger to start 
 - a cheat code finder (trainer)
 - a real-time opcode injector
 - a cheat code database
-- a mouse or joypad-driven user interface
+- with a mouse or joypad-driven user interface
 
 To make this amazing hardware appreciated again, I digitized and translated the manual, documented all the built-in codes, screenshotted each menu, and gathered more information.
 
@@ -121,8 +121,8 @@ Many people search the internet for help finding a well-functioning cartridge ad
 | Programmable Universal Adapter            | EU         | extended      | 2              | 1       | 0      | -      | -         | -       | -       | -              |
 | Action Replay                             | INT        | simple        | 1              | 4       | 0      | -      | -         | -       | -       | -              |
 | Pro Action Replay MK1                     | INT        | extended      | 2              | 5       | 0      | Yes    | -         | -       | -       | Maybe          |
-| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100/255? | 0      | Yes    | Yes       | Yes     | -       | Yes            |
-| Pro Action Replay MK3                     | INT        | extended      | 2              | 255      | 5      | Yes    | Yes       | Yes     | -       | Yes            |
+| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100      | 0      | Yes    | Yes       | Yes     | -       | Yes            |
+| Pro Action Replay MK3                     | INT        | extended      | 2              | 100      | 5      | Yes    | Yes       | Yes     | -       | Yes            |
 | Analogue Super NT                         | INT        | extended      | 1              | 0       | 6      | -      | -         | -       | FPGA    | -              |
 | Hyperkin Retron 5                         | INT        | extended      | 1              | `Raw`   | `Raw`  | -      | Yes       | -       | Emu     | -              |
 | Hyperkin SupaBoy                          | INT        | extended      | 1              | 0       |        | -      | Unknown   | -       | Emu     | -              |
