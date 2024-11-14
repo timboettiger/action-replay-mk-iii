@@ -5,7 +5,7 @@
 
 ## Opcodes Used By `DEADC0DE`
 
-Opcodes, short for “operation codes,” are the fundamental building blocks of machine language, which is the lowest level of programming language a computer or processor understands. Each opcode represents a specific instruction for the CPU to perform, like adding two numbers, moving data between memory locations, or comparing values.
+Opcodes, short for “operation codes”, are the fundamental building blocks of machine language, which is the lowest level of programming language a computer or processor understands. Each opcode represents a specific instruction for the CPU to perform, like adding two numbers, moving data between memory locations, or comparing values.
 
 In assembly language, a human-readable form of machine code, opcodes are usually written as abbreviated commands (like ADD, MOV, JMP) that correspond to specific binary or hexadecimal codes the CPU interprets directly. 
 
