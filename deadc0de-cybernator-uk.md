@@ -4,6 +4,13 @@
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
+## Downloads
+
+- [Hexdump](deadc0de/hexdumps/cybernator_uk.hex)
+- [Binary](deadc0de/binaries/cybernator_uk.hex)
+- [Assambler (Plain)](deadc0de/assembler/plain/cybernator_uk.hex)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/cybernator_uk.hex)
+
 ## Maximum/Unlimited Equipment
 
 ### Input

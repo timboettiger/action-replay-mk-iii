@@ -4,6 +4,14 @@
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
+
+## Downloads
+
+- [Hexdump](deadc0de/hexdumps/starfox_uk.hex)
+- [Binary](deadc0de/binaries/starfox_uk.hex)
+- [Assambler (Plain)](deadc0de/assembler/plain/starfox_uk.hex)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/starfox_uk.hex)
+
 ## Infinite/Unlimited Energy/Bombs
 
 > This is for infinite energy and unlimited Nova bombs

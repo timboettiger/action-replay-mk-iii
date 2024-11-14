@@ -1,6 +1,6 @@
 # Project Preservaction
 
-[Table Of Contents](preservaction-ui-toc.md)
+[Table Of Contents](preservaction-toc.md)
 
 ## Trainer Screenshots
 

@@ -4,6 +4,14 @@
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
+
+## Downloads
+
+- [Hexdump](deadc0de/hexdumps/wolfenstein_3d.hex)
+- [Binary](deadc0de/binaries/wolfenstein_3d.hex)
+- [Assambler (Plain)](deadc0de/assembler/plain/wolfenstein_3d.hex)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/wolfenstein_3d.hex)
+
 ## Unlimited Shots, Attempts, Keys
 
 ### Input

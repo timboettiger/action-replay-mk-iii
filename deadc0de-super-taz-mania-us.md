@@ -4,6 +4,14 @@
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
+
+## Downloads
+
+- [Hexdump](deadc0de/hexdumps/super_taz_mania_us.hex)
+- [Binary](deadc0de/binaries/super_taz_mania_us.hex)
+- [Assambler (Plain)](deadc0de/assembler/plain/super_taz_mania_us.hex)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/super_taz_mania_us.hex)
+
 ## Unlimited Time, Attempts, Energy
 
 ### Input

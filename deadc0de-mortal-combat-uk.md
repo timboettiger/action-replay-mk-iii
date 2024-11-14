@@ -4,6 +4,23 @@
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
+
+## Downloads
+
+**Version A***
+
+- [Hexdump](deadc0de/hexdumps/mortal_combat_a_uk.hex)
+- [Binary](deadc0de/binaries/mortal_combat_a_uk.hex)
+- [Assambler (Plain)](deadc0de/assembler/plain/mortal_combat_a_uk.hex)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/mortal_combat_a_uk.hex)
+
+**Version B***
+
+- [Hexdump](deadc0de/hexdumps/mortal_combat_b_uk.hex)
+- [Binary](deadc0de/binaries/mortal_combat_b_uk.hex)
+- [Assambler (Plain)](deadc0de/assembler/plain/mortal_combat_b_uk.hex)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/mortal_combat_b_uk.hex)
+
 ## Full Blood During Combat (A)
 
 ### Input

@@ -4,6 +4,14 @@
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
+
+## Downloads
+
+- [Hexdump](deadc0de/hexdumps/mystical_ninja_2_jp.hex)
+- [Binary](deadc0de/binaries/mystical_ninja_2_jp.hex)
+- [Assambler (Plain)](deadc0de/assembler/plain/mystical_ninja_2_jp.hex)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/mystical_ninja_2_jp.hex)
+
 ## Maximum/Unlimited Equipment, Level Skip
 
 ### Input

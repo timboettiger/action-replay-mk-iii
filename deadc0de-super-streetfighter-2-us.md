@@ -4,6 +4,14 @@
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
+
+## Downloads
+
+- [Hexdump](deadc0de/hexdumps/super_streetfighter_2_us.hex)
+- [Binary](deadc0de/binaries/super_streetfighter_2_us.hex)
+- [Assambler (Plain)](deadc0de/assembler/plain/super_streetfighter_2_us.hex)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/super_streetfighter_2_us.hex)
+
 ## Next Stage
 
 > Player 1 moves on to the next battle when the select button is pressed

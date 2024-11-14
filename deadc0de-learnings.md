@@ -2,6 +2,22 @@
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
+## Preparation
+
+If you want to try disassembling yourself:
+
+1. Clone the [Dispel Github-Repository](https://github.com/pelrun/Dispel) to get a disassembler.
+2. Apply the [Dispel No-Limit Patch](deadc0de/dispel_no_limit_patch.txt) to `main.c` (this removes the minimum file size check).
+3. Apply the [Dispel Mac-Makefile Patch](deadc0de/dispel_mac_makefile_patch.txt) to the `Makefile` if you are on macOS or Linux (this changes the executable name).
+4. Compile Dispel using `make`.
+5. Test if it runs correctly (it should display instructions):
+   - Windows: `dispel.exe`
+   - macOS/Linux: `./dispel`
+6. Convert hex dumps to binary files using `xxd -r -p deadcode.hex deadcode.bin`.
+7. You can now use Dispel to disassemble:
+   - Windows: `dispel.exe deadcode.bin > deadcode.asm`
+   - macOS/Linux: `./dispel deadcode.bin > deadcode.asm`
+   
 ## Similarities
 
 - Every Dead Code begins with `DEADCODE`. That is obviously the Magic Number.
