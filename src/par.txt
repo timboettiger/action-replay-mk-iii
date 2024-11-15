@@ -1,0 +1,425 @@
+How the Master System and Game Gear Pro Action Replay and Game Genie work
+=========================================================================
+
+by Maxim
+
+maxim@mwos.cjb.net
+
+2nd revision, 4/12/00
+(typos fixed 16/12/00)
+(more typos fixed, 3/1/01)
+3rd revision, 22/7/01
+
+
+This is based on first-hand use of a PAR on my Game Boy, and everything I've been
+able to find online. I've assumed that the two formats act the same.
+
+I know from that it's the convention in the world of Sega emulation to abbreviate
+Game Gear to GG; however, the Game Genie world apparently also uses that acronym.
+To avoid confusion, and save me a bit of typing, I've used "GG" to mean Game Genie,
+and any reference to SMS means SMS or Game Gear.
+
+My apologies for any errors in my understanding of how the SMS works. I'm just
+trying to ground my understanding in reality a bit.
+
+I hope this is of use to the world of SMS emulation... while I can appreciate that
+there is a strong argument that these kinds of cheats make games too easy, it would
+be nice if they were available, so people can play through games they aren't any
+good at...
+
+
+1. PAR
+======
+
+As far as I can see, the PAR is a RAM poker. Every code I've seen refers to a RAM
+offset.
+
+How it works:
+
+The PAR sits between the cart and the SMS. That means it can override any ROM
+reads. It has a sliding switch on it with On, Off and Train positions. The Master
+System one is just tall enough so you can get at the switch, and pull it out, with
+the cart attaching to a connector on top of it. The Game Gear one instead has the
+switch(es) on the top, the cart connector sticking out of the back so the cart
+plugs into it upside down, flat against the back of the Game Gear.
+
+When you first switch on, execution of ROM code starts at 0x0000. The PAR
+intercepts this, and pops up a screen where you can enter codes. After entering
+your codes, the PAR jumps back to 0x0000, and this time does not intercept it,
+allowing the game to start.
+
+Every VBlank, the SMS generates an IRQ, and jumps to offset 0x0038 in the ROM. If
+the switch is in the On position, the PAR intercepts this and returns code of the
+form:
+
+for every entered code (up to 4)
+  write (value) to (offset)
+jump to 0x0038 in the ROM
+
+Basically, this means that at least once every frame, the ram values are
+overwritten with values specified by the PAR code. If there are line interrupt
+then I presume there's more than one write per frame.
+
+If the code switch is off, it does not intercept it and it acts as if the PAR
+wasn't there.
+
+PAR codes are of the form:
+
+AABBBBCC
+
+AA is almost always 00. On other formats it affects the way the cartridge acts, but
+the vast majority of SMS codes leave this at 00, so I'm assuming it does nothing on
+the SMS.
+
+BBBB is the memory offset. It's in the range 0xc000 to 0xdfff (the RAM area), in
+big-endian byte order (ie. 0x1234 is represented by 1234).
+
+CC is the value which is written to that offset when the PAR is active.
+
+
+1.1 PAR training
+================
+
+When the switch is in the Train position, the PAR intercepts reads of 0x0066. This
+is where execution jumps to when Pause is pressed. The PAR executes its code
+instead. This brings up a menu, where the user can enter more codes, or start the
+trainer. Since the Game Gear has no pause button, some other method must be used.
+
+The trainer is a mode where, using various methods, you can track down the memory
+location of a particular variable. Since the RAM locations will still have the
+values assigned by the cart when the PAR is activated, it can scan them for
+particular values.
+
+In the simplest mode, you tell the PAR what value something has (eg. the number of
+lives). It maintains an internal list of memory locations which have this value.
+After telling it the value, the PAR returns you to the game. I'm not sure if this
+means it resets, it passes control to the normal pause button handler, or it goes
+back to how it was before you pressed pause. You repeat the process, changing the
+number of lives, until the list narrows down. It has to handle binary coded
+decimals as well as hex values. In other words, when you're on level 25, the
+variable might store that as 0x25 (BCD) or 0x19 (25 in hex). It also has to handle
+situations where the number entered is different to the memory value; for example,
+when you're on Green Hill Act 1, the level variable is actually set to 00, and
+increments by 1 for every act/level, so Bridge Act 1 (the fourth level) is value
+03. However, the user might tell the trainer that Green Hill Act 1 was level 01 and
+Bridge Act 1 was level 04.
+
+Alternative training modes include known difference (useful for values over 255,
+which use two bytes), meter (where you tell it the start value, then again when the
+meter is at *about* 75%, 50% or 25%) and change of state (you tell it if the
+condition is the same as or different from the start).
+
+
+2. GG
+=====
+
+The Game Genie is a ROM poker. As I understand the meaning of the word "poke", this
+isn't quite correct usage, but what the hell, it's my document. It basically acts
+the same as the PAR, in that it intercepts reads of ROM, but the difference is that
+it just returns different values depending on the codes entered. This is the same
+as patching the rom in meka.pat or by hand in a hex editor.
+
+How it works:
+
+Like a PAR, it sits between the SMS and the cart. I've not actually seen any
+pictures, but I have seen the GB and NES ones pictured and they were the worst
+possible designs... the NES one seemed to project the already oversize cart about
+30cm out of the front of the console, and the GB one was the same cross-section as
+the old GB, and effectively made the GB about 8cm longer... and was a different
+colour on top of that.
+
+My primary GG source (GGCCC) source says that it only intercepts ROM locations
+0x0000 to 0x7fff, ie. ROM pages 0 and 1, and displays an "invalid code" warning if
+an offset outside this range is entered. However, I have seen codes which refer to
+page 2 (up to 0xbfff)... which makes more sense.
+
+Since the ROM is paged for carts over 32K, the GG has to know when to intercept and
+when not to. It does this by having a third value, so it acts like this:
+
+if read is of (offset)
+and (offset) in ROM contains (third value)
+then return (value)
+else return value in (offset)
+
+This is basically very simple (and crappy) page detection, to stop it returning the
+cheat value when it shouldn't. It is obvious that it might be fooled, if the
+location contains the same value when another page is there.
+
+Also, if it can't intercept page 2 reads, it can't work on every value in every
+game.
+
+GG codes are of the form:
+
+CCB-BBB-AAA
+
+I've used the letters in the same sense as before.
+
+For reasons that aren't immediately obvious, GG codes are partially encrypted.
+
+CC is the value. It isn't messed with.
+
+BBBB is the offset. The digits are out of order - the last digit in BBBB is the
+first. Also, the final digit is NOTed. So, offset 0x2f14 becomes f14d - the 2 is
+NOTed to d, and moved to the end.
+
+AAA is the "third value" mentioned above, along with a "cloak" value. This will
+take some explaining.
+
+The cloak value apparently affects the way the GG acts to avoid the cart being able
+to detect it. As I remember, back in the dim and distant past, when the first GG
+came out for the NES (spit), Nintendo were mightily pissed off about it. After all,
+it wasn't licensed, and Nintendo made precisely no money from it. They weren't
+happy with this, so they started writing code into their carts which made them lock
+up if they detected a GG. So the people at Galoob (who made the GG) made another
+version, which could not be detected, and for some reason, made this hiding
+configurable. All I know is that most of the time, the cloak value is 8 for SMS
+codes.
+
+To encode these three digits, first find the "third value". As I explained before,
+this is the value that the offset contains when the right part of the rom is mapped
+there.
+
+Then, invert bits 0, 2 and 6. You can do this by XORing it with 0x45 (= 01000101
+in binary).
+
+Then rotate it left by 2 bits. To do this, you can use bitwise shift operations:
+value = (value SHL 2) OR (value SHR 6)
+where value must be a byte variable, otherwise you'll probably end up with a value
+over 255.
+
+Then invert (NOT) it.
+
+Now express it as a hex number again. Let's call it XY. XOR X with the cloak value,
+and call this Z. AAA is then XZY.
+
+And to go the other way... do it all backwards. XORing goes both ways, and rotate
+right instead of left, and you should be there.
+
+I know what you're thinking, what an utter pain in the arse. (Unless you're
+american, in which case you were thinking of your ass.) Yeah, but apparently this
+is how it goes.
+
+The GG has no training mode; most codes were found by the makers (Galoob),
+presumably by dumping and disassembling the carts. There is a Game Genie Code
+Creator's Club (www.ggccc.com), who apparently work by choosing random values; they
+are obviously insane. Still, they provided the source for this section. Which, by
+the way, was Game Gear specific, but I'm sure the Master System version (if there
+was one?) was the same.
+
+Oh, and I seem not to have mentioned the on/off switch. There is one. And it
+presumably intercepts the jump to 0x0000 at startup the same as the PAR, for you to
+enter the codes. Also, I think the actual GG has a limit of 3 codes.
+
+
+3. Emulating these
+==================
+
+If I wanted to emulate these, here's what I'd do...
+
+
+3.1 PAR
+=======
+
+First, have a dialogue where people can enter codes, and ideally where they can
+turn them on and off individually. This should preferrably be accessible at all
+times when the game is running. Also, set up a hotkey for a master on/off switch,
+as a lot of codes must be switched off at certain points - for example, if I set
+the life meter in WB2 to be held at a certain value, for infinite life, when I
+finished a level and it tried to run the meter down for the bonus, it would never
+finish. So an off switch is needed.
+
+Then, every VBlank, write the values to the memory locations. Not difficult, is it?
+:o)
+
+ChaSMS has this already... it's fairly well done, too, except it doesn't have a
+master on/off switch.
+
+FreezeSMS now does it too, although it's not very well documented.
+
+
+3.2 PAR trainer
+===============
+
+I'm sure you can see how to do this. Try ChaSMS's, although that's a simple
+implementation. Whover writes the first advanced trainer gets a free car; to claim,
+send your name, address and £20,000 to me.
+
+
+3.3 GG
+======
+
+Again, you need to have code entry arrangements and an on/off switch. You need to
+decode the codes this time, though. The cloaking byte can be ignored.
+
+You could try and work the same way as the GG, by passing all ROM reads through a
+function, but I'd have thought it'd be easier to just patch the rom in memory.
+First, take the location and MOD it by 16k (0x4000), to get the offset from the
+nearest 16k (page) boundary. Then go through the rom, starting at this offset and
+increasing by 0x4000 each time. If the value in the rom is the "third value",
+change it to the one in the code. Keep a list so when the code or GG is turned off,
+you can turn the values back.
+
+The caveat with this method is that when there are multiple possible patching
+locations, patching them all might crash the game.
+
+Also, with this method, you shouldn't patch the first 1K of the rom, as this isn't
+paged.
+
+
+4. Patching roms with GG codes
+==============================
+
+I'll do this by example. Take this code for Game Gear Sonic 1:
+
+0X0-54A-E6E  Rings worth X
+
+First, the memory offset. I take "0-54A", and take off the last digit, A.
+NOT A = 5, which I stick on the start of the code, making 5054. So the offset is
+0x5054. I MOD it by 0x4000 (16K) to get the offset from the nearest page boundary -
+0x1054.
+
+Now I've got to decode the "third value". I take the 7th and 9th digits to get EE.
+NOT 0xEE = 0x11. I rotate it right by 2 bits to get 0x44. I then XOR it with 0x45
+to get 0x01.
+
+I fire up Hex Workshop and Goto... offset 0x1054 from the start of the file. It is
+0x6C, not 0x01, so I Goto... offset 0x4000 from the current position, and repeat
+until the end of the file. In each case, I check if the value is 0x01.
+
+Offset   Value
+0x001054 0x6C
+0x005054 0x01
+0x009054 0x04
+0x00D054 0x00
+0x011054 0xF1
+0x015054 0x00
+0x019054 0x01
+0x01D054 0x2D
+0x021054 0x0D
+0x025054 0x84
+0x029054 0xBF
+0x02D054 0xA0
+0x031054 0x00
+0x035054 0x00
+0x039054 0x10
+0x03D054 0x0F
+
+So, the value could be the one at 0x5054 or the one at 0x19054. Since 0x5054 is the
+original offset before it was MODed, this is a strong indicator that frame 1 is
+never paged, and that the game engine lives in there. (It is quite common for SMS
+and GG games to only use frame 2 for paging; frame 0 paging is apparently never
+used, but is supported by the hardware.)
+
+So, I go to offset 0x5054 and change the value there to 0A (10 in hex). I save the
+modified rom file, and load it in Meka. I collect a few rings and... each one
+increases the ring counter by 10. Success!
+
+But what about offset 0x19054? If I modify this location, I don't see the effect,
+so it's obviously the wrong one. It might cause the game to crash if I leave it
+modified, so I change it back.
+
+This can be easily translated into a meka.pat entry. I grab the checksum from
+meka.nam, and add an entry to meka.pat like this:
+
+; Game Gear Sonic 1 - each ring worth 10
+[2D341FEB6A1B46CA]
+seek, 5054
+write, 0A
+
+Now, when I load the unmodified rom, the change is made automatically.
+
+
+I have made a small program to do this automatically - it decodes the GG code, and
+then does the file searching itself. You should be able to get it from:
+
+http://smschecker.mwos.cjb.net/ggconvertor.zip
+
+Email me if that URL doesn't work. You can have the source too if you want.
+
+I have used it to test some codes. My suspicions were correct - several codes could
+refer to several ROM offsets. Generally, if one of the possible offsets is below
+0xC000 then it's probably the right one.
+
+
+5. Disclaimer
+=============
+
+I have never seen a Master System or Game Gear PAR or GG in the flesh. I'm not even
+sure a Master System GG exists.
+
+I have seen the the PARs pictured in the ads, in Sega Master Force magazine. Maybe
+there's an ad in the one I sent Zoop, and I really wish I hadn't thrown the rest
+away... I had the whole set, dammit... Anyway, I digress. If there is an ad, maybe
+Zoop will scan it if someone asks nicely.
+
+I also never had a NES, or knew anyone with one - I played one once in a shop, and
+thought it was a bit crappy. However, the NES GG was in the Argos catalogue, and I
+was of the age where the toy section of the Argos catalogue was of great importance
+and to be studied closely every christmas and birthday. That's how I know what it
+looks like.
+
+Now for the confession. I do have a Game Boy, and I explain this by the fact that
+when I bought it, the Game Gear was no longer sold in most shops. And it was
+cheaper. Anyway, I do have a PAR for it - I got it so I could play through my
+pirated 20 in 1 Hong Kong cart, which contains stupidly difficult games. This is
+where I had all my original PAR knowledge from.
+
+So, a great deal of the information in this document has been pieced together from
+various sources, and any errors in them will have been passed on. Also, any errors
+caused by my miscomprehension will have made matters worse.
+
+If you have anything to add, please email me or post it on S8-dev or something. I'd
+particularly like to know:
+o Is there a Master System Game Genie?
+  (probably not as Game Genie was very American...)
+o Have I made any glaring errors?
+o Who made the PAR?
+  (programmers, credits in manual? I know Datel made the thing...)
+o Can the PAR do ROM patching?
+  (try converting a GG code, eg. 0050 540A for the example in section 4)
+o Does changing the first two digits of a PAR code have any effect?
+o I'd love to get my hands on one of these carts...
+o Failing that, pictures/scans/more info would be nice.
+
+
+6. Netography
+=============
+
+Richard's doc - for me to turn "it writes the value 50 times a second" into "it
+intercepts the jump to 0x0038":
+http://www.smspower.org/dev/docs/richard.txt
+
+MUG U.K(tm)'s site - gave me the best PAR code list available, and the PAR manual.
+He also sent me about a gazillion GG codes, which might already be there:
+http://surf.to/muguk
+
+This page told me how the Game Genie code obfuscation works:
+http://www.videogamesource.com/genie/gg/create/make_gg_gg_codes.html
+
+This page has information I didn't know, but some of it is clearly wrong:
+http://www.vgstrategies.about.com/games/vgstrategies/library/misc/blgamegenie.htm
+
+
+7. An interesting thing
+=======================
+
+The Game Genie has secret message screens, shown when certain key combinations are
+pressed. Among these is:
+
+Game Genie built by: Richard Aplin
+Code by: Jon the Programmer
+Managed by: Paul Ranson
+
+(To get it, press UU121DD, starting from a position where every U and D will move
+the cursor.)
+
+Recognise Jon the Programmer? Yes, this is apparently the same Jon who worked
+(works?) for Codemasters, who made Jon's Squinky Tennis, the secret game hidden in
+all Game Gear Codemasters games, and who wrote a very early technical document
+(jon.txt on S8-dev). This supports the line in the last URL above which says that
+Codemasters did the programming.
+
+Recognise Richard Aplin? He contributed technical information which allowed Marat
+Fayzullin to make Master Gear, and one of the first technical documents on the
+Master System and Game Gear. Without him, maybe SMS emulation wouldn't be where it
+is today. He has the same credit on the Game Boy Game Genie.

@@ -92,7 +92,7 @@ Along with **some misleading simplifications**:
 
 #### More (Cheat-)Codes!
 
-If you're looking for even more codes beyond what's built-in, check out [the SNES area at gamehacking.org](https://gamehacking.org/system/snes/), an excellent resource with a vast collection of codes for the SNES, including games that may not be covered by the built-in database. 
+If you're looking for even more codes beyond what's built-in, check out [the SNES area at gamehacking.org](https://gamehacking.org/system/snes/), an excellent resource with a vast collection of codes for the SNES, including games that may not be covered by the built-in database.
 
 ## Further Insights
 
@@ -120,9 +120,9 @@ Many people search the internet for help finding a well-functioning cartridge ad
 | Honey Bee (Super-Magic Game Converter)    | EU         | simple        | 2              | 0       | 0      | -      | -         | -       | -       | -              |
 | Programmable Universal Adapter            | EU         | extended      | 2              | 1       | 0      | -      | -         | -       | -       | -              |
 | Action Replay                             | INT        | simple        | 1              | 4       | 0      | -      | -         | -       | -       | -              |
-| Pro Action Replay MK1                     | INT        | extended      | 2              | 5       | 0      | Yes    | -         | -       | -       | Maybe          |
-| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100      | 0      | Yes    | Yes       | Yes     | -       | Yes            |
-| Pro Action Replay MK3                     | INT        | extended      | 2              | 100      | 5      | Yes    | Yes       | Yes     | -       | Yes            |
+| Pro Action Replay (unofficially MK1)      | INT        | extended      | 2              | 20      | 0      | Yes    | -         | -       | -       | Maybe          |
+| Pro Action Replay MK2 (1.0, 2.P, 2.T)     | INT        | extended      | 2              | 100     | 0      | Yes    | Yes       | Yes     | -       | Yes            |
+| Pro Action Replay MK3                     | INT        | extended      | 2              | 100     | 5      | Yes    | Yes       | Yes     | -       | Yes            |
 | Analogue Super NT                         | INT        | extended      | 1              | 0       | 6      | -      | -         | -       | FPGA    | -              |
 | Hyperkin Retron 5                         | INT        | extended      | 1              | `Raw`   | `Raw`  | -      | Yes       | -       | Emu     | -              |
 | Hyperkin SupaBoy                          | INT        | extended      | 1              | 0       |        | -      | Unknown   | -       | Emu     | -              |
@@ -133,21 +133,22 @@ Many people search the internet for help finding a well-functioning cartridge ad
     (1) [Reddit](https://www.reddit.com/r/snes/comments/v83p0f/pro_action_replay_confusion/)
     (2) [SNES Central](https://snescentral.com/article.php?id=0798)
     (3) [GameFAQs](https://gamefaqs.gamespot.com/snes/916396-super-nintendo/faqs/11640)
+    (4) [Jungsi (german)](https://www.jungsi.de/pro-action-replay-2-sega-megadrive/)
 
 #### Legend
 
-- **Region:** 
+- **Region:**
   - **INT**: International (incl. JP)
   - **EU/NA**: North America (without JP)
   - **EU**: Europe
   - **NA**: North America
   - **JP**: Japan
 
-- **Slot Type:** 
+- **Slot Type:**
   - **simple**: Simple contacts (no enhancement chips supported)
   - **extended**: Extended contacts (some or all enhancement chips supported)
 
-- **Cart Slots:** 
+- **Cart Slots:**
   - **1**: Single Slot
   - **2**: Dual Slot (one for local CIC 'donation' cartridge)
 
@@ -155,14 +156,14 @@ Many people search the internet for help finding a well-functioning cartridge ad
   - **PAR**: Pro Action Replay cheat codes supported (and how many)
   - **GG**: Game Genie cheat codes supported (and how many)
   - **Raw**: Raw cheat codes (from gamehacking) supported, no limit known
-  
+
 - **Special Features:**
   - **DB:** Indicates whether a cheat code database is integrated
   - **Slomo:** Indicates whether slow motion is integrated
   - **ROM:** Indicates whether ROM cheat codes are supported
   - **CIC:** Indicates whether a CIC chip is integrated
   - **Dead Codes:** Indicates whether [dead codes](preservaction-deadc0de.md) are supported
-  
+
 ### Secrets
 
 #### Credits/Informations
@@ -201,7 +202,7 @@ Below are images of the *Action Replay MK III* module showing its front and back
 
 ![Back View](./assets/back.png)
 
-- **Card Slot on Back**: This slot is essential when using a game from a different region. To enable compatibility with certain expansion chips (such as those used in certain region-specific games), you will need to insert a **donor module** in this slot. The donor module provides the necessary additional chips required for the imported game to run correctly on the SNES console. 
+- **Card Slot on Back**: This slot is essential when using a game from a different region. To enable compatibility with certain expansion chips (such as those used in certain region-specific games), you will need to insert a **donor module** in this slot. The donor module provides the necessary additional chips required for the imported game to run correctly on the SNES console.
 
 #### PCB
 
@@ -209,7 +210,7 @@ Further pictures as well as information about the (Action Replay board and chips
 
 ---
 
-## Legals 
+## Legals
 
 ### Legacy Product Status
 
