@@ -14,13 +14,17 @@ So far, over `300` screenshots have been documented, more than `200` games added
 - [ ] Scanning and editing the original cover insert of the packaging
 - [ ] Complete screenshot documentation of trainer
 - [ ] Describing all UI features
-- [ ] Analyze `DEADC0DE` cheats (and maybe provide some new)
+- [ ] Analyze and describe PCB and its components
 - [ ] Analyze and describe ROM structure
+- [ ] Develop extraction script for cheats in ROM db as proof-of-concept
+- [ ] Develop own dead codes as proof-of-concept
+- [X] Analyze `DEADC0DE` cheats
 
 ## Table Of Contents
 
-### General
+### Hard- and Software
 
+1. [Printed Circuit Board](preservaction-pcb.md)
 1. [ROM structure](preservaction-rom.md)
 2. Cheats
    - [Database](preservaction-database.md)

@@ -1,13 +1,14 @@
-00/8000:	C0025C  	cpy #$5C02
-00/8003:	09ADA8  	ora #$A8AD
-00/8006:	00C9    	brk $C9
-00/8008:	0020    	brk $20
-00/800A:	D00A    	bne $8016
-00/800C:	E230    	sep #$30
-00/800E:	A9FF    	lda #$FF
-00/8010:	8F71077E	sta $7E0771
-00/8014:	C230    	rep #$30
-00/8016:	AD1A42  	lda $421A
-00/8019:	AA      	tax 
-00/801A:	5C6002C0	jmp $C00260
-00/801E:	0000    	brk $00
+C0025C  	cpy #$5C02
+09ADA8  	ora #$A8AD
+00C9    	brk $C9
+0020    	brk $20
+D00A    	bne $8016
+E230    	sep #$30
+A9FF    	lda #$FF
+8F71077E	sta $7E0771
+C230    	rep #$30
+AD1A42  	lda $421A
+AA      	tax 
+5C6002C0	jmp $C00260
+00      	brk
+00      	brk

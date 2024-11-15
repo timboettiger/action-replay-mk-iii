@@ -7,22 +7,44 @@
 If you want to try disassembling yourself:
 
 1. Clone the [Dispel Github-Repository](https://github.com/pelrun/Dispel) to get a disassembler.
-2. Apply the [Dispel No-Limit Patch](deadc0de/dispel_no_limit_patch.txt) to `main.c` (this removes the minimum file size check).
-3. Apply the [Dispel Mac-Makefile Patch](deadc0de/dispel_mac_makefile_patch.txt) to the `Makefile` if you are on macOS or Linux (this changes the executable name).
+2. Check if you can apply the [Special Edition Patch](src/dispel-special-edition.patch) to the repository using `git apply --check dispel-special-edition.patch`.
+3. If everything is fine, apply the [Special Edition Patch](src/dispel-special-edition.patch) to the repository using `git apply dispel-special-edition.patch`.
 4. Compile Dispel using `make`.
-5. Test if it runs correctly (it should display instructions):
-   - Windows: `dispel.exe`
-   - macOS/Linux: `./dispel`
+5. Test if it runs correctly (it should display instructions) using `./dispel`
 6. Convert hex dumps to binary files using `xxd -r -p deadcode.hex deadcode.bin`.
-7. You can now use Dispel to disassemble:
-   - Windows: `dispel.exe deadcode.bin > deadcode.asm`
-   - macOS/Linux: `./dispel deadcode.bin > deadcode.asm`
-   
+7. You can now use Dispel to disassemble dead codes using `./dispel -A deadcode.bin > deadcode.asm`
+
 ## Similarities
 
 - Every Dead Code begins with `DEADCODE`. That is obviously the Magic Number.
 - It often ends with `BRK`, after which a jump (`JML`) is executed. Occasionally, multiple `BRK`s are used in succession, suggesting that it is repurposed as a filler opcode. The question is whether a final `BRK` is even necessary, as it is sometimes missing.
 - `NOP` is used within cheat options as padding or a filler opcode, so to speak, to maintain the visual structure of 8-byte hex blocks.
+
+### Blockwise Processing
+
+Every Dead Code section (or "line") seems to need to be 4 bytes long and is otherwise filled with opcode 00 (`brk`). `brk` officially *can* have a operand, but must not. Because of this the disassembler struggles in interpreting the following sequence:
+
+```hex
+80827800
+8F004200
+```
+
+It recognizes the `8F` from the second line as a operator belonging to the previous `brk` - but that's obviously wrong. Instead of:
+
+```hex
+80 8278
+008F
+0042
+00
+```
+
+It should be read as:
+
+```hex
+80 8278
+00
+8F 004200
+```
 
 ### Maximum Dead Code Length
 

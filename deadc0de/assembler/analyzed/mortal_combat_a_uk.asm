@@ -1,20 +1,22 @@
 ; DEADC0DE-Cheat, Action Replay MK2 only
-; This is for Full Blood During Combat (A)
-00/8000:	80E6      	bra $7FE8     ; Branch Always to address $7FE8, moving Program Counter unconditionally.
-00/8002:	9B        	txy           ; Transfer Index Register X to Index Register Y, copying value from X to Y.
-00/8003:	08        	php           ; Push Processor Status onto the Stack, storing current flags.
-00/8004:	08        	php           ; Another push of Processor Status, duplicating flag storage on stack.
-00/8005:	C230      	rep #$30      ; Reset specified bits in Processor Status, clearing bits 4 and 5 to set 16-bit mode for A, X, and Y.
-00/8007:	A20000    	ldx #$0000    ; Load immediate 16-bit value $0000 into X register, initializing it to zero.
-00/800A:	A91600    	lda #$0016    ; Load immediate 16-bit value $0016 into Accumulator, setting A to this constant.
-00/800D:	9F301480  	sta $801430,X ; Store Accumulator at $801430 offset by X, saving value in memory at computed address.
-00/8011:	E8        	inx           ; Increment X register by one, advancing its value.
-00/8012:	E8        	inx           ; Increment X register again, increasing it by another one.
-00/8013:	E00800    	cpx #$0008    ; Compare X register with immediate value $0008, setting flags based on the result.
-00/8016:	D0F2      	bne $800A     ; Branch if Not Equal to $800A, repeating loop if X isn’t equal to $0008.
-00/8018:	28        	plp           ; Pull Processor Status from Stack, restoring previous flag state.
-00/8019:	08        	php           ; Push Processor Status again, preserving current flags on stack.
-00/801A:	E220      	sep #$20      ; Set specified bits in Processor Status, setting bit 5 to use 8-bit A, X, and Y.
-00/801C:	9C2121    	stz $2121     ; Store zero at address $2121, effectively clearing this memory location.
-00/801F:	5CA1E680  	jmp $80E6A1   ; Jump to long address $80E6A1, setting Program Counter to this address for further execution.
-00/8023:	00                        ; Break instruction with no vector provided, acts as software interrupt or breakpoint.
+; Version A, Full Blood During Combat
+; Begin with this code
+; Try code version B if this code did not work
+80E6        bra $7FE8        ; Branch Always: Jump to the address $7FE8 relative to the current program counter.
+9B          txy              ; Transfer X to Y: Copy the value in the X register to the Y register.
+08          php              ; Push Processor Status to Stack: Save the current processor status onto the stack.
+08          php              ; Push Processor Status to Stack: Save the current processor status onto the stack again.
+C230        rep #$30         ; Reset Processor Flags: Set 16-bit accumulator and index register modes.
+A20000      ldx #$0000       ; Load X Register with Immediate Value: Load the value $0000 into the X register.
+A91600      lda #$0016       ; Load Accumulator with Immediate Value: Load $0016 into the accumulator.
+9F301480    sta $801430,X    ; Store Accumulator: Store the accumulator value into absolute indexed address $801430,X.
+E8          inx              ; Increment X Register: Add 1 to the X register.
+E8          inx              ; Increment X Register: Add 1 to the X register again.
+E00800      cpx #$0008       ; Compare X Register: Compare X with the immediate value $0008.
+D0F2        bne $800A        ; Branch if Not Equal: If the comparison result is not zero, jump to $800A.
+28          plp              ; Pull Processor Status from Stack: Restore processor status from the stack.
+08          php              ; Push Processor Status to Stack: Save the processor status onto the stack.
+E220        sep #$20         ; Set Processor Flags: Set the processor to 8-bit accumulator mode (index unchanged).
+9C2121      stz $2121        ; Store Zero: Write zero to absolute address $2121.
+5CA1E680    jmp $80E6A1      ; Jump: Jump to absolute long address $80E6A1.
+00                           ; Incomplete or padding opcode, possibly intentional for alignment.
