@@ -10,16 +10,23 @@
 **Version A***
 
 - [Hexdump](deadc0de/hexdumps/mortal_combat_a_uk.hex)
-- [Binary](deadc0de/binaries/mortal_combat_a_uk.hex)
-- [Assambler (Plain)](deadc0de/assembler/plain/mortal_combat_a_uk.hex)
-- [Assambler (Annotated)](deadc0de/assembler/analyzed/mortal_combat_a_uk.hex)
+- [Binary](deadc0de/binaries/mortal_combat_a_uk.bin)
+- [Assambler (Plain)](deadc0de/assembler/plain/mortal_combat_a_uk.asm)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/mortal_combat_a_uk.asm)
 
 **Version B***
 
 - [Hexdump](deadc0de/hexdumps/mortal_combat_b_uk.hex)
-- [Binary](deadc0de/binaries/mortal_combat_b_uk.hex)
-- [Assambler (Plain)](deadc0de/assembler/plain/mortal_combat_b_uk.hex)
-- [Assambler (Annotated)](deadc0de/assembler/analyzed/mortal_combat_b_uk.hex)
+- [Binary](deadc0de/binaries/mortal_combat_b_uk.bin)
+- [Assambler (Plain)](deadc0de/assembler/plain/mortal_combat_b_uk.asm)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/mortal_combat_b_uk.asm)
+
+**Skip Level***
+
+- [Hexdump](deadc0de/hexdumps/mortal_combat_skip_uk.hex)
+- [Binary](deadc0de/binaries/mortal_combat_skip_uk.bin)
+- [Assambler (Plain)](deadc0de/assembler/plain/mortal_combat_skip_uk.asm)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/mortal_combat_skip_uk.asm)
 
 ## Full Blood During Combat (A)
 
@@ -41,94 +48,24 @@ A1E68000
 ### Analysis
 
 ```assembler
-; 80 E6             ; Opcode and operand for BRA instruction
-    BRA $-26               ; 80 E6: BRA (Branch Always) with relative offset -26
-                           ; Opcode 80: BRA
-                           ; Operand E6: Offset -26 (0xE6 in two's complement is -26)
-                           ; Branches back 26 bytes from the next instruction
-
-; 9B                ; Opcode for TXY
-    TXY                      ; 9B: TXY (Transfer X to Y)
-                             ; Transfers the contents of X register to Y register
-
-; 08                ; Opcode for PHP
-    PHP                      ; 08: PHP (Push Processor Status)
-                             ; Pushes the processor status register onto the stack
-
-; 08                ; Opcode for PHP
-    PHP                      ; 08: PHP (Push Processor Status)
-                             ; Pushes the processor status register onto the stack again
-
-; C2 30             ; Opcode and operand for REP #imm8
-    REP #$30                ; C2 30: REP #$30
-                             ; Opcode C2: REP (Reset Processor Status Bits)
-                             ; Operand 30: Bits to reset (bits 4 and 5)
-                             ; Sets accumulator and index registers to 16-bit mode
-
-; A2 00 00          ; Opcode and operand for LDX #imm16
-    LDX #$0000               ; A2 00 00: LDX Immediate 16-bit
-                             ; Opcode A2: LDX Immediate
-                             ; Operand 00 00: Loads X register with $0000
-
-; A9 16 00          ; Opcode and operand for LDA #imm16
-    LDA #$0016               ; A9 16 00: LDA Immediate 16-bit
-                             ; Opcode A9: LDA Immediate
-                             ; Operand 16 00: Loads accumulator with $0016
-
-; 9F 30 14 80       ; Opcode and address for STA Absolute Long,X
-    STA $801430,X            ; 9F 30 14 80: STA Absolute Long,X
-                             ; Opcode 9F: STA Absolute Long,X
-                             ; Address: 30 14 80 (little-endian), which is $801430
-                             ; Stores accumulator at address $801430 + X
-
-; 80 E8             ; Opcode and operand for BRA instruction
-    BRA $-24               ; 80 E8: BRA (Branch Always) with relative offset -24
-                             ; Operand E8: Offset -24 (0xE8 in two's complement is -24)
-                             ; Branches back 24 bytes from the next instruction
-
-; E8                ; Opcode for INX
-    INX                      ; E8: INX (Increment X Register)
-                             ; Increments X by 1
-
-; E0 08 00          ; Opcode and operand for CPX #imm16
-    CPX #$0008               ; E0 08 00: CPX Immediate 16-bit
-                             ; Opcode E0: CPX Immediate
-                             ; Operand 08 00: Compares X with $0008
-
-; D0 F2             ; Opcode and operand for BNE
-    BNE $-14               ; D0 F2: BNE (Branch if Not Equal) with relative offset -14
-                             ; Operand F2: Offset -14 (0xF2 in two's complement is -14)
-                             ; Branches if zero flag is clear (X ≠ $0008)
-
-; 28                ; Opcode for PLP
-    PLP                      ; 28: PLP (Pull Processor Status)
-                             ; Restores the processor status from the stack
-
-; 08                ; Opcode for PHP
-    PHP                      ; 08: PHP (Push Processor Status)
-                             ; Pushes the processor status register onto the stack
-
-; E2 20             ; Opcode and operand for SEP #imm8
-    SEP #$20                ; E2 20: SEP #$20
-                             ; Opcode E2: SEP (Set Processor Status Bits)
-                             ; Operand 20: Bits to set (bit 5)
-                             ; Sets accumulator to 8-bit mode
-
-; 9C 21 21          ; Opcode and address for STZ Absolute
-    STZ $2121                ; 9C 21 21: STZ Absolute
-                             ; Opcode 9C: STZ Absolute
-                             ; Address: 21 21 (little-endian), which is $2121
-                             ; Stores zero to address $2121
-
-; 5C A1 E6 80       ; Opcode and address for JML instruction
-    JML $80E6A1             ; 5C A1 E6 80: JML Absolute Long
-                             ; Opcode 5C: JML (Jump Long)
-                             ; Address: A1 E6 80 (little-endian), which is $80E6A1
-                             ; Jumps to the address $80E6A1
-
-; 00                ; Opcode for BRK
-    BRK                      ; 00: BRK (Break)
-                             ; Causes a software interrupt or breakpoint
+80E6    	bra $7FE8        ; Branch Always (bra) - Unconditional jump to the address $7FE8. This will skip a portion of the code if executed.
+9B      	txy              ; Transfer X to Y (txy) - Copies the value in the X register to the Y register.
+08      	php              ; Push Processor Status (php) - Pushes the processor status register onto the stack.
+08      	php              ; Push Processor Status (php) - Again pushes the processor status register onto the stack (possibly redundant).
+C230    	rep #$30         ; Reset Processor Status Bits (rep) - Clears specified bits (in this case, bit 4 and 5) in the status register, setting accumulator and index registers to 16-bit mode.
+A20000  	ldx #$0000       ; Load X Register with Immediate (ldx) - Loads the X register with the immediate value $0000.
+A91600  	lda #$0016       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $0016.
+9F301480	sta $801430,X    ; Store Accumulator (sta) - Stores the value of the accumulator into the address calculated by $801430 plus the X register. This uses the long indexed addressing mode.
+E8      	inx              ; Increment X Register (inx) - Increases the value of the X register by one.
+E8      	inx              ; Increment X Register (inx) - Performs another increment, total increment is by 2 at this point.
+E00800  	cpx #$0008       ; Compare X Register with Immediate (cpx) - Compares the X register with the immediate value $0008.
+D0F2    	bne $800A        ; Branch if Not Equal (bne) - Jumps back to address $800A if the result of the previous comparison is not zero (X is not 8), creating a loop.
+28      	plp              ; Pull Processor Status (plp) - Pulls (retrieves) the processor status register from the stack, restoring it.
+08      	php              ; Push Processor Status (php) - Pushes the processor status register onto the stack again.
+E220    	sep #$20         ; Set Processor Status Bits (sep) - Sets specified bits (in this case, bit 5) in the status register, making the accumulator 8-bit mode.
+9C2121  	stz $2121        ; Store Zero (stz) - Stores zero into the memory location $2121.
+5CA1E680	jmp $80E6A1      ; Jump Long (jmp) - Unconditionally jumps to the long address $80E6A1.
+00      	brk              ; Break (brk) - Forces a software interrupt, similar to a program breakpoint.
 ```
 
 ## Full Blood During Combat (B)
@@ -152,84 +89,23 @@ A1E68000
 ### Analysis
 
 ```assembler
-; 80 E6             ; Opcode and operand for BRA instruction
-    BRA $-26               ; 80 E6: BRA (Branch Always) with relative offset -26
-                           ; Opcode 80: BRA (Branch Always)
-                           ; Operand E6: Relative offset (-26 in two's complement)
-                           ; Branches back 26 bytes from the next instruction
-
-; CF 08 C2 30       ; Opcode and address for CMP Absolute Long
-    CMP $30C208           ; CF 08 C2 30: CMP Absolute Long
-                           ; Opcode CF: CMP (Compare Accumulator) Absolute Long
-                           ; Address: 08 C2 30 (little-endian), which is $30C208
-                           ; Compares the accumulator with the value at memory address $30C208
-
-; A2 00 00          ; Opcode and operand for LDX #imm16
-    LDX #$0000             ; A2 00 00: LDX Immediate 16-bit
-                           ; Opcode A2: LDX Immediate
-                           ; Operand 00 00: Loads X register with $0000
-
-; A9 16 00          ; Opcode and operand for LDA #imm16
-    LDA #$0016             ; A9 16 00: LDA Immediate 16-bit
-                           ; Opcode A9: LDA Immediate
-                           ; Operand 16 00: Loads accumulator with $0016
-
-; 9F 6A 14 80       ; Opcode and address for STA Absolute Long,X
-    STA $80146A,X          ; 9F 6A 14 80: STA Absolute Long,X
-                           ; Opcode 9F: STA Absolute Long,X
-                           ; Address: 6A 14 80 (little-endian), which is $80146A
-                           ; Stores accumulator at address $80146A plus X register
-
-; E8                ; Opcode for INX
-    INX                    ; E8: INX (Increment X Register)
-                           ; Increments X register by 1
-
-; E8                ; Opcode for INX
-    INX                    ; E8: INX (Increment X Register)
-                           ; Increments X register by 1 again
-
-; E0 08 00          ; Opcode and operand for CPX #imm16
-    CPX #$0008             ; E0 08 00: CPX Immediate 16-bit
-                           ; Opcode E0: CPX Immediate
-                           ; Operand 08 00: Compares X register with $0008
-
-; D0 F2             ; Opcode and operand for BNE
-    BNE $-14               ; D0 F2: BNE (Branch if Not Equal) with relative offset -14
-                           ; Operand F2: Offset -14 (in two's complement)
-                           ; Branches back 14 bytes if zero flag is clear (X ≠ $0008)
-
-; 28                ; Opcode for PLP
-    PLP                    ; 28: PLP (Pull Processor Status)
-                           ; Restores the processor status from the stack
-
-; 08                ; Opcode for PHP
-    PHP                    ; 08: PHP (Push Processor Status)
-                           ; Pushes the processor status register onto the stack
-
-; E2 20             ; Opcode and operand for SEP #imm8
-    SEP #$20               ; E2 20: SEP #$20
-                           ; Opcode E2: SEP (Set Processor Status Bits)
-                           ; Operand 20: Sets bit 5 (sets accumulator to 8-bit mode)
-
-; 9C 21 21          ; Opcode and address for STZ Absolute
-    STZ $2121              ; 9C 21 21: STZ Absolute
-                           ; Opcode 9C: STZ (Store Zero) Absolute
-                           ; Address: 21 21 (little-endian), which is $2121
-                           ; Stores zero to memory address $2121
-
-; 5C 9C 21 21       ; Opcode and address for JML instruction
-    JML $219C21            ; 5C 9C 21 21: JML Absolute Long
-                           ; Opcode 5C: JML (Jump Long)
-                           ; Address: 9C 21 21 (little-endian), which is $219C21
-                           ; Jumps to the long address $219C21
-
-; 9C 21 21          ; Opcode and address for STZ Absolute
-    STZ $2121              ; 9C 21 21: STZ Absolute
-                           ; Stores zero to memory address $2121 again
-                           
-; 5C                ; Opcode for JML
-                           ; 5C: JML (Jump Long)
-                           ; **Missing operand bytes for JML instruction**
+80E6    	bra $7FE8        ; Branch Always (bra) - Unconditional jump to the address $7FE8. This causes an immediate jump in the program flow.
+CF0808C2	cmp $C20808      ; Compare Accumulator with Memory (cmp) - Compares the accumulator with the contents at the long address $C20808.
+30A2    	bmi $7FAA        ; Branch if Minus (bmi) - Branches to the address $7FAA if the result of the previous comparison sets the negative flag.
+00      	brk              ; Break (brk) - Initiates a software interrupt, functioning similarly to a breakpoint in debugging.
+00      	brk              ; Break (brk) - Another breakpoint, possibly for redundancy or alignment purposes.
+A91600  	lda #$0016       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $0016.
+9F6A1480	sta $80146A,X    ; Store Accumulator (sta) - Stores the value of the accumulator at the memory address calculated as $80146A plus the X register.
+E8      	inx              ; Increment X Register (inx) - Increments the value in the X register by one.
+E8      	inx              ; Increment X Register (inx) - Another increment, total increment by 2 at this point.
+E00800  	cpx #$0008       ; Compare X Register with Immediate (cpx) - Compares the value of the X register with the immediate value $0008.
+D0F2    	bne $800A        ; Branch if Not Equal (bne) - Jumps back to $800A if the X register is not equal to $0008, forming a loop.
+28      	plp              ; Pull Processor Status (plp) - Restores the processor status register from the stack.
+08      	php              ; Push Processor Status (php) - Pushes the current processor status register onto the stack.
+E220    	sep #$20         ; Set Processor Status Bits (sep) - Sets the specified processor status bits, changing accumulator to 8-bit mode.
+9C2121  	stz $2121        ; Store Zero (stz) - Stores zero into memory location $2121.
+5C9C2121	jmp $21219C      ; Jump Long (jmp) - Unconditional jump to the long address $21219C.
+00/8023:	5C              ; Data at memory location $00/8023. The value 5C typically corresponds to a jump instruction, needing further context.
 ```
 
 ## Level Skip
@@ -260,120 +136,31 @@ EAFE8000
 ### Analysis
 
 ```assembler
-; 00 FE E4 0E       ; Opcodes for BRK and INC Absolute,X
-    BRK                     ; 00: BRK (Break)
-                            ; Causes a software interrupt or breakpoint
-
-    INC $0EE4,X             ; FE E4 0E: INC Absolute,X
-                            ; Opcode FE: INC (Increment Memory by 1)
-                            ; Address E4 0E (little-endian) is $0EE4
-                            ; Increments the value at address $0EE4 plus the X register
-
-; 08                ; Opcode for PHP
-    PHP                     ; 08: PHP (Push Processor Status)
-                            ; Pushes the processor status register onto the stack
-
-; C2 30             ; Opcode and operand for REP #imm8
-    REP #$30                ; C2 30: REP #$30
-                            ; Resets bits 4 and 5 of the status register, switching
-                            ; the accumulator and index registers to 16-bit mode
-
-; 48                ; Opcode for PHA
-    PHA                     ; 48: PHA (Push Accumulator)
-                            ; Pushes the accumulator onto the stack
-
-; 5A                ; Opcode for PHY
-    PHY                     ; 5A: PHY (Push Y Register)
-                            ; Pushes the Y register onto the stack
-
-; DA                ; Opcode for PHX
-    PHX                     ; DA: PHX (Push X Register)
-                            ; Pushes the X register onto the stack
-
-; E2 30             ; Opcode and operand for SEP #imm8
-    SEP #$30                ; E2 30: SEP #$30
-                            ; Sets bits 4 and 5 of the status register, switching
-                            ; the accumulator and index registers to 8-bit mode
-
-; AF 19 42 00       ; Opcode and address for LDA Absolute Long
-    LDA $004219             ; AF 19 42 00: LDA Absolute Long
-                            ; Loads the accumulator with the value at memory address $004219
-
-; 29 20             ; Opcode and operand for AND #imm8
-    AND #$20                ; 29 20: AND Immediate
-                            ; Performs a bitwise AND between the accumulator and $20,
-                            ; isolating bit 5
-
-; F0 1D             ; Opcode and operand for BEQ
-    BEQ $+29                ; F0 1D: BEQ (Branch if Equal)
-                            ; Branches forward by 29 bytes if the zero flag is set (meaning AND result was zero)
-
-; AF 42 00 7E       ; Opcode and address for LDA Absolute Long
-    LDA $7E0042             ; AF 42 00 7E: LDA Absolute Long
-                            ; Loads the accumulator with the value at memory address $7E0042
-
-; C9 0B             ; Opcode and operand for CMP #imm8
-    CMP #$0B                ; C9 0B: CMP Immediate
-                            ; Compares the accumulator with the value $0B
-
-; F0 15             ; Opcode and operand for BEQ
-    BEQ $+21                ; F0 15: BEQ (Branch if Equal)
-                            ; Branches forward by 21 bytes if the zero flag is set (meaning accumulator equals $0B)
-
-; A9 FD             ; Opcode and operand for LDA #imm8
-    LDA #$FD                ; A9 FD: LDA Immediate
-                            ; Loads the accumulator with the immediate value $FD
-
-; 8F 71 04 7E       ; Opcode and address for STA Absolute Long
-    STA $7E0471             ; 8F 71 04 7E: STA Absolute Long
-                            ; Stores the accumulator value ($FD) at address $7E0471
-
-; A9 FE             ; Opcode and operand for LDA #imm8
-    LDA #$FE                ; A9 FE: LDA Immediate
-                            ; Loads the accumulator with the immediate value $FE
-
-; 8F 72 04 7E       ; Opcode and address for STA Absolute Long
-    STA $7E0472             ; 8F 72 04 7E: STA Absolute Long
-                            ; Stores the accumulator value ($FE) at address $7E0472
-
-; AF 42 00 7E       ; Opcode and address for LDA Absolute Long
-    LDA $7E0042             ; AF 42 00 7E: LDA Absolute Long
-                            ; Loads the accumulator with the value at memory address $7E0042
-
-; 1A                ; Opcode for INC A
-    INC A                   ; 1A: INC A
-                            ; Increments the accumulator by 1
-
-; 8F 42 00 7E       ; Opcode and address for STA Absolute Long
-    STA $7E0042             ; 8F 42 00 7E: STA Absolute Long
-                            ; Stores the incremented accumulator value back at $7E0042
-
-; C2 30             ; Opcode and operand for REP #imm8
-    REP #$30                ; C2 30: REP #$30
-                            ; Resets bits 4 and 5 of the status register (switches accumulator and index to 16-bit mode)
-
-; FA                ; Opcode for PLX
-    PLX                     ; FA: PLX (Pull X Register)
-                            ; Restores the X register from the stack
-
-; 7A                ; Opcode for PLY
-    PLY                     ; 7A: PLY (Pull Y Register)
-                            ; Restores the Y register from the stack
-
-; 68                ; Opcode for PLA
-    PLA                     ; 68: PLA (Pull Accumulator)
-                            ; Restores the accumulator from the stack
-
-; 28                ; Opcode for PLP
-    PLP                     ; 28: PLP (Pull Processor Status)
-                            ; Restores the processor status register from the stack
-
-; 5C EA FE 80       ; Opcode and address for JML Absolute Long
-    JML $80FEEA             ; 5C EA FE 80: JML (Jump Long)
-                            ; Jumps to address $80FEEA in the program
-
-; EA                ; Opcode for NOP
-    NOP                     ; EA: NOP (No Operation)
-                            ; Placeholder instruction, does nothing
+FEE40E  	inc $0EE4,X    ; Increment the value at memory location ($0EE4 + X). This adds 1 to the byte stored in that location.
+08      	php             ; Push the Processor Status Register onto the stack. This saves the current processor flags for later restoration.
+C230    	rep #$30        ; Reset processor status bits 4 and 5 in the Status Register. This sets the accumulator and index registers to 16-bit mode.
+48      	pha             ; Push the accumulator onto the stack. This saves the current value of the accumulator for later use.
+5A      	phy             ; Push the Y register onto the stack. This saves the current value of the Y register.
+DA      	phx             ; Push the X register onto the stack. This saves the current value of the X register.
+E230    	sep #$30        ; Set processor status bits 4 and 5. This sets the accumulator and index registers back to 8-bit mode.
+AF194200	lda $004219    ; Load the accumulator with the value from memory location $004219. This fetches a specific byte from memory.
+2920    	and #$20        ; Perform a bitwise AND between the accumulator and hexadecimal 20. This isolates a specific bit of interest.
+F01D    	beq $8030       ; Branch to memory address $8030 if the zero flag is set, meaning the result of the AND was zero.
+AF42007E	lda $7E0042    ; Load the accumulator with the value from memory location $7E0042. This accesses another specific byte from memory.
+C90B    	cmp #$0B        ; Compare the accumulator with hexadecimal 0B. Sets flags based on the comparison.
+F015    	beq $8030       ; Branch to memory address $8030 if the zero flag is set, meaning the value was 0B.
+A9FD    	lda #$FD        ; Load the accumulator with the immediate value FD. Puts this exact byte into the accumulator.
+8F71047E	sta $7E0471    ; Store the accumulator's value into memory location $7E0471. This saves the FD byte to this location.
+A9FE    	lda #$FE        ; Load the accumulator with the immediate value FE. Updates the accumulator with this specific value.
+8F72047E	sta $7E0472    ; Store the accumulator's value into memory location $7E0472. Writes FE byte into this specific memory location.
+AF42007E	lda $7E0042    ; Load the accumulator with the value from memory location $7E0042. Fetches the current byte from this location.
+1A      	inc A           ; Increment the accumulator. Adds one to the current value in the accumulator.
+8F42007E	sta $7E0042    ; Store the accumulator's value into memory location $7E0042. Saves the updated accumulator value back to this location.
+C230    	rep #$30        ; Reset processor status bits 4 and 5. Switches the processor back to 16-bit mode for the operands.
+FA      	plx             ; Pull the X register from the stack. Restores the previous value of the X register.
+7A      	ply             ; Pull the Y register from the stack. Restores the previous value of the Y register.
+68      	pla             ; Pull the accumulator from the stack. Restores the previously saved accumulator value.
+28      	plp             ; Pull the Processor Status Register from the stack. Restores the processor's flags to their saved state.
+5CEAFE80	jmp $80FEEA    ; Jump to address $80FEEA. Transfers program control to the specified location.
+00      	brk             ; Force a break. Typically used to trigger a software interrupt for debugging or as a breakpoint.
 ```
-

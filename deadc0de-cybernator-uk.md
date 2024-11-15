@@ -7,9 +7,9 @@
 ## Downloads
 
 - [Hexdump](deadc0de/hexdumps/cybernator_uk.hex)
-- [Binary](deadc0de/binaries/cybernator_uk.hex)
-- [Assambler (Plain)](deadc0de/assembler/plain/cybernator_uk.hex)
-- [Assambler (Annotated)](deadc0de/assembler/analyzed/cybernator_uk.hex)
+- [Binary](deadc0de/binaries/cybernator_uk.bin)
+- [Assambler (Plain)](deadc0de/assembler/plain/cybernator_uk.asm)
+- [Assambler (Annotated)](deadc0de/assembler/analyzed/cybernator_uk.asm)
 
 ## Maximum/Unlimited Equipment
 
@@ -79,202 +79,40 @@ A9B08FCA
 ### Analysis
 
 ```assembler
-; 80 82          ; Opcode and operand for BRA instruction
-    BRA $-126             ; 80 82: BRA (Branch Always) with relative offset -126
-                          ; Opcode 80: BRA (Branch Always)
-                          ; Operand 82: Relative offset (0x82 in two's complement is -126)
-                          ; Branches back 126 bytes from the next instruction
-
-; 78             ; Opcode for SEI
-    SEI                   ; 78: SEI (Set Interrupt Disable)
-                          ; Disables all interrupts until cleared
-
-; 00             ; Opcode for BRK
-    BRK                   ; 00: BRK (Break)
-                          ; Causes a software interrupt or breakpoint
-
-; 8F 00 42 00    ; Opcode and address for STA Absolute Long
-    STA $004200           ; 8F 00 42 00: STA Absolute Long to address $004200
-                          ; Opcode 8F: STA (Store Accumulator) Absolute Long
-                          ; Address: 00 42 00 (little-endian format)
-                          ; Stores the accumulator value to memory address $004200
-
-; **Dynamic Code Options (Optional, can be omitted or replaced)**
-; The following code blocks are optional and can be included or left out.
-
-; 80 82          ; Opcode and operand for BRA instruction
-    BRA $-126             ; 80 82: BRA (Branch Always) with relative offset -126
-                          ; Opcode 80: BRA (Branch Always)
-                          ; Operand 82: Relative offset (0x82 in two's complement is -126)
-                          ; Branches back 126 bytes from the next instruction
-
-; 78             ; Opcode for SEI
-    SEI                   ; 78: SEI (Set Interrupt Disable)
-                          ; Disables all interrupts until cleared
-
-; 00             ; Opcode for BRK
-    BRK                   ; 00: BRK (Break)
-                          ; Causes a software interrupt or breakpoint
-
-; 8F 00 42 00    ; Opcode and address for STA Absolute Long
-    STA $004200           ; 8F 00 42 00: STA Absolute Long to address $004200
-                          ; Opcode 8F: STA (Store Accumulator) Absolute Long
-                          ; Address: 00 42 00 (little-endian format)
-                          ; Stores the accumulator value to memory address $004200
-
-; **Dynamic Code Options (Optional, can be included or omitted)**
-; The following code blocks are optional and can be included or left out.
-
-; **Option 1: Maximum Vulcans**
-; A9 03          ; Opcode and operand for LDA Immediate
-    LDA #$03              ; A9 03: LDA Immediate with value $03
-                          ; Opcode A9: LDA Immediate
-                          ; Operand 03: Loads the value $03 into the accumulator
-
-; 8F 66 00 7E    ; Opcode and address for STA Absolute Long
-    STA $7E0066           ; 8F 66 00 7E: STA Absolute Long to address $7E0066
-                          ; Opcode 8F: STA Absolute Long
-                          ; Address: 66 00 7E (little-endian), which is $7E0066
-                          ; Stores the accumulator value ($03) to address $7E0066
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-                          ; Does nothing; used for timing or code alignment
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; **Option 2: Unlimited Vulcans**
-; A9 06          ; Opcode and operand for LDA Immediate
-    LDA #$06              ; A9 06: LDA Immediate with value $06
-                          ; Opcode A9: LDA Immediate
-                          ; Operand 06: Loads the value $06 into the accumulator
-
-; 8F 5C 00 7E    ; Opcode and address for STA Absolute Long
-    STA $7E005C           ; 8F 5C 00 7E: STA Absolute Long to address $7E005C
-                          ; Opcode 8F: STA Absolute Long
-                          ; Address: 5C 00 7E (little-endian), which is $7E005C
-                          ; Stores the accumulator value ($06) to address $7E005C
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; **Option 3: Maximum Missiles**
-; A9 03          ; Opcode and operand for LDA Immediate
-    LDA #$03              ; A9 03: LDA Immediate with value $03
-                          ; Opcode A9: LDA Immediate
-                          ; Operand 03: Loads the value $03 into the accumulator
-
-; 8F 6A 00 7E    ; Opcode and address for STA Absolute Long
-    STA $7E006A           ; 8F 6A 00 7E: STA Absolute Long to address $7E006A
-                          ; Opcode 8F: STA Absolute Long
-                          ; Address: 6A 00 7E (little-endian), which is $7E006A
-                          ; Stores the accumulator value ($03) to address $7E006A
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; **Option 4: Unlimited Missiles**
-; A9 19          ; Opcode and operand for LDA Immediate
-    LDA #$19              ; A9 19: LDA Immediate with value $19
-                          ; Opcode A9: LDA Immediate
-                          ; Operand 19: Loads the value $19 into the accumulator
-
-; 8F 60 00 7E    ; Opcode and address for STA Absolute Long
-    STA $7E0060           ; 8F 60 00 7E: STA Absolute Long to address $7E0060
-                          ; Opcode 8F: STA Absolute Long
-                          ; Address: 60 00 7E (little-endian), which is $7E0060
-                          ; Stores the accumulator value ($19) to address $7E0060
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; **Option 5: Maximum Laser**
-; A9 03          ; Opcode and operand for LDA Immediate
-    LDA #$03              ; A9 03: LDA Immediate with value $03
-                          ; Opcode A9: LDA Immediate
-                          ; Operand 03: Loads the value $03 into the accumulator
-
-; 8F 68 00 7E    ; Opcode and address for STA Absolute Long
-    STA $7E0068           ; 8F 68 00 7E: STA Absolute Long to address $7E0068
-                          ; Opcode 8F: STA Absolute Long
-                          ; Address: 68 00 7E (little-endian), which is $7E0068
-                          ; Stores the accumulator value ($03) to address $7E0068
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; **Option 6: Unlimited Laser**
-; A9 07          ; Opcode and operand for LDA Immediate
-    LDA #$07              ; A9 07: LDA Immediate with value $07
-                          ; Opcode A9: LDA Immediate
-                          ; Operand 07: Loads the value $07 into the accumulator
-
-; 8F 5E 00 7E    ; Opcode and address for STA Absolute Long
-    STA $7E005E           ; 8F 5E 00 7E: STA Absolute Long to address $7E005E
-                          ; Opcode 8F: STA Absolute Long
-                          ; Address: 5E 00 7E (little-endian), which is $7E005E
-                          ; Stores the accumulator value ($07) to address $7E005E
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; **Option 7: Maximum Punch**
-; A9 03          ; Opcode and operand for LDA Immediate
-    LDA #$03              ; A9 03: LDA Immediate with value $03
-                          ; Opcode A9: LDA Immediate
-                          ; Operand 03: Loads the value $03 into the accumulator
-
-; 8F 6C 00 7E    ; Opcode and address for STA Absolute Long
-    STA $7E006C           ; 8F 6C 00 7E: STA Absolute Long to address $7E006C
-                          ; Opcode 8F: STA Absolute Long
-                          ; Address: 6C 00 7E (little-endian), which is $7E006C
-                          ; Stores the accumulator value ($03) to address $7E006C
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; **Option 8: Unlimited Energy**
-; A9 B0          ; Opcode and operand for LDA Immediate
-    LDA #$B0              ; A9 B0: LDA Immediate with value $B0
-                          ; Opcode A9: LDA Immediate
-                          ; Operand B0: Loads the value $B0 into the accumulator
-
-; 8F CA 14 7E    ; Opcode and address for STA Absolute Long
-    STA $7E14CA           ; 8F CA 14 7E: STA Absolute Long to address $7E14CA
-                          ; Opcode 8F: STA Absolute Long
-                          ; Address: CA 14 7E (little-endian), which is $7E14CA
-                          ; Stores the accumulator value ($B0) to address $7E14CA
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; EA             ; Opcode for NOP
-    NOP                   ; EA: NOP (No Operation)
-
-; **End of Dynamic Code Options**
-
-; 5C 7C 82 80    ; Opcode and address for JML instruction
-    JML $80827C           ; 5C 7C 82 80: JML (Jump Long) to address $80827C
-                          ; Opcode 5C: JML (Jump to Long Address)
-                          ; Address: 7C 82 80 (little-endian), which is $80827C
-                          ; Jumps to the address $80827C to continue execution
+8082    	bra $7F84        ; Branch Always (bra) - Unconditional jump to the address $7F84. Effectively, this is a forward jump in the program.
+78      	sei              ; Set Interrupt Disable (sei) - Disables all interrupts by setting the Interrupt Disable flag in the status register.
+00      	brk              ; Break (brk) - Forces an interrupt by generating a software interrupt request, similar to a breakpoint.
+8F004200	sta $004200      ; Store Accumulator (sta) - Stores the value in the accumulator to the memory location $004200.
+A9038F  	lda #$8F03       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $8F03.
+6600    	ror $00          ; Rotate Right (ror) - Rotates the bits of the byte at memory location $00 to the right by one bit.
+7EEAEA  	ror $EAEA,X      ; Rotate Right (ror) - Rotates the bits of the byte at memory location $EAEA plus the value of X register to the right.
+A9068F  	lda #$8F06       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $8F06.
+5C007EEA	jmp $EA7E00      ; Jump (jmp) - Unconditionally jump to the long address $EA7E00.
+EA      	nop              ; No Operation (nop) - Does nothing, used for timing or alignment.
+A9038F  	lda #$8F03       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $8F03 again.
+6A      	ror A            ; Rotate Right Accumulator (ror) - Rotates the bits of the accumulator to the right by one bit.
+00      	brk              ; Break (brk) - Forces an interrupt by generating a software interrupt request.
+7EEAEA  	ror $EAEA,X      ; Rotate Right (ror) - Rotates the bits of the byte at memory location $EAEA plus the value of X register to the right.
+A919BF  	lda #$BF19       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $BF19.
+60      	rts              ; Return from Subroutine (rts) - Returns from subroutine to the address stored on the stack.
+00      	brk              ; Break (brk) - Forces an interrupt by generating a software interrupt request.
+7EEAEA  	ror $EAEA,X      ; Rotate Right (ror) - Rotates the bits of the byte at memory location $EAEA plus the value of X register to the right.
+A9038F  	lda #$8F03       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $8F03.
+68      	pla              ; Pull Accumulator (pla) - Pulls (retrieves) a byte from the stack into the accumulator.
+00      	brk              ; Break (brk) - Forces an interrupt by generating a software interrupt request.
+7EEAEA  	ror $EAEA,X      ; Rotate Right (ror) - Rotates the bits of the byte at memory location $EAEA plus the value of X register to the right.
+A9078F  	lda #$8F07       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $8F07.
+5E007E  	lsr $7E00,X      ; Logical Shift Right (lsr) - Shifts the bits of the byte at memory location $7E00 plus X register to the right.
+EA      	nop              ; No Operation (nop) - Does nothing, used for timing or alignment.
+EA      	nop              ; No Operation (nop) - Does nothing, used for timing or alignment.
+A9038F  	lda #$8F03       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $8F03.
+6C007E  	jmp ($7E00)      ; Jump Indirect (jmp) - Jumps to the address contained in memory location $7E00.
+EA      	nop              ; No Operation (nop) - Does nothing, used for timing or alignment.
+EA      	nop              ; No Operation (nop) - Does nothing, used for timing or alignment.
+A9B08F  	lda #$8FB0       ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $8FB0.
+CA      	dex              ; Decrement X Register (dex) - Decreases the value of the X register by one.
+147E    	trb $7E          ; Test and Reset Bit (trb) - Tests and resets the bits in the memory location $7E that are set in the accumulator.
+EA      	nop              ; No Operation (nop) - Does nothing, used for timing or alignment.
+EA      	nop              ; No Operation (nop) - Does nothing, used for timing or alignment.
+5C7C8280	jmp $80827C      ; Jump Long (jmp) - Jumps unconditionally to the long address $80827C.
 ```
