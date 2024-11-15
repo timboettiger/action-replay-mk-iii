@@ -46,16 +46,16 @@ It should be read as:
 8F 004200
 ```
 
-To accurately disassemble the binary code from the hex dumps, we needed to tweak the disassembler. It had to handle code fragments and process breaks without an operand. Check out the "Preparation" above section to see how it's done.
+To accurately disassemble the binary code from the hex dumps, we needed to tweak the disassembler. It had to handle code fragments and process breaks without an operand. Check out the "Preparation" section above to see how it's done.
 
 ### Maximum Dead Code Length
 
 In the available dead codes, between `40` and `60` opcodes are used. This does not provide any conclusions about a maximum length for dead codes. However, since no other cheats besides opcodes are allowed,
 
-- the entire maximum number of cheats (`255`) is theoretically available.
-- Subtracting the magic word leaves `254`.
-- Each cheat is 8 ASCII bytes in length, totaling 2032 bytes.
-- This could accommodate an average of 677 opcodes.
+- the entire maximum number of cheats (`100`) is theoretically available.
+- Subtracting the magic word leaves `99`.
+- Each cheat line is 8 ASCII bytes in length, totaling `792` bytes. The Action Replay's RAM is 32KB, that should work out.
+- This could accommodate an average of `264` opcodes with operands.
 
 ### Maximum Option Length
 
