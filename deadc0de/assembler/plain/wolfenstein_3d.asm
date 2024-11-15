@@ -1,5 +1,5 @@
-00FD    	brk $FD
-1500    	ora $00,X
+00      	brk 
+FD1500  	sbc $0015,X
 48      	pha 
 08      	php 
 E230    	sep #$30
@@ -23,5 +23,5 @@ EA      	nop
 68      	pla 
 AF114200	lda $004211
 5C15FDC0	jmp $C0FD15
-00      	brk
-00      	brk
+00      	brk 
+00      	brk 

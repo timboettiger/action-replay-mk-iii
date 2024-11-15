@@ -8,7 +8,7 @@
 # -----------------------------------------------------------------------------
 
 HEX_CMD="xxd -r -p"
-ASM_CMD="./dispel -H -o"
+ASM_CMD="dispel -A -o "
 
 HEX_DIR="./hexdumps"
 BIN_DIR="./binaries"

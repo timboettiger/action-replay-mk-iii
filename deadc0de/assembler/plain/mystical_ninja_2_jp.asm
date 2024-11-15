@@ -27,5 +27,5 @@ A900    	lda #$00
 7EEAEA  	ror $EAEA,X
 C210    	rep #$10
 5CB88780	jmp $8087B8
-00      	brk
-00      	brk
+00      	brk 
+00      	brk 

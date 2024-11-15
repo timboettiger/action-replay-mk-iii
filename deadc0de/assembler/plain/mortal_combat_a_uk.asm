@@ -15,4 +15,4 @@ D0F2    	bne $800A
 E220    	sep #$20
 9C2121  	stz $2121
 5CA1E680	jmp $80E6A1
-00
+00      	brk 

@@ -10,5 +10,5 @@ A905    	lda #$05
 6468    	stz $68
 6469    	stz $69
 5C7EFC02	jmp $02FC7E
-00      	brk $00
-00      	brk $00
+00      	brk 
+00      	brk 

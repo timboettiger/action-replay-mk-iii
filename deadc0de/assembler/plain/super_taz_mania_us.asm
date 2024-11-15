@@ -39,6 +39,6 @@ EA      	nop
 A5B2    	lda $B2
 25AA    	and $AA
 5C8B899A	jmp $9A898B
-00      	brk
-00      	brk
-00      	brk
+00      	brk 
+00      	brk 
+00      	brk 
