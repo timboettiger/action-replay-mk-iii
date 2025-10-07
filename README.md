@@ -5,16 +5,22 @@
 
 ### Discover the Full Power of the Action Replay MK3!
 
-Finding in-depth information (or even basic manuals) for this Super Nintendo cheat device is difficult. Here you find:
-- revised and up-to-date manuals (de/en)
-- print-ready repro labels
-- further information on the built-in code database
-- project "Preservaction" - a deep documentation of PAR MK III
-- comparison to other cheat-devices or SNES region adapters
+Whether you're a long-time fan who used the Action Replay MK III back in the day - or you've just stumbled upon it for the first time - this remarkable device deserves a proper spotlight.
+
+The MK III was far more than a simple cheat cartridge. It was a clever blend of game enhancer, region adapter, and tinkering tool, letting players unlock hidden features, experiment with codes, and play import titles long before emulation made that easy. For many, it was a gateway into the world of game hacking and discovery - a small piece of hardware with a big personality.
+
+Yet despite its importance, information about it has nearly vanished: manuals are inconsistent, scans are incomplete, and technical details have been scattered or lost. This page aims to change that - to collect, preserve, and share everything known about the Action Replay MK III.
+
+Here you'll find:
+- revised and up-to-date manuals (German / English)
+- print-ready reproduction labels for your cartridge
+- background information on the built-in cheat database
+- the "PreservAction" project - a deep documentation of the MK III
+- comparisons with other cheat devices and SNES region adapters
 
 ### Why did you make this?
 
-I've been collecting SNES equipment for over 30 years, but the trigger to start this project was something else. In zhe last year I've spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MKIII - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
+I've been collecting SNES equipment for over 30 years, but the trigger to start this project was something else. In the last year I've spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MKIII - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
 
 **Indeed!** The Pro Action Replay MK III is my favorite SNES cheat device because it's much more like a Swiss Army knife:
 - a region adapter
@@ -22,7 +28,7 @@ I've been collecting SNES equipment for over 30 years, but the trigger to start 
 - a cheat code finder (trainer)
 - a real-time opcode injector
 - a cheat code database
-- with a mouse or joypad-driven user interface
+- it has a user interface driven by mouse or joypad
 
 To make this amazing hardware appreciated again, I digitized and translated the manual, documented all the built-in codes, screenshotted each menu, and gathered more information.
 
@@ -34,7 +40,7 @@ Happy gaming
 
 ### Manuals
 
-The original manual contains several small errors, and a revised version is available for download. Since the module's interface is in German, I have provided a translation. However, only the body text has been translated – the menu names and messages have been kept in the original language for better orientation.
+The original manual contains a few minor inaccuracies; a corrected version is available for download. Because the module's interface is in German, I've added a translation - but only the main text is translated. Menu names and messages remain in German to make navigation easier.
 
 ![AR MK III Manuals Logo](./assets/logo.jpg)
 
@@ -43,7 +49,7 @@ The original manual contains several small errors, and a revised version is avai
 
 ### Cartridge Labels (Repros)
 
-To give your Action Replay MK III module an authentic look, we've provided high-resolution label downloads for printing. These are faithful recreations of the original labels and are available in case your module's label has been damaged and needs replacing:
+To bring your Action Replay MK III cartridge back to its original glory, I've included high-resolution printable labels. They're carefully recreated from the originals - perfect for replacing worn, damaged, or missing stickers:
 
 - [Module Label (PNG)](./assets/action_replay_mk_iii_label.png)
 - [Module Label (PDF)](./assets/action_replay_mk_iii_label.pdf)
@@ -51,19 +57,19 @@ To give your Action Replay MK III module an authentic look, we've provided high-
 
 ### Project 'Preservaction'
 
-Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started this project to document all functions of the Action Replay MK III - from the interface and operation to features hidden within the ROM. Take a look at [Project Preservaction](preservaction-toc.md)?
+Since no (or very little) information, screenshots, and other details are available, I think it is important to preserve the Pro Action Replay 3 details. Therefore I started project 'Preservaction' to document all functions of the Action Replay MK III - from the interface and operation to features hidden within the ROM. Take a look at [Project Preservaction](preservaction-toc.md)?
 
 ### All about DEADC0DE
 
 Different from the regular cheatcodes you find `DEADC0DES` for the Action Replay beginning from MK II. They look very unusual, but a quick google research shows: Nothing.
 
-This is interesting! A challenge! Why hasn’t anyone delved into this yet? Oh, the nerd in me must have awakened. If you’re interested in what deadcodes are (they’re awesome, I can already tell you), check out the corresponding archive [with all the details](preservaction-deadc0de.md).
+This is interesting! A challenge! Why hasn't anyone delved into this yet? Oh, the nerd in me must have awakened. If you're interested in what deadcodes are (they're awesome, I can already tell you), check out the corresponding archive [with all the details](preservaction-deadc0de.md).
 
 ### Built-In Codes
 
-The Action Replay MK III includes a built-in database of (cheat) codes. A total of `907` codes for `202` games are pre-installed on the module (version `V1.0G`). Alongside classics like A Link to the Past, Castlevania, Final Fight, and Street Fighter, it also features cheats for games that only later achieved cult status and are now considered “hidden gems” or “underrated”: such as Blackthorne, Goof Troop, Lost Vikings, and Mickey's Magical Quest.
+The Action Replay MK III includes a built-in database of (cheat) codes. A total of `907` codes for `202` games are pre-installed on the module (version `V1.0G`). Alongside classics like A Link to the Past, Castlevania, Final Fight, and Street Fighter, it also features cheats for games that only later achieved cult status and are now considered "hidden gems" or "underrated": such as Blackthorne, Goof Troop, Lost Vikings and Mickey's Magical Quest.
 
-Due to limited storage space, only the most essential codes were included, such as infinite lives, energy, or time. Additionally, there are codes that support region unlocking, effectively patching the software in real-time.
+Though, due to limited storage space, only the most essential codes were included, such as infinite lives, energy, or time. Additionally, there are codes that support region unlocking, effectively patching the software in real-time.
 
 See a [list of all included games](preservaction-database.md) and the amount of integrated cheat codes.
 
@@ -73,7 +79,7 @@ Interestingly, there are **a few oddities**:
 - `Eek! The Cat` is listed in the cheat code database mistakenly as `Sky Cat`.
 - `Rampart` is listed mistakenly as `Ramparts`.
 - The [cheat codes for `Street Racer`](./ui/cheats/170b-codes-street-racer-4.png) are labeled mistakenly as `No Description`.
-- Some games are listed with their Japanese or European name, but not marked with "`JAP`" or "`EU`" as other games are. This leaves the version unclear:
+- Some games are listed under their Japanese or European titles but aren't marked with "`JAP`" or "`EU`" as others are. As a result, it's unclear which version the listed cheat codes apply to.
   - `Contra Spirits` (JAP) = `Contra III: The Alien Wars` (US)
   - `Dead Dance` (JAP) = `Tuff E Nuff` (US)
   - `Super SWIV` (JAP) = `Firepower 2000` (US)
@@ -85,10 +91,10 @@ Interestingly, there are **a few oddities**:
   - `Super Aleste` (JAP) = `Space Megaforce` (US)
   - `Super Pang` (JAP) = `Super Buster Bros` (US)
 
-Along with **some misleading simplifications**:
-- `90 Minutes - European Prime Goal` is listed as `Prime Goal`.
-- `Harley's Humongous Adventure` is listed as `Harleys Humongous Advent`.
-- `The Legend of Zelda - A Link to the Past` is listed as `Zelda III`.
+- There are also **some misleading simplifications**:
+  - `90 Minutes - European Prime Goal` is listed as `Prime Goal`.
+  - `Harley's Humongous Adventure` is listed as `Harleys Humongous Advent`.
+  - `The Legend of Zelda - A Link to the Past` is listed as `Zelda III`.
 
 #### More (Cheat-)Codes!
 
@@ -96,11 +102,11 @@ If you're looking for even more codes beyond what's built-in, check out [the SNE
 
 ## Further Insights
 
-In addition to the main information about the MK III features, I’ve also compiled other interesting insights about the cheat device that caught my attention during my research.
+Besides the main info about the MK III's features, I've collected a few other tidbits and details that caught my eye while digging into the history of this fascinating cheat device.
 
 ### Game Converters and Adapters
 
-Many people search the internet for help finding a well-functioning cartridge adapter to play games from another region on a Super Nintendo. There are certainly a few decent options, but the best one is the Action Replay MK III. Most adapters don’t support complex late-release games, don’t pass through the cartridge’s enhancement chips, and so on.
+Many people search the internet for help finding a well-functioning cartridge adapter to play games from another region on a Super Nintendo. There are certainly a few decent options, but the best one is the Action Replay MK III. Most adapters don't support complex late-release games, don't pass through the cartridge's enhancement chips, and so on.
 
 | **Adapter Name**                          | **Region** | **Slot Type** | **Cart-Slots** | **PAR** | **GG** | **DB** | **Slomo** | **ROM** | **CIC** | **Dead Codes** |
 |-------------------------------------------|------------|---------------|----------------|---------|--------|--------|-----------|---------|---------|----------------|
@@ -214,7 +220,7 @@ Further pictures as well as information about the (Action Replay board and chips
 
 ### Legacy Product Status
 
-The **Action Replay MK III** has not been manufactured or distributed for many years. While it is no longer available for purchase through official channels, it is still widely appreciated by retro gamers and collectors. Since this product is no longer sold, it is often considered **abandonware**, meaning there are no current copyright or distribution restrictions for personal use. However, always check your local regulations regarding abandonware before distribution or modification.
+The **Action Replay MK III** has not been manufactured or distributed for many years. While it is no longer available for purchase through official channels, it is still widely appreciated by retro gamers and collectors. Since this product is no longer sold, it is often considered **abandonware**, meaning there are no current copyright or distribution restrictions for personal use. However, always check your local regulations regarding abandonware before distribution or modification of the provided media files and information.
 
 ### License
 
