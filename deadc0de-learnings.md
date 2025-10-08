@@ -4,14 +4,23 @@
 
 ## Preparation
 
-If you want to try disassembling yourself:
+If you want to try disassembling yourself, you have the choice!
+
+**BREAKING NEWS** its recommended to use the [Dispel DEADC0DE Edition](https://github.com/timboettiger/dispel-snesdc-edition)! It's a modern version of Dispel with build-in support for deadc0des and the ability to decribe what the code does.
+
+1. Clone the [Dispel-DEADC0DE Github-Repository](https://github.com/timboettiger/dispel-snesdc-edition) to get a disassembler.
+2. Compile Dispel using `make`.
+3. Test if it runs correctly (it should display instructions) using `./dispel -h`
+4. Disassemble the readymade binaries using `./dispel -f=annotated ../par-mk3/deadc0de/binaries/deadcode.bin` (where "par-mk3" is your clone of this repository and "deadcode.bin" is the filename of the cheat you want to analyze).
+
+Or do you want to go the hard way? It's up to you:
 
 1. Clone the [Dispel Github-Repository](https://github.com/pelrun/Dispel) to get a disassembler.
 2. Check if you can apply the [Special Edition Patch](src/dispel-special-edition.patch) to the repository using `git apply --check dispel-special-edition.patch`.
 3. If everything is fine, apply the [Special Edition Patch](src/dispel-special-edition.patch) to the repository using `git apply dispel-special-edition.patch`.
 4. Compile Dispel using `make`.
 5. Test if it runs correctly (it should display instructions) using `./dispel`
-6. Convert hex dumps to binary files using `xxd -r -p deadcode.hex deadcode.bin`.
+6. Convert hex dumps to binary files using `xxd -r -p deadcode.hex deadcode.bin` or the convenient shell script [hex2asm.sh](./deadc0de/hex2asm.sh) within the deadc0de folder.
 7. You can now use Dispel to disassemble dead codes using `./dispel -A deadcode.bin > deadcode.asm`
 
 ## Dead Code Structure
