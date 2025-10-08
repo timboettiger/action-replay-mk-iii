@@ -4,7 +4,7 @@
 
 ## Built-In Code Database
 
-The Action Replay MK III includes a built-in database of (cheat-)codes. A total of `907` codes for `202` games are pre-installed on the module (version `V1.0G`):
+The Action Replay MK3 includes a built-in database of (cheat-)codes. A total of `907` codes for `202` games are pre-installed on the module (version `V1.0G`):
 
 |   ID | Game Abbreviation         | Game Name                                        |   Cheat Codes |
 |-----:|:--------------------------|:-------------------------------------------------|--------------:|

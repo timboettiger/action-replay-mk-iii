@@ -20,6 +20,21 @@
 
 ```hex
 DEADCODE
+C0025C07
+ADA800C9
+0020D00A
+E230A9FF
+8F71077E
+C230AD1A
+42AA5C60
+02C00000
+```
+> The original cheat code includes a wrong length byte (should be `07` instead of `09`)
+
+**Original:**
+
+```hex
+DEADCODE
 C0025C09
 ADA800C9
 0020D00A
@@ -30,21 +45,50 @@ C230AD1A
 02C00000
 ```
 
-### Analysis
+## Analysis
 
-```assembler
-C0025C  	cpy #$5C02        ; Compare Y Register with Immediate (cpy) - Compares the Y register with the immediate value $5C02, setting the processor status flags based on the result.
-09ADA8  	ora #$A8AD        ; Logical Inclusive OR with Accumulator (ora) - Performs a bitwise OR between the accumulator and the immediate value $A8AD.
-00      	brk               ; Break (brk) - Forces a software interrupt, often used as a breakpoint for debugging.
-C90020  	cmp #$2000        ; Compare Accumulator with Immediate (cmp) - Compares the accumulator with the immediate value $2000.
-D00A    	bne $8016         ; Branch if Not Equal (bne) - Branches to address $8016 if the comparison did not result in equality (zero flag not set).
-E230    	sep #$30          ; Set Processor Status Bits (sep) - Sets the specified processor status bits, changing accumulator and index registers to 8-bit mode by setting bits 4 and 5.
-A9FF    	lda #$FF          ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $FF.
-8F71077E	sta $7E0771       ; Store Accumulator (sta) - Stores the value of the accumulator at the long memory address $7E0771.
-C230    	rep #$30          ; Reset Processor Status Bits (rep) - Clears the specified status bits, switching accumulator and index registers to 16-bit mode.
-AD1A42  	lda $421A         ; Load Accumulator from Memory (lda) - Loads the accumulator with the value from memory location $421A.
-AA      	tax               ; Transfer Accumulator to X (tax) - Copies the value in the accumulator to the X register.
-5C6002C0	jmp $C00260       ; Jump Long (jmp) - Unconditionally jumps to the long address $C00260.
-00      	brk               ; Break (brk) - Forces a software interrupt, again serving often as a breakpoint.
-00      	brk               ; Break (brk) - Another break, possibly for alignment or redundancy.
+**Header**
+
 ```
+DE AD C0 DE
+C0 02 5C 07
+```
+Translates to:
+- Signature = `DEADC0DE`
+- Hook address = `$C0:025C`
+- Lengeth = `0x07` -> 7 * 4 = 28 bytes of code follow
+
+**Segment Disassembly (65C816)**
+
+```assambler
+--------------------------------
+LDA $00A8           ; AD A8 00      - load A from address $00A8 (address uses current DBR; in game
+                    ;                 context this is typically WRAM)
+CMP #$00            ; C9 00         - compare A with 0x00 (sets N/Z/C flags)
+JSR $0AD0           ; 20 D0 0A      - call original subroutine at $0AD0; returns with RTS. This
+                    ;                 replays original game logic that was overwritten by the hook
+SEP #$30            ; E2 30         - set M and X flags (force 8-bit accumulator and 8-bit index)
+LDA #$FF            ; A9 FF         - load immediate 0xFF into A (now 8-bit)
+STA $7E:0771        ; 8F 71 07 7E   - store A to WRAM $7E:0771   <-- core cheat write
+REP #$30            ; C2 30         - clear M and X flags (restore 16-bit accumulator/index)
+LDA $421A           ; AD 1A 42      - read I/O register $421A (timing/status read)
+TAX                 ; AA            - transfer A -> X (may be used for side-effect or register sync)
+JML $C0:0260        ; 5C 60 02 C0   - long jump to $C0:0260 (hook + 4)
+00 00               ;               - (padding / alignment)
+```
+
+**Operational notes**
+- The header's len byte denotes how many 4-byte words the loader will copy/execute.
+  Here len=`07` -> 28 bytes follow; the trainer loader treats following bytes as a contiguous
+  machine-code blob (the CPU fetches bytes serially; instruction boundaries can cross segment
+  boundaries).
+- The routine intentionally replays original instructions (`LDA/CMP/JSR`) that were replaced
+  at the hook site so original semantics are preserved.
+- `SEP/REP` pair is critical: `SEP #$30` forces `A/X` to 8-bit so that `LDA #imm` behaves as a
+  single-byte load and `STA` writes one byte. `REP` restores the original width before returning control.
+- `STA` long (opcode `8F`) includes an explicit bank byte: `8F 71 07 7E` -> store to `$7E:0771` (WRAM).
+- The final `JML` targets the same offset in the execution bank; conventions typically use
+  "return = hook_offset + 4" so the CPU resumes at the instruction following the overwritten bytes.
+- `DBR` (data bank register) affects absolute 16-bit loads/stores (`AD` / `8D`): `LDA $00A8` reads `DBR:$00A8`.
+  The long `STA` (`8F`) used here is independent of `DBR` because its operand includes the bank byte.
+- Padding bytes are used to align the blob; they are not executed.

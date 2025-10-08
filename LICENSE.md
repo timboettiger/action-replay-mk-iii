@@ -19,8 +19,8 @@ EXCLUSIONS
 
 This license does not apply to:
 
-- The original manual for the Action Replay MK III.
-- The original label artwork for the Action Replay MK III.
+- The original manual for the Action Replay MK3.
+- The original label artwork for the Action Replay MK3.
 - Any other trademarks or materials mentioned within the original manual.
 
 These elements remain the intellectual property of their respective owners and are not covered by the license provided here.

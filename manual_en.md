@@ -1,12 +1,12 @@
-# SNES Action Replay MKIII V1.1 - Manual/Guide (English)
+# SNES Action Replay MK3 V1.1 - Manual/Guide (English)
 
 Translation V2.1
 
-Copyright (C) 2024 by Tim Böttiger
+Copyright (C) 2024/2025 by Tim Böttiger
 
 ## WELCOME!
 
-Welcome to the world of the "Action Replay MK III". The "Action Replay MK III" offers you numerous new possibilities, such as the completely revamped trainer, parameter groups, and the improved German menu system.
+Welcome to the world of the "Action Replay MK3". The "Action Replay MK3" offers you numerous new possibilities, such as the completely revamped trainer, parameter groups, and the improved German menu system.
 
 > **COPYRIGHT:** `SUPER NES` and `NINTENDO` are registered trademarks of Nintendo America INC.
 
@@ -172,7 +172,7 @@ Explanations for the Parameter Menu:
 
 ### <a name="param_gruppen"></a> PARAMETER GROUPS
 
-In addition to the parameters that are always activated (`AN`) by entering them in the Parameter List, the "Action Replay MK III" also has two parameter groups to which multiple parameters can be assigned.
+In addition to the parameters that are always activated (`AN`) by entering them in the Parameter List, the "Action Replay MK3" also has two parameter groups to which multiple parameters can be assigned.
 
 These `A` and `B` groups can be toggled on or off at certain points in the game using a key combination.
 
@@ -335,11 +335,11 @@ In this example, we refer to the game "SUPER BOMBERMAN 1 TM."
 5. Delete the trainer's memory by pressing the `START` and `SELECT` buttons simultaneously.
 6. Press the `SELECT` and `X` buttons to start the trainer.
 7. You must now complete the first level.
-   
+
 > IF THE CHARACTER HAS LOST ALL LIVES, YOU MUST RESTART THE GAME AND CONTINUE THE TRAINER BY PRESSING THE `SELECT` AND `X` BUTTONS BECAUSE THE CHARACTER IS STILL IN THE FIRST LEVEL.
 
 8. In the second level, press the `SELECT` and `A` buttons since the character was previously in the first level and is now in the second level.
-   
+
 > IF THE CHARACTER HAS LOST ALL LIVES, YOU MUST RESTART THE GAME AND CONTINUE THE TRAINER BY PRESSING THE `SELECT` AND `Y` BUTTONS BECAUSE THE CHARACTER IS AGAIN IN THE FIRST LEVEL AND WAS PREVIOUSLY IN THE SECOND LEVEL.
 
 9. Repeat points 7 and 8 until `LED 2` blinks rapidly. You must be in the next level with each pass (first in the third, then in the fourth, etc.).

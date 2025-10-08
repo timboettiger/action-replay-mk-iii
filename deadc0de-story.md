@@ -1,39 +1,56 @@
-# DEADC0DE Story 
+# DEADC0DE Story
 
 [Dead Code Overview](preservaction-deadc0de.md)
 
 ## A nerdy flavor
 
-The term "DEADC0DE" itself is a bit of a nerd joke: In a hex editor, it immediately catches the eye because it's not written as an ASCII byte sequence (8 bits per character) but in hex (4 bits per character). At the same time, the term fits perfectly with cheats: it sounds somewhat mysterious, dangerous, and overall pretty cool!
+The term "DEADC0DE" itself is a bit of a nerd joke: In a hex editor, it immediately catches the eye because it's not written as `3735929054` (Big Indian UINT32) or `Þ_ÀÞ` (4-byte ASCII sequence) but in hex (4 bits per character). At the same time, the term fits perfectly with cheats: it sounds somewhat mysterious, dangerous, and overall pretty cool!
 
-Confusingly, the term DEADC0DE or "dead code" has nothing to do with cheats at all. It refers to outdated program code that is no longer called and is essentially orphaned or dead. Typically, when refactoring a codebase, dead code should be removed.
+> Confusingly, the term "DEADC0DE" or "dead code" has nothing to do with cheats at all. It refers to outdated program code that is "no longer called and is essentially orphaned or dead"[^Wikipedia]. Ironically, when refactoring a codebase, dead code is something that should be removed.
+
+[^Wikipedia]: [https://en.wikipedia.org/wiki/Dead_code](https://en.wikipedia.org/wiki/Dead_code)
 
 ## Reverse Engineering
 
 During the reverse engineering of the Action Replay ROM code, I initially couldn't parse the deadcode blocks because they didn't match the rest of the byte sequence or structure. So what do deadcodes do? Let's summarize:
 
-1. The sequence ‘DEADC0DE' appears before each deadcode and must not be omitted: this is reminiscent of a magic number often used in binary formats to perform typing.
-2. The entire hex sequence must be entered: the deadcode is to be considered as a whole.
-3. No spaces or separators may be inserted between the hex blocks: the parser is quite strict and doesn't accept any other symbols between the hex blocks, or perhaps an interpreter gets thrown off.
-4. The order must be strictly followed. If the order is important, two things are true: first, it involves a certain logic, and second, apparently no validation takes place (or is impossible).
+1. The header sequence `DEADC0DE` appears before each deadcode and must not be omitted. This is reminiscent of a *magic number*[^Wikipedia Magic Number], often used at the beginning of binary file formats to help identify the file type or version.
+2. The entire hex sequence must be entered — the deadcode is to be considered as a whole.
+3. Some deadcodes consist of a fixed number of hex blocks (e.g., 10 blocks), while others have a variable length (at least one block, with no known upper limit).
+4. Variable-length deadcodes have a fixed prologue and a fixed epilogue. Between them, one or more `DWORD` blocks can be inserted. In this case, the order is not arbitrary.
+5. No spaces or separators may be inserted between the hex blocks: the parser is quite strict and does not accept any other symbols between the hex blocks — otherwise, the interpreter may fail.
+6. The order must be strictly followed.
 
-That validation isn't feasible could also be because there are extremely few commonalities between different deadcode sequences. The only constant that keeps recurring is the magic number: ‘DEADC0DE'.
+[^Wikipedia Magic Number]: [https://en.wikipedia.org/wiki/List_of_file_signatures](https://en.wikipedia.org/wiki/List_of_file_signatures)
 
 ## That's logical!
 
-The matter of logic is further supported by the description of the deadcode itself: "Level skip - When select is pressed your player moves to the next stage"... WHEN = condition, after which the commands tied to the condition would typically be defined.
+How important is the order? Is it irrelevant when dealing with variable-length deadcodes? The answer is both yes and no. In the case of variable-length deadcodes, the order of the *header-*`DWORD`, followed by the *prologue*-`DWORD`(s), then one or more `DWORD` cheat code blocks, and finally the *epilogue*`DWORD`(s), is important. Within the cheat code blocks themselves, however, the order is not significant.
 
-How do you incorporate logic into this sequence of memory addresses, registers, and so on? After all, things are only being written or overwritten. ‘DEADC0DE' thus initiates a certain mode, that's clear. Let's assume it's the "logic mode." The first thing that came to mind was a kind of simple scripting language:
+Let's summarize: if the order matters, two things can be inferred. First, the sequence must carry or represent some form of logic. Second, no validation to verify the correct order of blocks appears to take place - or it might simply be impossible.
 
-1. Magic number to switch into logic mode
-2. A combination of memory address and value (as usual XXXXXX:YY), except that nothing is written but monitored.
-3. If the defined memory address contains the value, it switches back to write mode, and the remaining address-value combinations are executed.
+The idea of embedded logic is further supported by the description of one particular deadcode:
+*"Level skip - When SELECT is pressed, your player moves to the next stage."*
+Here, **WHEN** represents a condition, after which the commands associated with that condition would typically be executed.
 
-For a small logic, that could suffice, and it would definitely be feasible. So I looked at the address-value combinations: which memory areas are being addressed? Well, then it got really wild! It was a mix of WRAM, I/O registers, expanded RAM, ROM, and HiROM. Completely jumbled; at least for me, there was no logic, sequence pattern, or anything to see. Everything very random, even if querying I/O registers would fit the condition "button pressed." Can a cartridge even read these registers or interrupts? Strange.
+**So, how is logic implemented within this sequence of memory addresses, registers, and related data?** After all, these codes are merely writing or overwriting values. The `DEADC0DE` marker clearly initiates a certain operational mode — let's call it *logic mode*. The first hypothesis that comes to mind is that of a simple embedded scripting mechanism:
+
+1. The magic number switches the system into logic mode.
+2. A combination of memory address and value (as usual, `XXXXXX:YY`) is not written but instead monitored.
+3. When the defined memory address contains the specified value, the system switches back into write mode, executing the remaining address-value pairs.
+
+For implementing basic logic, this would be sufficient — and certainly feasible.
+However, upon examining the actual address-value combinations, things became rather chaotic. The addressed regions included WRAM, I/O registers, expansion RAM, ROM, and HiROM — all mixed together. To me, there was no apparent logic, sequence, or recognizable pattern. Everything appeared random, although checking I/O registers would make sense for a condition like "button pressed."
+Still, one has to wonder: can a cartridge even read those registers or interrupts? Strange indeed.
 
 ## What if?
 
-Let's take a look at the initial mentoned description by Datel itself: "It enables you to rewrite whole sections of the game". In other words it have to be scripting of some kind. What if Action Replay DEADC0DE is a binary code sequence encoded in hex? Now everything make sense:
+Let's take another look at Datel's own description: *"It enables you to rewrite whole sections of the game."*: In other words, it must involve some form of scripting or dynamic code execution.
+
+If you were the developer of the Action Replay, how would you implement such a feature?
+You wouldn't design an entirely new scripting language from scratch — instead, you'd likely leverage as much of the existing SNES hardware and software architecture as possible. That approach would be efficient, performant, and relatively straightforward to implement.
+
+Now, what if the Action Replay `DEADC0DE` sequence is actually a binary code sequence represented in hexadecimal? Suddenly, everything starts to make sense.
 
 1. Structure of the Data:
    - The data is formatted in a way typical of machine or assembly code. They consist of hexadecimal numbers that could represent sequential instructions and operands.
@@ -67,7 +84,7 @@ Let's take a look at the initial mentoned description by Datel itself: "It enabl
 
 ## Conclusion
 
-How crazy is that!? So deadcodes are nothing more than code injection! Unbelievable, right? What would be unthinkable with today's game consoles - considering the complexity of operating systems and data and cybersecurity - was entirely negligible in the case of the Super Nintendo: no operating system, no internet access, no permanent storage...
+How crazy is that!? So deadcodes are nothing more than code injection! Unbelievable, right? What would be unthinkable with today's game consoles - considering the complexity of operating systems and data and cybersecurity - was entirely negligible in the case of the Super Nintendo: no operating system, no internet access, no permanent storage (well, except save files)...
 
 By the way, that's the reason why I enjoy working with retro hardware so much: there are always surprises, things you would never have expected. You can do things with these devices that would be cool today but unthinkable - because they're dangerous. And it's another reason why the Action Replay is the coolest accessory for the SNES: Game Genie & Co. will never come out of its shadow.
 

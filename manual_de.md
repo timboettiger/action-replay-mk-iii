@@ -1,18 +1,18 @@
-# SNES Action Replay MKIII V1.1 - Handbuch/Anleitung (deutsch)
+# SNES Action Replay MK3 V1.1 - Handbuch/Anleitung (deutsch)
 
 Überarbeitete Version V2.1
 
-Copyright (C) 2024 by Tim Böttiger
+Copyright (C) 2024/2025 by Tim Böttiger
 
 ## WILLKOMMEN!
 
-Herzlich Willkommen in der Welt des "Action Replays MK III". Das "Action Replay MK III" bietet Ihnen zahlreiche neue Möglichkeiten, wie z.B. den komplett überarbeiteten Trainer, die Parametergruppen und die verbesserte deutsche Menüführung.
+Herzlich Willkommen in der Welt des "Action Replays MK3". Das "Action Replay MK3" bietet Ihnen zahlreiche neue Möglichkeiten, wie z.B. den komplett überarbeiteten Trainer, die Parametergruppen und die verbesserte deutsche Menüführung.
 
 > **COPYRIGHT:** `SUPER NES` sind `NINTENDO` sind eingetragene Warenzeichen von Nintendo America INC.
 
 > **DISCLAIMER:** Nichts aus dieser Anleitung darf vervielfältigt, kopiert oder auf irgendeinem anderen Wege in Umlauf gebracht werden, ohne daß vorher eine schriftliche Genehmigung von der Firma systems B.V. Ede, Niederlande vorliegt.
 
-### <a name="schalter"></a> SCHALTER AN DER RECHTEN SEITE DES ACTION REPLAY’S
+### <a name="schalter"></a> SCHALTER AN DER RECHTEN SEITE DES ACTION REPLAY'S
 
 Schaltmöglichkeiten:
 
@@ -26,7 +26,7 @@ Schaltmöglichkeiten:
     - Parameter-Eingabe,
     - Aktivierung des Action-Replay-Menüs
 
-### <a name="leds"></a> LED'S AUF DER VORDERSEITE DES ACTION REPLAY’S
+### <a name="leds"></a> LED'S AUF DER VORDERSEITE DES ACTION REPLAY'S
 
 - Linke LED (`LED 1`): Zeigt an, ob bzw. welche Parametergruppen aktiviert sind. (Siehe Kapitel "[Die Parametergruppen](#param_gruppen)")
 - Rechte LED (`LED 2`): Zeigt den Status des Trainers an. (Siehe Kapitel "[Der Trainer](#trainer)".)
@@ -171,7 +171,7 @@ Erläuterungen zum Parameter-Menü:
 
 ### <a name="param_gruppen"></a> DIE PARAMETERGRUPPEN
 
-Neben den Parametern, die durch Eingabe in der Parameterliste immer aktiviert (`AN`) sind, verfügt das "Action Replay MK III" auch über zwei Parametergruppen, denen mehrere Parameter zugeordnet werden können.
+Neben den Parametern, die durch Eingabe in der Parameterliste immer aktiviert (`AN`) sind, verfügt das "Action Replay MK3" auch über zwei Parametergruppen, denen mehrere Parameter zugeordnet werden können.
 
 Diese `A`- und `B`-Gruppen können an bestimmten Stellen im Spiel durch eine Tastenkombination wahlweise ein- bzw. ausgeschaltet werden.
 
@@ -270,7 +270,7 @@ In diesem Beispiel beziehen wir uns auf das Spiel "SUPER MARIOWORLD TM", bei dem
 
 Der von uns gesuchte Parameter (unendliche Zeit) für das Spiel "SUPER MARIOWORLD TM" lautet:  `7EOF 3205`.
 
-> SOLLTE DIE `LED 2` GAR NICHT BLINKEN, MUSSEN SIE DEN ANWEISUNGEN DES KAPITELS "[LED 2 BLINKT NICHT !?](#blinkt_nicht)" FOLGEN. 
+> SOLLTE DIE `LED 2` GAR NICHT BLINKEN, MUSSEN SIE DEN ANWEISUNGEN DES KAPITELS "[LED 2 BLINKT NICHT !?](#blinkt_nicht)" FOLGEN.
 
 #### <a name="beispiel_sfii"></a> Beispiel STREET FIGHTER II TM
 
