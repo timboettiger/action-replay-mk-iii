@@ -14,13 +14,15 @@ Yet despite its importance, information about it has nearly vanished: manuals ar
 Here you'll find:
 - revised and up-to-date manuals (German / English)
 - print-ready reproduction labels for your cartridge
+- hi-res scans of the original box art, inserts and manuals
 - background information on the built-in cheat database
-- the "PreservAction" project - a deep documentation of the MK3
+- fully reverse engineered `DEADC0DES` - the most dangerous cheat codes of all time!
+- the "Preservaction" project - a deep documentation of the MK3
 - comparisons with other cheat devices and SNES region adapters
 
 ### Why did you make this?
 
-I've been collecting SNES equipment for over 30 years, but the trigger to start this project was something else. In the last year I've spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MK3 for the Super NES - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
+I've been collecting SNES equipment for over 30 years, but the trigger to start this project was something else: In the last year I've spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MK3 for the Super NES - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
 
 **Indeed!** The Pro Action Replay MK3 is my favorite SNES cheat device because it's much more like a Swiss Army knife:
 - a region adapter
@@ -28,9 +30,10 @@ I've been collecting SNES equipment for over 30 years, but the trigger to start 
 - a cheat code finder (trainer)
 - a real-time opcode injector
 - a cheat code database
-- it has a user interface driven by mouse or joypad
 
-To make this amazing hardware appreciated again, I digitized and translated the manual, documented all the built-in codes, screenshotted each menu, and gathered more information.
+And the best part: It has a user interface driven by mouse or joypad!
+
+To help this remarkable piece of hardware gain the appreciation it deserves once again, I digitized and translated the manual, documented all the built-in codes, captured screenshots of every menu, reverse-engineered the mysterious `DEADC0DE` cheats, and collected even more information about this fascinating device.
 
 Happy gaming
 
@@ -50,6 +53,8 @@ The original manual contains a few minor inaccuracies; a corrected version is av
 
 #### High-Resolution Manual Scans
 
+![AR MK3 Manual](./assets/action_replay_mk_iii_manual_preview.png)
+
 - [Unedited Scanned Singlesided Pages (ZIP, 300dpi, 24.6MB)](./assets/action_replay_mk_iii_manual_pages.zip)
 - [Unedited Scanned Doublesided Pages (ZIP, 300dpi, 14.3MB)](./assets/action_replay_mk_iii_manual_scans.zip)
 - [Altered Manual Cover Scan (PNG, 300dpi, 7.1MB)](./assets/action_replay_mk_iii_manual_cover_touched.png)
@@ -63,6 +68,8 @@ To bring your Action Replay MK3 cartridge back to its original glory, I've inclu
 - [Module Label (Adobe Illustrator 2024)](./assets/action_replay_mk_iii_label.ai)
 
 ### Boxart and Inserts (Scans)
+
+![AR MK3 Boxart](./assets/action_replay_mk_iii_boxart_preview.png)
 
 If you are looking for the original Boxart - here we go. The scan is in high resolution (300dpi) and suitable for printing. The file size is relatively large (11.4MB) to preserve all details:
 
