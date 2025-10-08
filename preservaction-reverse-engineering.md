@@ -14,6 +14,12 @@ Another hint gives us the packaging of MK3:
 
 Sounds good, right? But where is the generator? How to write dead codes? Nobody knows :smile:
 
+## Disassambler for SNES
+
+In case you want to tinker yourself a little bit, I recommend using [Dispel DEADC0DE Edition](https://github.com/timboettiger/dispel-snesdc-edition)! It's a modern version of Dispel with build-in support for deadc0des and the ability to decribe what the code does.
+
+That repository is a sister project to this repository and is a convenient way to study and understand Super Nintendo Machine Language (which is used by deadc0des).
+
 ## Insights
 
 1. [The Story](deadc0de-story.md)
