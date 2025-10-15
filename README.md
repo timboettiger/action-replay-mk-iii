@@ -101,7 +101,7 @@ Interestingly, there are **a few oddities**:
 - `Eek! The Cat` is listed in the cheat code database mistakenly as `Sky Cat`.
 - `Rampart` is listed mistakenly as `Ramparts`.
 - The [cheat codes for `Street Racer`](./ui/cheats/170b-codes-street-racer-4.png) are labeled mistakenly as `No Description`.
-- The [deadc0de for `Super Streetfighter II`](./deadc0de-super-streetfighter-2-us.md)
+- The [deadc0de for `Super Streetfighter II`](./deadc0de-super-streetfighter-2-us.md) contains a wrong length byte.
 - Some games are listed under their Japanese or European titles but aren't marked with "`JAP`" or "`EU`" as others are. As a result, it's unclear which version the listed cheat codes apply to.
   - `Contra Spirits` (JAP) = `Contra III: The Alien Wars` (US)
   - `Dead Dance` (JAP) = `Tuff E Nuff` (US)
