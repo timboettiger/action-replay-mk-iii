@@ -1,5 +1,5 @@
 ; Action Replay DEADC0DE Cheat
-;   - Address-Hook: 0x80E69B
+;   - Address-Hook: 0x80E69C
 ;   - Length: 8 DWORDs (32 bytes)
 ;
 php
@@ -10,7 +10,7 @@ sta $801430,X
 inx
 inx
 cpx #$0008
-bne $E6A1
+bne $E6A2
 plp
 php
 sep #$20

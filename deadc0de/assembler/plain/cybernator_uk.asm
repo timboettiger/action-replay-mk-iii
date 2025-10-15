@@ -1,5 +1,5 @@
 ; Action Replay DEADC0DE Cheat
-;   - Address-Hook: 0x808278
+;   - Address-Hook: 0x808279
 ;   - Length: Dynamic (until EOF)
 ;
 sta $004200

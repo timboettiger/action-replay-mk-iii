@@ -1,5 +1,5 @@
 ; Action Replay DEADC0DE Cheat
-;   - Address-Hook: 0x00FD15
+;   - Address-Hook: 0x00FD16
 ;   - Length: Dynamic (until EOF)
 ;
 pha

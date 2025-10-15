@@ -1,5 +1,5 @@
 ; Action Replay DEADC0DE Cheat
-;   - Address-Hook: 0xC0025C
+;   - Address-Hook: 0xC0025D
 ;   - Length: 9 DWORDs (36 bytes)
 ;
 ; WARNING! Patch length mismatch: expected 28 bytes, got 36.
@@ -7,7 +7,7 @@
 ;
 lda $00A8
 cmp #$2000
-bne $026E
+bne $026F
 sep #$30
 lda #$FF
 sta $7E0771

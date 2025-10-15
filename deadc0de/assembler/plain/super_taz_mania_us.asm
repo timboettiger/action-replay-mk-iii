@@ -1,5 +1,5 @@
 ; Action Replay DEADC0DE Cheat
-;   - Address-Hook: 0x9A8987
+;   - Address-Hook: 0x9A8988
 ;   - Length: Dynamic (until EOF)
 ;
 php
