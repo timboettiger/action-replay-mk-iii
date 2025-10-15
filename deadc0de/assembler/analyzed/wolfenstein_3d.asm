@@ -1,27 +1,29 @@
-00      	brk               ; Break (brk) - Initiates a software interrupt, often used as a breakpoint for debugging.
-FD1500  	sbc $0015,X       ; Subtract with Borrow from Memory (sbc) - Subtracts the value from memory location $0015 plus the X register from the accumulator, considering the carry flag for borrow.
-48      	pha               ; Push Accumulator (pha) - Pushes the current value of the accumulator onto the stack.
-08      	php               ; Push Processor Status (php) - Pushes the processor status register onto the stack.
-E230    	sep #$30          ; Set Processor Status Bits (sep) - Sets the specified processor status bits, changing accumulator and index registers to 8-bit mode by setting bits 4 and 5.
-A90D    	lda #$0D          ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $0D.
-8F57897E	sta $7E8957       ; Store Accumulator (sta) - Stores the value of the accumulator at the long memory address $7E8957.
-EA      	nop               ; No Operation (nop) - Does nothing, often used for timing or alignment purposes.
-EA      	nop               ; No Operation (nop) - Another NOP for timing or alignment.
-A963    	lda #$63          ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $63.
-8F55897E	sta $7E8955       ; Store Accumulator (sta) - Stores the value of the accumulator at the long memory address $7E8955.
-EA      	nop               ; No Operation (nop) - Another NOP for timing or alignment.
-EA      	nop               ; No Operation (nop) - Another NOP for timing or alignment.
-A904    	lda #$04          ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $04.
-8F53897E	sta $7E8953       ; Store Accumulator (sta) - Stores the value of the accumulator at the long memory address $7E8953.
-EA      	nop               ; No Operation (nop) - Another NOP for timing or alignment.
-EA      	nop               ; No Operation (nop) - Another NOP for timing or alignment.
-A903    	lda #$03          ; Load Accumulator with Immediate (lda) - Loads the accumulator with the immediate value $03.
-8F5F897E	sta $7E895F       ; Store Accumulator (sta) - Stores the value of the accumulator at the long memory address $7E895F.
-EA      	nop               ; No Operation (nop) - Another NOP for timing or alignment.
-EA      	nop               ; No Operation (nop) - Another NOP for timing or alignment.
-28      	plp               ; Pull Processor Status (plp) - Restores the processor status register from the stack.
-68      	pla               ; Pull Accumulator (pla) - Pulls (retrieves) the last pushed accumulator value from the stack.
-AF114200	lda $004211       ; Load Accumulator from Long Address (lda) - Loads the accumulator with the value from the long address $004211.
-5C15FDC0	jmp $C0FD15       ; Jump Long (jmp) - Unconditionally jumps to the long address $C0FD15.
-00      	brk               ; Break (brk) - Another software interrupt, often used for debugging.
-00      	brk               ; Break (brk) - Another breakpoint, possibly for redundancy or alignment.
+; Action Replay DEADC0DE Cheat
+;   - Address-Hook: 0x00FD15
+;   - Length: Dynamic (until EOF)
+;
+00/FD15:    48          pha             ; Push accumulator onto stack.
+00/FD16:    08          php             ; Push processor status onto stack.
+00/FD17:    E230        sep #$30        ; Set processor status bits present in 0b00110000.
+00/FD19:    A90D        lda #$0D        ; Load accumulator with value from '13'.
+00/FD1B:    8F57897E    sta $7E8957     ; Store accumulator at Work RAM (WRAM) (at 7E/8957).
+00/FD1F:    EA          nop             ; No operation.
+00/FD20:    EA          nop             ; No operation.
+00/FD21:    A963        lda #$63        ; Load accumulator with value from '99'.
+00/FD23:    8F55897E    sta $7E8955     ; Store accumulator at Work RAM (WRAM) (at 7E/8955).
+00/FD27:    EA          nop             ; No operation.
+00/FD28:    EA          nop             ; No operation.
+00/FD29:    A904        lda #$04        ; Load accumulator with value from '4'.
+00/FD2B:    8F53897E    sta $7E8953     ; Store accumulator at Work RAM (WRAM) (at 7E/8953).
+00/FD2F:    EA          nop             ; No operation.
+00/FD30:    EA          nop             ; No operation.
+00/FD31:    A903        lda #$03        ; Load accumulator with value from '3'.
+00/FD33:    8F5F897E    sta $7E895F     ; Store accumulator at Work RAM (WRAM) (at 7E/895F).
+00/FD37:    EA          nop             ; No operation.
+00/FD38:    EA          nop             ; No operation.
+00/FD39:    28          plp             ; Pull processor status from stack.
+00/FD3A:    68          pla             ; Pull accumulator from stack.
+00/FD3B:    AF114200    lda $004211     ; Load accumulator with value from 0x004211.
+00/FD3F:    5C15FDC0    jmp $C0FD15     ; Jump to C0/FD15.
+00/FD43:    00          brk             ; brk.
+00/FD44:    00          brk             ; brk.

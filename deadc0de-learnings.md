@@ -7,8 +7,8 @@
 If you want to try disassembling yourself:
 
 1. Clone the [Dispel Github-Repository](https://github.com/pelrun/Dispel) to get a disassembler.
-2. Check if you can apply the [Special Edition Patch](src/dispel-special-edition.patch) to the repository using `git apply --check dispel-special-edition.patch`.
-3. If everything is fine, apply the [Special Edition Patch](src/dispel-special-edition.patch) to the repository using `git apply dispel-special-edition.patch`.
+2. Check if you can apply the [Special Edition Patch](./bin/dispel-special-edition.patch) to the repository using `git apply --check dispel-special-edition.patch`.
+3. If everything is fine, apply the [Special Edition Patch](./bin/dispel-special-edition.patch) to the repository using `git apply dispel-special-edition.patch`.
 4. Compile Dispel using `make`.
 5. Test if it runs correctly (it should display instructions) using `./dispel`
 6. Convert hex dumps to binary files using `xxd -r -p deadcode.hex deadcode.bin`.
@@ -29,7 +29,7 @@ They describe it as follows:
 - go to memory location `aaaaaa`
 - write `dd` times the value `xxxxxxxx`
 
-It might describe a valid cheat code type (one that I have not encountered yet), but it appears to follow a slightly different logic than the cheat codes currently documented and available.
+It might describe a valid cheat code type (one that I have not encountered yet), but it appears to follow a slightly different logic than the cheat codes currently documented and available. This is also documented within the [Fullsnes Nocash SNES Specs](./docs/Fullsnes-Nocash_SNES_Specs.pdf) Documentation.
 
 ### Cheatcode Header
 
@@ -68,4 +68,4 @@ Available sources ([^Spritedmind], [^Maxim]) suggest that the Action Replay taps
 
 Credits/Source
 ([^Spritedmind]) [Pro Action Replay reverse-engineering notes](https://gendev.spritesmind.net/forum/viewtopic.php?t=813)
-([^Maxim]) [How the ... Action Replay ... work](src/par.txt)
+([^Maxim]) [How the ... Action Replay ... work](./docs/how_par_work-v3-2001.txt)
