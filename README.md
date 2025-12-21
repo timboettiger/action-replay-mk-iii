@@ -168,7 +168,7 @@ Below are images of the *Action Replay MK3* module showing its front and back:
 
 #### PCB
 
-Further pictures as well as information about the (Action Replay board and chipset)[preservaction-pcb.md] can be found in the documentation.
+Further pictures as well as information about the [Action Replay board and chipset](preservaction-pcb.md) can be found in the documentation.
 
 ### Game Converters and Adapters
 
