@@ -10,11 +10,11 @@
 
 ### Components
 
-- **DATEL TURBO REPLAY (LZ95G72):** The 64 pin LZ95G72 is the heart of the module and is likely a specialized microcontroller or custom IC from DATEL, designed specifically for cheat and region-bypass functions. It retrieves user data stored by the ROM in SRAM, processes cheats, operates the trainer, injects dead codes and controls the module's overall functionality.
+- **DATEL TURBO REPLAY (LZ95G72):** The 64 pin LZ95G72 is the heart of the module and is designed specifically for data pipelining between the cpu, 1 or 2 cartridges, ROM and RAM and controls the module's overall functionality.
   - It looks much like a Zilog Z180 (an enhanced, compatible version of the Z80 CPU with additional instructions and capabilities) 68-Pin PLCC Chip; which can address up to 64kB RAM which maches the 32kB SRAM on the PCB. Additionally it has built-in serial I/O, timers, and a DMA controller.
   - Z80 Chips were reportly used for the Datel Action Replay for the Sega Mega System (3).
   - Before the chips were labeled as custom Datel chips, identical ones (1) were marked as `SHARP` on other pcbs.
-- **EPROM (AT27C010-12JC):** The AT27C010 is a one-time programmable memory chip (EPROM) with a storage capacity of 1 Megabit. It is used to store the hard-coded programs and data for the module, such as the SNES ROM (with user interface and pre-installed cheat codes) and custom instructions for the Zilog CPU - the BIOS or firmware.
+- **EPROM (AT27C010-12JC):** The AT27C010 is a one-time programmable memory chip (EPROM) with a storage capacity of 1 Megabit. It is used to store the SNES ROM which contains the user interface, various cheat codes, handling user input, speed control, trainer logic and cheat injection.
 - **CMOS SRAM (HY62256A):** All PAR versions contain 32 KBytes of SRAM, divided into four 8 KByte segments, which are mapped to even bank numbers as follows: `00/02/04/06:6000h–7FFFh`. This SRAM is used by the system as internal workspace for stack operations, variables, code storage, the NMI handler, the `DEADC0DE` handler, and for maintaining lists used by the code finder (such as possible match results).
 - **2 LEDs** (put through holes below the sticker-area and visibible on front of cartridge)
 - Cartridge Slots:
