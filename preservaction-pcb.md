@@ -87,14 +87,14 @@ The **3-way toggle switch** on the side of the Pro Action Replay MK3 module cont
 
 > **Codes 0-6:** Unused codes are initialized with the value `0x00000000`. Unlike the PAR1 and PAR MK2 formats, all codes use a linear 24-bit address space without modifying or removing bit 15. Of the seven available code slots, codes 5 and 6 are reserved for hooking the `NMI` (Non-Maskable Interrupt) handler, even when no `WRAM` software patches are active. Therefore, a maximum of five hardware ROM patches can be applied simultaneously.
 
-### Hypothetical Analysis of Chip Interaction
+### Analysis of Chip Interaction
 
 Based on the known functions of the module and the analyzed hardware, the following explanation is purely **speculative** about how the chips might work together:
 
-- **Processing and Control by the Main Chip:** The **LZ95G72** acts as the central control unit, coordinating the cheat and region-bypass functions. It reads its BIOS/firmware and ROM-Image data from the EPROM and makes use of the SRAM to store data between cartrige modes toggeled by the switch.
+- **Main Chip:** The **LZ95G72** acts as the central control unit, coordinating the memory reads and bypass. It reads and loads the ROM-Image (which is actually the firmware/BIOS of the Action Replay) data from the EPROM and makes use of the SRAM to store data between cartrige modes toggeled by the switch.
 
-- **Memory and Logic Processing:** The **HY62256A (SRAM)** temporarily stores active cheat data, detected cheat memory addresses (by the cheat finder) and settings that the module applies during gameplay. Its a fact that many HiROM games use their own SRAM in the same address range (`6000h–7FFFh`). It is not clearly documented how the Pro Action Replay hardware handles such conflicts or whether it can disable its own SRAM for compatibility. While the original PAR 1 was apparently designed for LoROM games, later versions (PAR MK2 and PAR MK3) reportedly include HiROM support. In these cases, the hardware must dynamically enable or disable the internal SRAM depending on whether game code or Pro Action Replay routines (such as the NMI and `DEADC0DE` handlers) are being executed.
+- **Memory and Exchange:** The **HY62256A (SRAM)** temporarily stores active cheat data, detected cheat memory addresses (by the cheat finder) and settings that the module applies during gameplay. Its a fact that many HiROM games use their own SRAM in the same address range (`6000h–7FFFh`). It is not clearly documented how the Pro Action Replay hardware handles such conflicts or whether it can disable its own SRAM for compatibility. While the original PAR 1 was apparently designed for LoROM games, later versions (PAR MK2 and PAR MK3) reportedly include HiROM support. In these cases, the hardware must dynamically enable or disable the internal SRAM depending on whether game code or Pro Action Replay routines (such as the NMI and `DEADC0DE` handlers) are being executed.
 
-- **Storage and Program Access:** The **AT27C010 EPROM** holds the BIOS/firmware of the IC as well as the user interface (ROM-image) for the Action Replay.
+- **Storage and Program Definitions:** The **AT27C010 EPROM** holds the SNES compatible ROM which contains the user interface, all logic (input/output) as well as the cheat code database of the Action Replay.
 
-However, the exact technical implementation remains unknown.
+The openFPGA implementation of the described behavior is to proof the above analysis.
