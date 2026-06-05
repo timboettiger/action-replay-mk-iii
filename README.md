@@ -1,30 +1,33 @@
 # Home of Pro Action Replay MK3 for SNES:
 ## The Ultimate Documentation Hub
 
----
-
 ### Discover the Full Power of the Action Replay MK3!
 
 Whether you're a long-time fan who used the Action Replay MK3 back in the day - or you've just stumbled upon it for the first time - this remarkable device deserves a proper spotlight.
 
-The MK3 was far more than a simple cheat cartridge. It was a clever blend of game enhancer, region adapter, and tinkering tool, letting players unlock hidden features, experiment with codes, and play import titles long before emulation made that easy. For many, it was a gateway into the world of game hacking and discovery - a small piece of hardware with a big personality.
-
-Yet despite its importance, information about it has nearly vanished: manuals are inconsistent, scans are incomplete, and technical details have been scattered or lost. This page aims to change that - to collect, preserve, and share everything known about the Action Replay MK3.
-
 Here you'll find:
-- revised and up-to-date manuals (German / English)
+- revised and **up-to-date manuals** (German / English)
 - print-ready reproduction labels for your cartridge
-- hi-res scans of the original box art, inserts and manuals
-- background information on the built-in cheat database
-- fully reverse engineered `DEADC0DES` - the most dangerous cheat codes of all time!
-- the "Preservaction" project - a deep documentation of the MK3
+- hi-res scans of the **original box art, inserts and manuals**
+- background information on the **built-in cheat database**
+- fully reverse engineered `DEADC0DES` - **the most dangerous cheat codes of all time!**
+- **"Project Preservaction"** - a deep documentation of the MK3
 - comparisons with other cheat devices and SNES region adapters
 
+Also part of Project Preservaction are the following repositories:
+- **The [SNES Disassembler](https://github.com/timboettiger/dispel-snesdc-edition):** A new generation 65816-Disassembler with built-in support for Action Replay Deadc0des (used to reengineer the MK3) with an unbeatable annotion-feature.
+- **The [Pro Action Replay MK3 openFPGA core](https://github.com/timboettiger/openfpga-SNES-pro-action-replay-mk3):** A fully working implementation of the PAR MK3 for SNES for Analogue Pocket - Finally cheats for SNES to go!
+- **[SD2SNES / FXPAK Pro Firmware/Core](https://github.com/timboettiger/sd2snes-pro-action-replay-mk3):** Pro Action Replay MK3 support on your favorite SNES flash card.
+ 
 ### Why did you make this?
 
 I've been collecting SNES equipment for over 30 years, but the trigger to start this project was something else: In the last year I've spent a long time researching which region adapter might be the best. The search wasn't easy, as there isn't much information about it online. Then I came across a forum post that mentioned the Action Replay MK3 for the Super NES - which made me curious, as I already owned this cheat device. Was there a function I had overlooked!?
 
-**Indeed!** The Pro Action Replay MK3 is my favorite SNES cheat device because it's much more like a Swiss Army knife:
+**Indeed!** The MK3 was far more than a simple cheat cartridge. It was a clever blend of game enhancer, region adapter, and tinkering tool, letting players unlock hidden features, experiment with codes, and play import titles long before emulation made that easy. For many, it was a gateway into the world of game hacking and discovery - a small piece of hardware with a big personality.
+
+Yet despite its importance, information about it has nearly vanished: manuals are inconsistent, scans are incomplete, and technical details have been scattered or lost. This page aims to change that - to collect, preserve, and share everything known about the Action Replay MK3.
+
+The Pro Action Replay MK3 is my favorite SNES cheat device because it's much more like a Swiss Army knife:
 - a region adapter
 - a cheat code device
 - a cheat code finder (trainer)
