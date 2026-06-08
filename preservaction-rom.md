@@ -8,6 +8,34 @@ The goal of this section is to uncover and understand the data structure of the 
 
 In addition, I want to know more about the interaction between ROM (SNES runtime) and the Datel IC (cheat runtime)
 
+### ROM-Museum
+
+As described in (ROM disassembly)[preservaction-rom-disassembly.md] chapter `18. Emulator Patches` during the reverse engineering a "musuem"-version of the ROM has been created: All checks, reads and writes have been disabled to make the navigation through the UI possible. This means: you can view the user interface, use it, but not make any changes or even launch/patch a game rom (museum == "view it, but don't touch it").
+
+You can download the (ips-patch)[rom/Pro Action Replay MK3 (Europe) (Unl) (museum).ips] and apply it to any legally sourced rom:
+
+```bash
+# Using Floating IPS (flips, https://www.smwcentral.net/?p=section&a=details&id=11474)
+flips --apply "Pro Action Replay MK3 (Europe) (Unl) (museum).ips" \
+              "Pro Action Replay MK3 (Europe) (Unl).sfc" \
+              "Pro Action Replay MK3 (Europe) (Unl) (museum).sfc"
+
+# Or as a Python one-liner (run inside the rom/ folder)
+python3 -c "
+import pathlib
+d = bytearray(pathlib.Path('Pro Action Replay MK3 (Europe) (Unl).sfc').read_bytes())
+ips = pathlib.Path('Pro Action Replay MK3 (Europe) (Unl) (museum).ips').read_bytes()
+i = 5
+while ips[i:i+3] != b'EOF':
+    off = (ips[i]<<16)|(ips[i+1]<<8)|ips[i+2]; i += 3
+    n = (ips[i]<<8)|ips[i+1]; i += 2
+    for k in range(n): d[off+k] = ips[i+k]
+    i += n
+pathlib.Path('Pro Action Replay MK3 (Europe) (Unl) (museum).sfc').write_bytes(d)
+"
+```
+
+
 ### Versions
 
 The following ROM Versions are known:

@@ -632,18 +632,6 @@ The original ROM is **by design not runnable without MK3 hardware**. It expects:
 2. 32 KB of Replay SRAM at `$00/02/04/06:$6000-$7FFF` (a non-standard mapping that no emulator supports natively).
 3. an inserted game cartridge whose header at `$00:FFC0` can be read via the Control-A bit-4 toggle.
 
-To make the ROM boot in standard emulators (bsnes, SNES9x, Mesen-S, ...) and to allow navigating the UI, an IPS patch is provided in the same folder:
-
-[rom/Pro Action Replay MK3 (Europe) (Unl) [emulator-friendly].ips](rom/Pro%20Action%20Replay%20MK3%20%28Europe%29%20%28Unl%29%20%5Bemulator-friendly%5D.ips)
-
-It changes **60 bytes** at **50 locations** of the original ROM. The patched variant is available as [Pro Action Replay MK3 (Europe) (Unl) [headered].sfc](rom/Pro%20Action%20Replay%20MK3%20%28Europe%29%20%28Unl%29%20%5Bheadered%5D.sfc).
-
-| File              | Size      | MD5                                |
-|-------------------|-----------|------------------------------------|
-| Original `.sfc`   | 131,072 B | `e04ac2e71b840f0e1a35c9afde75e5ce` |
-| Patched `.sfc`    | 131,072 B | `1d497cef520945329d546dd9fd6c85f5` |
-| IPS patch         | 318 B     | `71a7293851c18f96d8678e3ac33432fc` |
-
 #### 18.1 Overview of All Changes
 
 | #      | Offset       | Bank:Addr  | Bytes         | Intention                                   |
@@ -998,22 +986,22 @@ With any common IPS tool:
 
 ```bash
 # Using Floating IPS (flips, https://www.smwcentral.net/?p=section&a=details&id=11474)
-flips --apply "Pro Action Replay MK3 (Europe) (Unl) [emulator-friendly].ips" \
+flips --apply "Pro Action Replay MK3 (Europe) (Unl) (museum).ips" \
               "Pro Action Replay MK3 (Europe) (Unl).sfc" \
-              "Pro Action Replay MK3 (Europe) (Unl) [headered].sfc"
+              "Pro Action Replay MK3 (Europe) (Unl) (museum).sfc"
 
 # Or as a Python one-liner (run inside the rom/ folder)
 python3 -c "
 import pathlib
 d = bytearray(pathlib.Path('Pro Action Replay MK3 (Europe) (Unl).sfc').read_bytes())
-ips = pathlib.Path('Pro Action Replay MK3 (Europe) (Unl) [emulator-friendly].ips').read_bytes()
+ips = pathlib.Path('Pro Action Replay MK3 (Europe) (Unl) (museum).ips').read_bytes()
 i = 5
 while ips[i:i+3] != b'EOF':
     off = (ips[i]<<16)|(ips[i+1]<<8)|ips[i+2]; i += 3
     n = (ips[i]<<8)|ips[i+1]; i += 2
     for k in range(n): d[off+k] = ips[i+k]
     i += n
-pathlib.Path('Pro Action Replay MK3 (Europe) (Unl) [headered].sfc').write_bytes(d)
+pathlib.Path('Pro Action Replay MK3 (Europe) (Unl) (museum).sfc').write_bytes(d)
 "
 ```
 

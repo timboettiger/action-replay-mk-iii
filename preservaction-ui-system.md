@@ -21,3 +21,13 @@
 ### Factory Test
 
 ![Test](./ui/boot/4-boot-test.png)
+
+### Error Screens
+
+#### No Cartridge Found
+
+![No Cartridge Found](./ui/boot/5-no-cartridge-found.png)
+
+#### Clean Edge Connector
+
+![Clean Edge Connector](./ui/boot/6-clean-edge-connector.png)
