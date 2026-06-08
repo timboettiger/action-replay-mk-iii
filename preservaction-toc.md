@@ -26,6 +26,7 @@ So far, over `300` screenshots have been documented, more than `200` games added
 
 1. [Printed Circuit Board](preservaction-pcb.md)
 1. [ROM structure](preservaction-rom.md)
+1. [ROM disassembly (reverse engineering)](preservaction-rom-disassembly.md)
 2. Cheats
    - [Cheatformats](preservaction-cheatformat.md)
    - [Regular Cheats](preservaction-database.md)
