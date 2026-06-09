@@ -1,0 +1,168 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to release (e.g. v2.1.0)'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build artifacts and publish release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Resolve tag name
+        id: tag
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "name=${{ inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "name=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install Pandoc and LaTeX toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            pandoc \
+            texlive-xetex \
+            texlive-fonts-recommended \
+            texlive-lang-german \
+            texlive-latex-recommended \
+            texlive-latex-extra \
+            librsvg2-bin \
+            zip
+
+      - name: Convert German manual to PDF
+        run: |
+          pandoc manual_de.md \
+            --from=gfm \
+            --pdf-engine=xelatex \
+            --resource-path=.:ui:assets \
+            -V geometry:margin=2cm \
+            -V mainfont="DejaVu Serif" \
+            -V monofont="DejaVu Sans Mono" \
+            -V lang=de-DE \
+            -V documentclass=report \
+            --toc \
+            --toc-depth=3 \
+            -o manual_de.pdf
+
+      - name: Convert English manual to PDF
+        run: |
+          pandoc manual_en.md \
+            --from=gfm \
+            --pdf-engine=xelatex \
+            --resource-path=.:ui:assets \
+            -V geometry:margin=2cm \
+            -V mainfont="DejaVu Serif" \
+            -V monofont="DejaVu Sans Mono" \
+            -V lang=en-US \
+            -V documentclass=report \
+            --toc \
+            --toc-depth=3 \
+            -o manual_en.pdf
+
+      - name: Stage release artifacts
+        run: |
+          mkdir -p release
+
+          # --- Manual bundle ---------------------------------------------------
+          # Sources, generated PDFs, original scans, cover and previews.
+          zip -j release/action_replay_mk_iii_manual.zip \
+            manual_de.md \
+            manual_en.md \
+            manual_de.pdf \
+            manual_en.pdf \
+            assets/action_replay_mk_iii_manual_cover_touched.png \
+            assets/action_replay_mk_iii_manual_preview.png \
+            assets/action_replay_mk_iii_manual_scan.pdf \
+            assets/action_replay_mk_iii_manual_pages.zip \
+            assets/action_replay_mk_iii_manual_scans.zip
+
+          # --- Boxart bundle --------------------------------------------------
+          # Scans, previews, individual front/back artwork and product logo.
+          zip -j release/action_replay_mk_iii_boxart.zip \
+            assets/action_replay_mk_iii_boxart_preview.png \
+            assets/action_replay_mk_iii_boxart_scan.png \
+            assets/front.png \
+            assets/back.png \
+            assets/logo.jpg
+
+          # --- Label bundle ---------------------------------------------------
+          # Print-ready reproduction label in all source formats.
+          zip -j release/action_replay_mk_iii_label.zip \
+            assets/action_replay_mk_iii_label.ai \
+            assets/action_replay_mk_iii_label.pdf \
+            assets/action_replay_mk_iii_label.png
+
+          # Generated PDFs as standalone artifacts (in addition to the bundle).
+          cp manual_de.pdf release/manual_de.pdf
+          cp manual_en.pdf release/manual_en.pdf
+
+          ls -lh release/
+
+      - name: Generate changelog
+        id: changelog
+        run: |
+          TAG="${{ steps.tag.outputs.name }}"
+          PREV_TAG="$(git tag --sort=-version:refname | grep -v "^${TAG}$" | head -n 1 || true)"
+
+          {
+            echo "## What's new in ${TAG}"
+            echo ""
+            if [ -n "${PREV_TAG}" ]; then
+              echo "Changes since \`${PREV_TAG}\`:"
+              echo ""
+              git log --pretty=format:'- %s (%h)' "${PREV_TAG}..HEAD"
+            else
+              echo "Initial release of the documented Action Replay MK3 archive."
+              echo ""
+              echo "Highlights:"
+              git log --pretty=format:'- %s (%h)' | head -n 25
+              echo ""
+              echo ""
+              echo "_Showing the 25 most recent commits._"
+            fi
+            echo ""
+            echo ""
+            echo "## Artifacts"
+            echo ""
+            echo "- \`manual_de.pdf\` — revised German manual (PDF)"
+            echo "- \`manual_en.pdf\` — revised English manual (PDF)"
+            echo "- \`action_replay_mk_iii_manual.zip\` — Markdown sources, PDFs and original scans"
+            echo "- \`action_replay_mk_iii_boxart.zip\` — box art scans, previews and product logo"
+            echo "- \`action_replay_mk_iii_label.zip\` — reproduction label (AI, PDF, PNG)"
+          } > release_notes.md
+
+          echo "--- Generated release notes ---"
+          cat release_notes.md
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.name }}
+          name: ${{ steps.tag.outputs.name }}
+          body_path: release_notes.md
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            release/manual_de.pdf
+            release/manual_en.pdf
+            release/action_replay_mk_iii_manual.zip
+            release/action_replay_mk_iii_boxart.zip
+            release/action_replay_mk_iii_label.zip
