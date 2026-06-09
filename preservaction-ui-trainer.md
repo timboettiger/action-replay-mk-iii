@@ -40,3 +40,17 @@ fast** (a single candidate remains), then `Select`+`R` to freeze it as a cheat.
 [Detail Screens](preservaction-ui-mainmenu.md)
 
 ![Trainer No Parameters](./ui/trainer/0-trainer-no-parameters.png)
+
+### Many Parameters
+
+Multiple candidates remain after the first comparison — LED 2 blinks slowly.
+Keep narrowing the search by repeating the lower/higher/same/different combo.
+
+![Trainer Many Parameters](./ui/trainer/1-trainer-many-parameters.png)
+
+### Single Parameter
+
+Only one candidate remains — LED 2 blinks fast. Press `Select`+`R` to freeze
+this address as an active cheat.
+
+![Trainer Single Parameter](./ui/trainer/2-trainer-single-parameter.png)

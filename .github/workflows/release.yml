@@ -37,13 +37,16 @@ jobs:
       - name: Install Pandoc and LaTeX toolchain
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends \
+          sudo apt-get install -y \
             pandoc \
             texlive-xetex \
             texlive-fonts-recommended \
+            texlive-fonts-extra \
             texlive-lang-german \
             texlive-latex-recommended \
             texlive-latex-extra \
+            lmodern \
+            fonts-dejavu \
             librsvg2-bin \
             zip
 
